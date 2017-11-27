@@ -1,0 +1,34 @@
+body{
+    /* Created the bg on http://www.heropatterns.com/ - I'm a fan of this pattern and the polka dots one */
+    /* other bg options: */
+    /*
+    background-color: #f1eef6;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'/%3E%3C/svg%3E");
+    */
+    
+    background-color: #f1eef6;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+
+    margin:0px;
+    padding:0px;
+    font-family: 'Open Sans', sans-serif;
+    text-align:center;
+}
+
+#header {
+    /*background-color: #e2d7f4;*/
+    background-color: #eae3f8;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    padding-bottom: 40px;
+}
+
+.wrapper{
+    margin:0px;
+    width:100%;
+}
+
+h1{
+    font-size:100px;
+    font-weight:bold;
+    padding:5px 0px;
+}
