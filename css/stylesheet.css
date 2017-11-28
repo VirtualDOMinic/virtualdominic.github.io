@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
 html{
     font-size: 10px;
 }
@@ -33,8 +35,6 @@ body{
     font-size: 1.4rem;
 }
 
-
-
 #header {
     
     background:rgba(0,0,0,0.15);
@@ -52,35 +52,39 @@ body{
 }
 
 h1{
+    font-family: 'Lato', sans-serif;
     font-size:8rem;
-    font-weight:bold;
+    font-weight:500;
     padding:4px 1px;
     margin: 0px;
 }
 
 h2{
+    font-family: 'Lato', sans-serif;
     font-size:5rem;
-    font-weight:bold;
+    font-weight:500;
     padding:2px 1px;
     margin:0px;
 }
 
 h3{
+    font-family: 'Lato', sans-serif;
     font-size:3.5rem;
-    font-weight:bold;
+    font-weight:500;
     padding:1px;
     margin:0px;
 }
 
 h4{
+    font-family: 'Lato', sans-serif;
     font-size:2.5rem;
-    font-weight:bold;
+    font-weight:500;
     padding:1px;
     margin:0px;
 }
 
 p{
-    font-size:1.6rem;
+    font-size:1.7rem;
 }
 
 /* tabs 2 BEGIN */
@@ -89,7 +93,8 @@ p{
 div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #f1f1f185;
+    font-size:1.6rem;
     margin:0px;
 }
 
@@ -103,17 +108,18 @@ div.tab button {
     padding: 14px 16px;
     transition: 0.3s;
     margin:0px;
+    font-size:1.8rem;
 }
 
 /* Change background color of buttons on hover */
 div.tab button:hover {
-    background-color: #ddd;
+    background-color: rgba(221, 221, 221, 0.85);
     margin:0px;
 }
 
 /* Create an active/current tablink class */
 div.tab button.active {
-    background-color: #ccc;
+    background-color: rgba(204, 204, 204, 0.85);
     margin:0px;
 }
 
@@ -121,9 +127,9 @@ div.tab button.active {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    margin:0px;
+    border-bottom: 1px solid #ccc;
+    margin:0 auto;
+    max-width:630px;
 }
 
 /* Fade-in effects */
@@ -150,6 +156,7 @@ div.tab button.active {
 .image:hover {
     -webkit-transform:scale(1.1); 
             transform:scale(1.1);
+    opacity:1;
   }
   .image {
     -webkit-transition: all 0.4s ease; 
@@ -157,6 +164,34 @@ div.tab button.active {
     max-width: 65px;
     padding:8px;
     margin:2px;
+    opacity:0.75;
   }
-
+.photo {
+    padding:0px;
+    margin:0px;
+    border:2px rgba(133, 133, 133,0.8) solid;
+    max-width:300px;
+    display:block;
+    width:100%;
+    margin: 0 auto;
+}
 /* Images END */
+
+/* Stick nav css START*/
+
+.fixed-nav nav{
+    position:fixed;
+    box-shadow: 0 3px rgba(0,0,0,0.2);
+}
+
+nav{
+    background:blue;
+    top:0;
+    width:100%;
+    transition:all 0.5s;
+    position:relative;
+    z-index:1;
+}
+
+/* Stick nav css END*/
+
