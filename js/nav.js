@@ -1,4 +1,5 @@
- //Sticky nav start
+//Sticky nav start
+/*
 const nav = document.querySelector("#topNav"); //get nav (id is "topNav" - Wes goes with "main" in his tute)
 const topOfNav = nav.offsetTop //detect where top of the nav is
 function fixNav(){
@@ -12,8 +13,10 @@ function fixNav(){
     }
 
 window.addEventListener("scroll",fixNav); //run fixNav function whenever I scroll
+*/
+//sticky nav end - can delete the above? No use for it now
 
-//sticky nav end
+
 //tabs start
 function openSection(evt, secName) {
     // Declare/initialise vars
