@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
-    <link rel="shortcut icon" href="img/favicon.ico" >
+    <link rel="shortcut icon" href="img/favicon.png" >
     <script type="text/javascript" src="js/nav.js"></script>
     <title>Dominic Coelho - F&amp;C Hopeful</title>
 
@@ -16,47 +16,44 @@
         </div>
     </div>
 
-<!-- Tab test start -->
 
-<div data-tabs class="tabs">
+    <!-- Second tab test start -->
     <div class="tab">
-      <input type="radio" name="tabgroup" id="tab-1" checked>
-      <label for="tab-1">Tab 1</label>
-      <div class="tab__content">
-        <h4>Tab heading 1</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt libero ipsum, veniam magni modi exercitationem debitis ducimus assumenda ratione corporis, illum eius, laborum tempore cumque amet id perspiciatis nostrum unde?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, maiores.</p>
+        <button class="tablinks" onclick="openSection(event, 'About')" id="defaultOpen">About</button>
+        <button class="tablinks" onclick="openSection(event, 'Why')">Why I'm Applying</button>
+        <button class="tablinks" onclick="openSection(event, 'Contact')">Contact(?)</button>
       </div>
-    </div>
-    <div class="tab">
-      <input type="radio" name="tabgroup" id="tab-2">
-      <label for="tab-2">Tab 2</label>
-      <div class="tab__content">
-        <h4>Tab heading 2</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur odio cum eveniet excepturi eum provident molestias ad ipsa unde dignissimos illo porro animi earum aliquam perspiciatis id omnis, adipisci incidunt. Qui, beatae. Beatae animi totam obcaecati at quae, iste facere fuga nemo pariatur esse nihil?</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque commodi eos voluptatem numquam pariatur deleniti repellat fugiat eligendi nulla molestiae sunt praesentium vero sequi distinctio error quibusdam maiores natus magnam, explicabo hic sed alias dolores, quis eum! Reprehenderit atque cupiditate dolorum? Saepe, doloribus veniam? Nulla!</p>
+      
+      <div id="About" class="tabcontent">
+        <h3>About Me</h3>
+        <p>Hello 123</p>
       </div>
-    </div>
-    <div class="tab">
-      <input type="radio" name="tabgroup" id="tab-3">
-      <label for="tab-3">Tab 3</label>
-      <div class="tab__content">
-        <h4>Tab heading 3</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis voluptas maiores deserunt ullam aliquam?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officia accusantium quod fuga porro eius animi earum excepturi omnis! Reprehenderit!</p>
+      
+      <div id="Why" class="tabcontent">
+        <h3>Why I'm Applying</h3>
+        <p>Reasons</p> 
       </div>
-    </div>
-    <div class="tab">
-      <input type="radio" name="tabgroup" id="tab-4">
-      <label for="tab-4">Tab 4</label>
-      <div class="tab__content">
-        <h4>Tab heading 4</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia exercitationem veritatis vero eaque. Nam totam dolorem sapiente ullam non sed nostrum praesentium voluptatem, ad quam libero deserunt nemo fuga hic repudiandae veritatis cupiditate, mollitia recusandae!</p>
+      
+      <div id="Contact" class="tabcontent">
+        <h3>Contact Me</h3>
+        <p>Contact form? Not sure if necessary</p>
       </div>
-    </div>
-  </div>
+    <!-- Second tab test end -->
 
-<!-- Tab test end -->
+
+    <div class="section" id="footer">
+        <div class="wrapper">
+            <h3>Links (prerequisites)</h3>
+            <p>Images with links to FCC, codewars, github repo and linkedin</p>
+        </div>
+    </div>
+
+    <script>
+        // Open my default tab on load
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
 <!-- 
     <h1>H1 ONE one</h1>
     <a href="https://www.codewars.com/users/DomJC/authored"><img src="https://www.codewars.com/users/DomJC/badges/micro"></a>

@@ -1,11 +1,5 @@
 body{
-    /* Created the bg on http://www.heropatterns.com/ - I'm a fan of this pattern and the polka dots one */
-    /* other bg options: */
-    /*
-    background-color: #f1eef6;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'/%3E%3C/svg%3E");
-    */
-    
+    /* Created the bg on http://www.heropatterns.com/ - originally went with the hexagon one */
     background-color: #f1eef6;
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
 
@@ -18,10 +12,16 @@ body{
 }
 
 #header {
-    /*background-color: #e2d7f4;*/
-    background-color: #eae3f8;
+    
+    background:#7f7f7f;
+    background:rgba(0,0,0,0.2);
+    padding-bottom: 0px;
+}
+
+#footer {
+    background-color: #e2d7f4;
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-    padding-bottom: 40px;
+    padding-bottom: 5px;
 }
 
 .wrapper{
@@ -41,45 +41,60 @@ h2{
     padding:2px 0px;
 }
 
-/* Tabs BEGIN */
-.tabs {
-    clear: both;
-    position: relative;
-    max-width: 650px;
-    margin: 0 auto;/* you can either manually set a min-height here or do it via JS ---> */
-  }
-  
-  .tab { float: left; }
-  
-  .tab label {
-    margin-right: 20px;
-    position: relative;
-    top: 0;
+
+/* tabs 2 BEGIN */
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: center;
+    border: none;
+    outline: none;
     cursor: pointer;
-    color: #E95546;
-    text-transform: uppercase;
-  }
-  
-  .tab [type=radio] { display: none; }
-  
-  .tab__content {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: opacity .2s cubic-bezier(.42, 0, .34, 1.01);
-    opacity: 0;
-  }
-  
-  [type=radio]:checked ~ label {
-    border-bottom: 2px solid #1d1d1d;
-    color: #1d1d1d;
-    z-index: 2;
-  }
-  
-  [type=radio]:checked ~ label ~ .tab__content {
-    z-index: 1;
-    opacity: 1;
-  }
-/* Tabs END*/
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Fade-in effects */
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; 
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* tabs 2 END*/
+
