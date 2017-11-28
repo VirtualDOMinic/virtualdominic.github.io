@@ -1,3 +1,13 @@
+html{
+    font-size: 10px;
+}
+
+@media (max-width:650px){
+    html{
+        font-size: 7px;
+    }
+}
+
 body{
     /* Created the bg on http://www.heropatterns.com/ - originally went with the hexagon one */
     background-color: #f1eef6;
@@ -8,8 +18,10 @@ body{
     font-family: 'Open Sans', sans-serif;
     text-align:center;
     line-height: 1.4;
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
+
+
 
 #header {
     
@@ -19,7 +31,7 @@ body{
 }
 
 #footer {
-    background-color: #e2d7f4;
+    background-color: #eae3f8;
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
     padding-bottom: 5px;
 }
@@ -30,17 +42,32 @@ body{
 }
 
 h1{
-    font-size:100px;
+    font-size:8rem;
     font-weight:bold;
-    padding:5px 0px;
+    padding:4px 1px;
+    margin: 0px;
 }
 
 h2{
-    font-size:50px;
+    font-size:5rem;
     font-weight:bold;
-    padding:2px 0px;
+    padding:2px 1px;
+    margin:0px;
 }
 
+h3{
+    font-size:3.5rem;
+    font-weight:bold;
+    padding:1px;
+    margin:0px;
+}
+
+h4{
+    font-size:2.5rem;
+    font-weight:bold;
+    padding:1px;
+    margin:0px;
+}
 
 /* tabs 2 BEGIN */
 
@@ -49,6 +76,7 @@ div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    margin:0px;
 }
 
 /* Style the buttons inside the tab */
@@ -60,16 +88,19 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    margin:0px;
 }
 
 /* Change background color of buttons on hover */
 div.tab button:hover {
     background-color: #ddd;
+    margin:0px;
 }
 
 /* Create an active/current tablink class */
 div.tab button.active {
     background-color: #ccc;
+    margin:0px;
 }
 
 /* Style the tab content */
@@ -78,6 +109,7 @@ div.tab button.active {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    margin:0px;
 }
 
 /* Fade-in effects */
