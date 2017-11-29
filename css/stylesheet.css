@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 
+/* Gradually reducing font size as width reduces, using media queries and rem! */
 html{
     font-size: 10px;
 }
@@ -89,7 +90,7 @@ p{
 
 /* tabs 2 BEGIN */
 
-/* Style the tab */
+/* Tab style */
 div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -98,7 +99,7 @@ div.tab {
     margin:0px;
 }
 
-/* Style the buttons inside the tab */
+/* Tab button style */
 div.tab button {
     background-color: inherit;
     float: center;
@@ -111,19 +112,19 @@ div.tab button {
     font-size:1.8rem;
 }
 
-/* Change background color of buttons on hover */
+/* Change tab button colour on hover */
 div.tab button:hover {
     background-color: rgba(221, 221, 221, 0.85);
     margin:0px;
 }
 
-/* Create an active/current tablink class */
+/* Active/current tab button */
 div.tab button.active {
     background-color: rgba(204, 204, 204, 0.85);
     margin:0px;
 }
 
-/* Style the tab content */
+/* Tab content */
 .tabcontent {
     display: none;
     padding: 6px 12px;
@@ -177,21 +178,20 @@ div.tab button.active {
 }
 /* Images END */
 
-/* Stick nav css START*/
-
-.fixed-nav nav{
-    position:fixed;
-    box-shadow: 0 3px rgba(0,0,0,0.2);
-}
-
-nav{
-    background:blue;
-    top:0;
-    width:100%;
-    transition:all 0.5s;
-    position:relative;
-    z-index:1;
-}
-
-/* Stick nav css END*/
-
+/* Add lists? */
+ul {
+    list-style-type: none;
+    list-style-position: right;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    font-size: 1.7rem;
+  }
+  
+  li:last-child {
+    border: none;
+  }
