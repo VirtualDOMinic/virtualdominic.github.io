@@ -45,6 +45,9 @@ body{
 #footer {
     background:rgba(234,227,248,0.5);
     padding-bottom: 2px;
+    position:relative;
+    bottom:0;
+    width:100%;
 }
 
 .wrapper{
@@ -101,7 +104,7 @@ div.tab {
 
 /* Tab button style */
 div.tab button {
-    background-color: inherit;
+    background-color: #ffffff00;
     float: center;
     border: none;
     outline: none;
@@ -114,13 +117,13 @@ div.tab button {
 
 /* Change tab button colour on hover */
 div.tab button:hover {
-    background-color: rgba(221, 221, 221, 0.85);
+    background-color: rgba(221, 221, 221, 0.5);
     margin:0px;
 }
 
 /* Active/current tab button */
 div.tab button.active {
-    background-color: rgba(204, 204, 204, 0.85);
+    background-color: rgba(204, 204, 204, 0.5);
     margin:0px;
 }
 
@@ -178,20 +181,12 @@ div.tab button.active {
 }
 /* Images END */
 
-/* Add lists? */
-ul {
-    list-style-type: none;
-    list-style-position: right;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    font-family: 'Open Sans', sans-serif;
-    border-bottom: 1px solid rgb(230, 230, 230);
-    font-size: 1.7rem;
-  }
-  
-  li:last-child {
-    border: none;
-  }
+/* links (a late addition!) */
+a:link, a:visited{
+    color:rgb(54, 54, 54);
+}
+
+a:hover{
+    color:rgb(112, 112, 112);
+    text-decoration:underline;
+}
