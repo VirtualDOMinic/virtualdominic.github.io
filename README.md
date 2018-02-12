@@ -1,2 +1,4 @@
 # VirtualDOMinic
-My self-hosted site (testing pages &amp; using this as a notebook!)
+My GitHub Pages site for Founders & Coders.
+
+Will be updating for 2018 over the coming months (Feb - Apr)
