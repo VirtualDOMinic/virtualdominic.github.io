@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
+/* Gradually reducing font size as width reduces, using media queries and rem! */
+html{
+    font-size: 10px;
+}
+
+@media (max-width:700px){
+    html{
+        font-size: 9px;
+    }
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 8px;
+    }
+}
+
+@media (max-width:350px){
+    html{
+        font-size: 7px;
+    }
+}
+
+body{
+    /* Created the bg on http://www.heropatterns.com/ - originally went with the hexagon one */
+    background-color: #f1eef6;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.16' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    margin:0px;
+    padding:0px;
+    font-family: 'Open Sans', sans-serif;
+    text-align:center;
+    line-height: 1.4;
+    font-size: 1.4rem;
+}
+
+#header {
+    
+    background:rgba(0,0,0,0.15);
+    padding-bottom: 0px;
+}
+
+#footer {
+    background:rgba(234,227,248,0.5);
+    padding-bottom: 2px;
+    position:relative;
+    bottom:0;
+    width:100%;
+}
+
+.wrapper{
+    margin:0px;
+    width:100%;
+}
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-size:8rem;
+    font-weight:500;
+    padding:4px 1px;
+    margin: 0px;
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    font-size:5rem;
+    font-weight:500;
+    padding:2px 1px;
+    margin:0px;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;
+    font-size:3.5rem;
+    font-weight:500;
+    padding:1px;
+    margin:0px;
+}
+
+h4{
+    font-family: 'Lato', sans-serif;
+    font-size:2.5rem;
+    font-weight:500;
+    padding:1px;
+    margin:0px;
+}
+
+p{
+    font-size:1.7rem;
+}
+
+/* tabs 2 BEGIN */
+
+/* Tab style */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f185;
+    font-size:1.6rem;
+    margin:0px;
+}
+
+/* Tab button style */
+div.tab button {
+    background-color: #ffffff00;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin:0px;
+    font-size:1.8rem;
+}
+
+/* Change tab button colour on hover */
+div.tab button:hover {
+    background-color: rgba(221, 221, 221, 0.5);
+    margin:0px;
+}
+
+/* Active/current tab button */
+div.tab button.active {
+    background-color: rgba(204, 204, 204, 0.5);
+    margin:0px;
+}
+
+/* Tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-bottom: 1px solid #ccc;
+    margin:0 auto;
+    max-width:630px;
+}
+
+/* Fade-in effects */
+.tabcontent {
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s; 
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* tabs 2 END*/
+
+/* Images */
+
+
+.image:hover {
+    -webkit-transform:scale(1.1); 
+            transform:scale(1.1);
+    opacity:1;
+  }
+  .image {
+    -webkit-transition: all 0.4s ease; 
+            transition: all 0.4s ease;
+    max-width: 65px;
+    padding:8px;
+    margin:2px;
+    opacity:0.75;
+  }
+.photo {
+    padding:0px;
+    margin:0px;
+    border:2px rgba(133, 133, 133,0.8) solid;
+    max-width:300px;
+    display:block;
+    width:100%;
+    margin: 0 auto;
+}
+/* Images END */
+
+/* links (a late addition!) */
+a:link, a:visited{
+    color:rgb(54, 54, 54);
+}
+
+a:hover{
+    color:rgb(112, 112, 112);
+    text-decoration:underline;
+}
