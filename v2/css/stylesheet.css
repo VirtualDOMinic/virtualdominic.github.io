@@ -109,6 +109,7 @@ div.tab button {
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     margin:0px;
     font-size:1.8rem;
@@ -135,20 +136,20 @@ div.tab button.active {
     max-width:630px;
 }
 
-/* Fade-in effects */
+/* Fade-in effects - updated with http://pleeease.io/play/  */
 .tabcontent {
     -webkit-animation: fadeEffect 0.5s;
     animation: fadeEffect 0.5s; 
 }
 
 @-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+    to {opacity: 1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
 }
 
 @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+    to {opacity: 1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
 }
 
 /* tabs 2 END*/
@@ -160,6 +161,7 @@ div.tab button.active {
     -webkit-transform:scale(1.1); 
             transform:scale(1.1);
     opacity:1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
   .image {
     -webkit-transition: all 0.4s ease; 
@@ -168,6 +170,7 @@ div.tab button.active {
     padding:8px;
     margin:2px;
     opacity:0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
   }
 .photo {
     padding:0px;
@@ -178,7 +181,7 @@ div.tab button.active {
     width:100%;
     margin: 0 auto;
 }
-/* Images END */
+/* Images END - the above section was updated using http://pleeease.io/play/ - autoprefixer plugin didn't add the ms-filter that pleeease did */
 
 /* links (a late addition!) */
 a:link, a:visited{
