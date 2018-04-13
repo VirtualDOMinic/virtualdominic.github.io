@@ -52,7 +52,7 @@ h1 {
   font-family: "Lato", sans-serif;
   font-size: calc(1rem + 8.5vw);
   font-weight: 500;
-  padding: 4px 1px;
+  padding: 1px;
   margin: 0px;
 }
 
@@ -60,7 +60,7 @@ h2 {
   font-family: "Lato", sans-serif;
   font-size: calc(1rem + 5.5vw);
   font-weight: 500;
-  padding: 2px 1px;
+  padding: 1px;
   margin: 0px;
 }
 
@@ -82,6 +82,7 @@ h4 {
 
 p {
   font-size: calc(1rem + 1vw);
+  margin: 0.3rem;
 }
 
 /* tabs 2 BEGIN */
@@ -89,7 +90,7 @@ p {
 /* Tab style */
 div.tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: none;
   /* background-color: #f1f1f185; */
   background-color: rgba(77,0,255,0.15);
   font-size: 1.6rem;
@@ -128,6 +129,10 @@ div.tab button.active {
   border-bottom: 1px solid #ccc;
   background-color: rgba(39,51,255,0.15);
   margin: 0 auto;
+  /* max-width: 1000px; */
+}
+
+.pre-tabcontent .text-container {
   max-width: 1000px;
 }
 
@@ -135,7 +140,7 @@ div.tab button.active {
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -182,6 +187,7 @@ div.tab button.active {
   margin: 2px;
   opacity: 0.75;
 }
+/* .photo is now redundant? */
 .photo {
   padding: 0px;
   margin: 0px;
@@ -219,6 +225,9 @@ div.tab button.active {
     font-size: 4.5rem;
   }
   div.tab button {
+    font-size: 2.15rem;
+  }
+  p {
     font-size: 2.15rem;
   }
 }

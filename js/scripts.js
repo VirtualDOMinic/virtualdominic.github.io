@@ -34,8 +34,9 @@ function nicerHeading() {
     document.getElementById("not-nice").setAttribute("style","display:none"); 
 
     // update contents of intro to match new photo
-    helloChangeText.innerHTML = "Hi! I'm dom, the one in the middle (with the red bow tie).";
+    helloChangeText.innerHTML = "Hi! I'm Dom, the one in the middle/right (with the red bow tie).";
 
     // remove the option to change image
     imgChangeText.parentNode.removeChild(imgChangeText);
 }
+// "Nicer photo" function end
