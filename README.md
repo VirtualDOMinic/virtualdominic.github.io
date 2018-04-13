@@ -1,6 +1,12 @@
 # VirtualDOMinic
 My GitHub Pages site for Founders & Coders.
 
-Will be updating (v2) for 2018 over the coming months (March - April)
+Updated for the April 2018 application deadline.
 
-## Update currently in progress. Check back after Friday 13th April 2018
+## Quick overview
+
+I've aimed to make the site responsive with a mix of media queries (altering font sizes, images and flex layout) and css calc/vw units.
+
+The tab-style navigation and header image change use vanilla javascript.
+
+I hope you like my site :).
