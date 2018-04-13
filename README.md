@@ -1,4 +1,5 @@
 # VirtualDOMinic
+
 My GitHub Pages site for Founders & Coders.
 
 Updated for the April 2018 application deadline.
@@ -9,4 +10,4 @@ I've aimed to make the site responsive with a mix of media queries (altering fon
 
 The tab-style navigation and "header image change" use vanilla javascript.
 
-I hope you like my site :).
+Thanks for looking :).
