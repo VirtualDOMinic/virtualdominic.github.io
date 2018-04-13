@@ -151,6 +151,17 @@ div.tab button.active {
   animation: fadeEffect 0.5s;
 }
 
+.tabcontent img{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  max-width: 60%;
+/*   justify-content: center; */
+/*   align-items: center; */
+  margin: auto;
+}
+
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -168,6 +179,11 @@ div.tab button.active {
     opacity: 1;
   }
 }
+
+/* .tabcontent img {
+  max-width: 500px;
+  width: 25vw;
+} */
 
 /* tabs 2 END*/
 
@@ -245,4 +261,7 @@ a:hover {
   color: rgb(112, 112, 112);
 }
 
+.tabcontent a {
+  font-weight: bold;
 }
+

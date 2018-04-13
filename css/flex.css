@@ -1,4 +1,4 @@
-.tabcontent .flexContainer {
+.tabcontent .flex-cont {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6,21 +6,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-}
-.tabcontent .flexSpaceAround {
     -ms-flex-pack: distribute;
         justify-content: space-around;
 }
-.tabcontent .subContainer {
-    width: 80%;
-    margin: 0 auto;
-}
-.tabcontent .col {  
+
+.tabcontent .three-col {  
   width: 32%;
-    border: 1px solid #77777750;
-    border-radius: 3px;
-/*     background: white; */
-    padding: 20px;
+    border-right: 1px solid #77777750;
+    padding: 15px;
   -webkit-box-pack:center;
       -ms-flex-pack:center;
           justify-content:center;
@@ -29,23 +22,36 @@
           align-items:center;
 }
 
-.tabcontent img{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 300px;
-  max-width: 90%;
-/*   justify-content: center; */
-/*   align-items: center; */
-  margin: auto;
+  /* Don't show border to the right of last item */
+.tabcontent .three-col:last-child {
+    border-right: 0px;
 }
+
+.tabcontent .two-col {  
+    width: 48%;
+      border-right: 1px solid #77777750;
+      padding: 15px;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+  }
+
+  /* Don't show border to the right of last item */
+  .tabcontent .two-col:last-child {
+    border-right: 0px;
+}
+
+
 
 .tabcontent .col p{
   text-align: center;
 }
 
-@media (max-width: 850px){
-    .tabcontent .flexContainer{
+@media (max-width: 950px){
+    .tabcontent .flex-cont{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -54,7 +60,36 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .tabcontent .col{
+  .tabcontent .two-col{
     width: 90%;
+    border-right: 0px;
+    border-bottom: 1px solid #77777750;
   }
+  .tabcontent .three-col{
+    width: 90%;
+    border-right: 0px;
+    border-bottom: 1px solid #77777750;
+  }
+  .tabcontent .three-col:last-child {
+    border-bottom: 0px;
+}  .tabcontent .two-col:last-child {
+    border-bottom: 0px;
+}
+}
+
+@media (max-width: 1200px){
+    .tabcontent .three{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .tabcontent .three-col{
+        width: 90%;
+        border-right: 0px;
+        border-bottom: 1px solid #77777750;
+      }
 }
