@@ -22403,7 +22403,6 @@ window.onload = function () {
     targetWord = data[1];
     clueData = data[0];
     urlData = data[2];
-    console.log(data);
     startInteraction()
 
     for (const char of targetWord) {
@@ -22472,7 +22471,6 @@ function handleMouseClick(e) {
   console.log(e.target);
 
   if (e.target.matches("[data-delete]")) {
-    console.log("here");
     deleteKey()
     return
   }

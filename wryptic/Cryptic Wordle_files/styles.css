@@ -7,21 +7,22 @@ body {
   background-color: hsl(240, 3%, 7%);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100dvh;
   margin: 0;
   padding: 1em;
-  font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+  /* Dynamic font size can cause overflow if too permissive */
+  font-size: clamp(.5rem, 2.5vmin, 1.2rem);
 }
-.wrap{
+.wrap {
   flex-grow: 1;
 }
 
-.clue{
+.clue {
   display: grid;
   justify-content: center;
   color: white;
   vertical-align: bottom;
-  margin-top: 2em;
+  margin-top: 1em;
   font-size: 1.5em;
 }
 
@@ -233,7 +234,7 @@ button {
   touch-action: manipulation;
 }
 
-.win-keyboard{
+.win-keyboard {
   display: none;
 }
 
@@ -246,7 +247,7 @@ button {
   margin-bottom: 5em;
 }
 
-.win-box-show{
+.win-box-show {
   display: flex;
 }
 
@@ -259,7 +260,7 @@ button {
   margin-bottom: 5em;
 }
 
-.lose-box-show{
+.lose-box-show {
   display: flex;
 }
 
@@ -285,11 +286,11 @@ button {
   box-shadow: 0 0 5px white; /* Add shadow for focus state */
 }
 
-.support{
+.support {
   font-size: small;
 }
 
-.bi{
+.bi {
   margin-top: 100%;
   padding-top: 10%;
   padding-left: 10%;
