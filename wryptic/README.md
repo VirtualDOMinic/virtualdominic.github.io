@@ -14,6 +14,6 @@ Just a light-touch change for my internet friend's Cryptic Wordle project. No bi
 - Today's answer logged in console -- potential accidental spoiler
   - [x] FIXME: Stop console log
 - All Qs & As in the source code, more spoiler potential
-  - [ ] Encode in BASE64? Then can automatically decode immediately, at least meaning they're not instantly readable
+  - [x] Encode in BASE64? Then can automatically decode immediately, at least meaning they're not instantly readable
   - [ ] Store in another file (as well as do a proper API req) to make the main source smaller?
 - [ ] Avoid overflow of "Explained!" button

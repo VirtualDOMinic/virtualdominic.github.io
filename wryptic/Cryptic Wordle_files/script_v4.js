@@ -1,9243 +1,9182 @@
-let targetWordle = [
+// Encoded answers using btoa (same map as line 9179 with reverse function)
+const targetWordle = [
   [
-    "Vouchsafed information about Roman square",
-    "given"
+      "Vouchsafed information about Roman square",
+      "Z2l2ZW4="
   ],
   [
-    "Country parrot seen round city",
-    "kenya"
+      "Country parrot seen round city",
+      "a2VueWE="
   ],
   [
-    "Volunteers express disapproval — that’s not acceptable",
-    "taboo"
+      "Volunteers express disapproval — that’s not acceptable",
+      "dGFib28="
   ],
   [
-    "Sound beginning when hummingbird is rapidly returning",
-    "whirr"
+      "Sound beginning when hummingbird is rapidly returning",
+      "d2hpcnI="
   ],
   [
-    "Dynamic person is good in bank",
-    "tiger"
+      "Dynamic person is good in bank",
+      "dGlnZXI="
   ],
   [
-    "Record single up around number four in chart",
-    "enrol"
+      "Record single up around number four in chart",
+      "ZW5yb2w="
   ],
   [
-    "It may get endless representation",
-    "image"
+      "It may get endless representation",
+      "aW1hZ2U="
   ],
   [
-    "Maxim’s garden feature?",
-    "gnome"
+      "Maxim’s garden feature?",
+      "Z25vbWU="
   ],
   [
-    "Plant serving sauce with meat",
-    "oxlip"
+      "Plant serving sauce with meat",
+      "b3hsaXA="
   ],
   [
-    "Roofer left in middle or row",
-    "tiler"
+      "Roofer left in middle or row",
+      "dGlsZXI="
   ],
   [
-    "Model put up by a fabulous writer",
-    "aesop"
+      "Model put up by a fabulous writer",
+      "YWVzb3A="
   ],
   [
-    "Surprisingly content to ignore every new music group",
-    "octet"
+      "Surprisingly content to ignore every new music group",
+      "b2N0ZXQ="
   ],
   [
-    "Praise out of place in review of books",
-    "audit"
+      "Praise out of place in review of books",
+      "YXVkaXQ="
   ],
   [
-    "Class left out of big house",
-    "caste"
+      "Class left out of big house",
+      "Y2FzdGU="
   ],
   [
-    "Quickly take horse from native American",
-    "apace"
+      "Quickly take horse from native American",
+      "YXBhY2U="
   ],
   [
-    "Singer in first ENO Rigoletto",
-    "tenor"
+      "Singer in first ENO Rigoletto",
+      "dGVub3I="
   ],
   [
-    "Eroded around front of ship — not so good",
-    "worse"
+      "Eroded around front of ship — not so good",
+      "d29yc2U="
   ],
   [
-    "Choirmaster’s beginning to repeat part of Mass",
-    "credo"
+      "Choirmaster’s beginning to repeat part of Mass",
+      "Y3JlZG8="
   ],
   [
-    "The man’s gaining tons in robbery",
-    "heist"
+      "The man’s gaining tons in robbery",
+      "aGVpc3Q="
   ],
   [
-    "Proposer is Shaker’s companion?",
-    "mover"
+      "Proposer is Shaker’s companion?",
+      "bW92ZXI="
   ],
   [
-    "Present of francs given to monarch",
-    "offer"
+      "Present of francs given to monarch",
+      "b2ZmZXI="
   ],
   [
-    "Express dismay as relative has nothing to eat",
-    "groan"
+      "Express dismay as relative has nothing to eat",
+      "Z3JvYW4="
   ],
   [
-    "Med resort's inspiring hotel in suitable place",
-    "niche"
+      "Med resort's inspiring hotel in suitable place",
+      "bmljaGU="
   ],
   [
-    "High official and old men laugh",
-    "pasha"
+      "High official and old men laugh",
+      "cGFzaGE="
   ],
   [
-    "Round and large character",
-    "omega"
+      "Round and large character",
+      "b21lZ2E="
   ],
   [
-    "Left port carrying cargo",
-    "laden"
+      "Left port carrying cargo",
+      "bGFkZW4="
   ],
   [
-    "Old-fashioned fool interrupts gym class",
-    "passe"
+      "Old-fashioned fool interrupts gym class",
+      "cGFzc2U="
   ],
   [
-    "Son to possess smooth face?",
-    "shave"
+      "Son to possess smooth face?",
+      "c2hhdmU="
   ],
   [
-    "Fool accepting second surprising plot development",
-    "twist"
+      "Fool accepting second surprising plot development",
+      "dHdpc3Q="
   ],
   [
-    "Beam of light in contact with synthetic fabric",
-    "rayon"
+      "Beam of light in contact with synthetic fabric",
+      "cmF5b24="
   ],
   [
-    "Someone acting for another in favour of two unknowns",
-    "proxy"
+      "Someone acting for another in favour of two unknowns",
+      "cHJveHk="
   ],
   [
-    "Nothing right in girl? That's hard!",
-    "ivory"
+      "Nothing right in girl? That's hard!",
+      "aXZvcnk="
   ],
   [
-    "Stipulations for academic periods",
-    "terms"
+      "Stipulations for academic periods",
+      "dGVybXM="
   ],
   [
-    "Greek party with wealth not half evident",
-    "doric"
+      "Greek party with wealth not half evident",
+      "ZG9yaWM="
   ],
   [
-    "The Spanish drink in Scottish city",
-    "elgin"
+      "The Spanish drink in Scottish city",
+      "ZWxnaW4="
   ],
   [
-    "Pole’s few lines of poetry",
-    "anode"
+      "Pole’s few lines of poetry",
+      "YW5vZGU="
   ],
   [
-    "Traffic needs to speed up heading for Edinburgh",
-    "trade"
+      "Traffic needs to speed up heading for Edinburgh",
+      "dHJhZGU="
   ],
   [
-    "Cheats and criminals caught out",
-    "rooks"
+      "Cheats and criminals caught out",
+      "cm9va3M="
   ],
   [
-    "Key rings unable to be brought up",
-    "taboo"
+      "Key rings unable to be brought up",
+      "dGFib28="
   ],
   [
-    "Asian dog covering miles",
-    "tamil"
+      "Asian dog covering miles",
+      "dGFtaWw="
   ],
   [
-    "Like this young lady from East African port",
-    "lagos"
+      "Like this young lady from East African port",
+      "bGFnb3M="
   ],
   [
-    "Plaintiff's back behind person who won't be appealing?",
-    "frump"
+      "Plaintiff's back behind person who won't be appealing?",
+      "ZnJ1bXA="
   ],
   [
-    "Give a lift to European and others around",
-    "elate"
+      "Give a lift to European and others around",
+      "ZWxhdGU="
   ],
   [
-    "Writer quite slowly knocking out leading article",
-    "dante"
+      "Writer quite slowly knocking out leading article",
+      "ZGFudGU="
   ],
   [
-    "Funds in Madison County",
-    "bucks"
+      "Funds in Madison County",
+      "YnVja3M="
   ],
   [
-    "Treasure for Paris Commune Le Havre's seized back",
-    "helen"
+      "Treasure for Paris Commune Le Havre's seized back",
+      "aGVsZW4="
   ],
   [
-    "Very fine short name for a hedgehog?",
-    "sonic"
+      "Very fine short name for a hedgehog?",
+      "c29uaWM="
   ],
   [
-    "Fool about to produce gunpowder ingredient",
-    "nitre"
+      "Fool about to produce gunpowder ingredient",
+      "bml0cmU="
   ],
   [
-    "Fear of god?",
-    "panic"
+      "Fear of god?",
+      "cGFuaWM="
   ],
   [
-    "Condemn explosion",
-    "blast"
+      "Condemn explosion",
+      "Ymxhc3Q="
   ],
   [
-    "Queen follows favourite saint",
-    "peter"
+      "Queen follows favourite saint",
+      "cGV0ZXI="
   ],
   [
-    "Family member doesn't start to let loose",
-    "untie"
+      "Family member doesn't start to let loose",
+      "dW50aWU="
   ],
   [
-    "Province in actual centre of Germany",
-    "realm"
+      "Province in actual centre of Germany",
+      "cmVhbG0="
   ],
   [
-    "Extra snake almost died",
-    "added"
+      "Extra snake almost died",
+      "YWRkZWQ="
   ],
   [
-    "Extremely desirable drug store",
-    "depot"
+      "Extremely desirable drug store",
+      "ZGVwb3Q="
   ],
   [
-    "Encouraging word for Charlie's predecessor",
-    "bravo"
+      "Encouraging word for Charlie's predecessor",
+      "YnJhdm8="
   ],
   [
-    "Uncommon sense in a German city",
-    "essen"
+      "Uncommon sense in a German city",
+      "ZXNzZW4="
   ],
   [
-    "Clubs fancy something spicy?",
-    "clove"
+      "Clubs fancy something spicy?",
+      "Y2xvdmU="
   ],
   [
-    "Server missing one essential liquid",
-    "water"
+      "Server missing one essential liquid",
+      "d2F0ZXI="
   ],
   [
-    "New farmer oddly quiet",
-    "fresh"
+      "New farmer oddly quiet",
+      "ZnJlc2g="
   ],
   [
-    "Introduction of competition hurt store",
-    "cache"
+      "Introduction of competition hurt store",
+      "Y2FjaGU="
   ],
   [
-    "Municipal head from Irish county? Right",
-    "mayor"
+      "Municipal head from Irish county? Right",
+      "bWF5b3I="
   ],
   [
-    "Refuse hard slog",
-    "march"
+      "Refuse hard slog",
+      "bWFyY2g="
   ],
   [
-    "Burned remains after emptying secret store",
-    "stash"
+      "Burned remains after emptying secret store",
+      "c3Rhc2g="
   ],
   [
-    "Check a Buddhist at regular intervals",
-    "audit"
+      "Check a Buddhist at regular intervals",
+      "YXVkaXQ="
   ],
   [
-    "Treatment of savant by university",
-    "usage"
+      "Treatment of savant by university",
+      "dXNhZ2U="
   ],
   [
-    "Trifling child",
-    "minor"
+      "Trifling child",
+      "bWlub3I="
   ],
   [
-    "Letters from schoolmaster never enforcing discipline",
-    "stern"
+      "Letters from schoolmaster never enforcing discipline",
+      "c3Rlcm4="
   ],
   [
-    "Tea from northbound service area",
-    "assam"
+      "Tea from northbound service area",
+      "YXNzYW0="
   ],
   [
-    "Organ adds energy for fast movement",
-    "lunge"
+      "Organ adds energy for fast movement",
+      "bHVuZ2U="
   ],
   [
-    "Small bag for art",
-    "skill"
+      "Small bag for art",
+      "c2tpbGw="
   ],
   [
-    "Distinguished Muslim reversed interdiction binding Washington",
-    "nawab"
+      "Distinguished Muslim reversed interdiction binding Washington",
+      "bmF3YWI="
   ],
   [
-    "Hospital thanks bringer of gifts",
-    "santa"
+      "Hospital thanks bringer of gifts",
+      "c2FudGE="
   ],
   [
-    "Native American’s article read in bed",
-    "carib"
+      "Native American’s article read in bed",
+      "Y2FyaWI="
   ],
   [
-    "How to address Hindu dignitary in the morning in Westminster?",
-    "swami"
+      "How to address Hindu dignitary in the morning in Westminster?",
+      "c3dhbWk="
   ],
   [
-    "Live on cape overlooking a palm-tree",
-    "areca"
+      "Live on cape overlooking a palm-tree",
+      "YXJlY2E="
   ],
   [
-    "Poor mark in school given by master",
-    "gamma"
+      "Poor mark in school given by master",
+      "Z2FtbWE="
   ],
   [
-    "Trim short leggings",
-    "tight"
+      "Trim short leggings",
+      "dGlnaHQ="
   ],
   [
-    "Make altogether disgusting",
-    "gross"
+      "Make altogether disgusting",
+      "Z3Jvc3M="
   ],
   [
-    "Sort of lamp I plugged in picked up as benefit",
-    "avail"
+      "Sort of lamp I plugged in picked up as benefit",
+      "YXZhaWw="
   ],
   [
-    "Man I have heard on the radio",
-    "roger"
+      "Man I have heard on the radio",
+      "cm9nZXI="
   ],
   [
-    "Horrible feeling commonly looms over time",
-    "angst"
+      "Horrible feeling commonly looms over time",
+      "YW5nc3Q="
   ],
   [
-    "College window",
-    "oriel"
+      "College window",
+      "b3JpZWw="
   ],
   [
-    "Compound kept by some Westerners",
-    "ester"
+      "Compound kept by some Westerners",
+      "ZXN0ZXI="
   ],
   [
-    "Instrument played by old Marx",
-    "harpo"
+      "Instrument played by old Marx",
+      "aGFycG8="
   ],
   [
-    "Criticise one Conservative creating alarm",
-    "panic"
+      "Criticise one Conservative creating alarm",
+      "cGFuaWM="
   ],
   [
-    "Female bird always returning full of energy",
-    "reeve"
+      "Female bird always returning full of energy",
+      "cmVldmU="
   ],
   [
-    "We hear horses eat in field",
-    "graze"
+      "We hear horses eat in field",
+      "Z3JhemU="
   ],
   [
-    "Like female not looking very well",
-    "ashen"
+      "Like female not looking very well",
+      "YXNoZW4="
   ],
   [
-    "Girl in New York who looks after children?",
-    "nanny"
+      "Girl in New York who looks after children?",
+      "bmFubnk="
   ],
   [
-    "Chop end off dining chair",
-    "carve"
+      "Chop end off dining chair",
+      "Y2FydmU="
   ],
   [
-    "Be left with large and ultimately unlovely stomach",
-    "belly"
+      "Be left with large and ultimately unlovely stomach",
+      "YmVsbHk="
   ],
   [
-    "Athlete runs behind lots of people",
-    "racer"
+      "Athlete runs behind lots of people",
+      "cmFjZXI="
   ],
   [
-    "Severe reduction in A & E",
-    "acute"
+      "Severe reduction in A & E",
+      "YWN1dGU="
   ],
   [
-    "Nobleman upset Liberal? That's funny",
-    "droll"
+      "Nobleman upset Liberal? That's funny",
+      "ZHJvbGw="
   ],
   [
-    "Terribly nice English family member",
-    "niece"
+      "Terribly nice English family member",
+      "bmllY2U="
   ],
   [
-    "Make circular motion with part of foot",
-    "wheel"
+      "Make circular motion with part of foot",
+      "d2hlZWw="
   ],
   [
-    "Join a Parisian welcoming computers etc.",
-    "unite"
+      "Join a Parisian welcoming computers etc.",
+      "dW5pdGU="
   ],
   [
-    "Movable chair some used anywhere",
-    "sedan"
+      "Movable chair some used anywhere",
+      "c2VkYW4="
   ],
   [
-    "Remnant of fire found at the end of three months",
-    "ember"
+      "Remnant of fire found at the end of three months",
+      "ZW1iZXI="
   ],
   [
-    "Proudly claim vessel carries spades",
-    "boast"
+      "Proudly claim vessel carries spades",
+      "Ym9hc3Q="
   ],
   [
-    "Safe place to jump",
-    "vault"
+      "Safe place to jump",
+      "dmF1bHQ="
   ],
   [
-    "Seal swimming at end of beach shows restraint for an animal",
-    "leash"
+      "Seal swimming at end of beach shows restraint for an animal",
+      "bGVhc2g="
   ],
   [
-    "Royal Society’s in misery with lower standards",
-    "worse"
+      "Royal Society’s in misery with lower standards",
+      "d29yc2U="
   ],
   [
-    "Speak at length with old judge",
-    "orate"
+      "Speak at length with old judge",
+      "b3JhdGU="
   ],
   [
-    "Girl trapping judge’s assassin",
-    "ninja"
+      "Girl trapping judge’s assassin",
+      "bmluamE="
   ],
   [
-    "Bulk large on the outside?",
-    "bulge"
+      "Bulk large on the outside?",
+      "YnVsZ2U="
   ],
   [
-    "Certain about Chile’s capital being somewhere in the Andes",
-    "sucre"
+      "Certain about Chile’s capital being somewhere in the Andes",
+      "c3VjcmU="
   ],
   [
-    "Section of poem to preserve — Tasso’s no fool",
-    "canto"
+      "Section of poem to preserve — Tasso’s no fool",
+      "Y2FudG8="
   ],
   [
-    "Socialists pursuing Conservative split",
-    "cleft"
+      "Socialists pursuing Conservative split",
+      "Y2xlZnQ="
   ],
   [
-    "Mike’s stuffing piece of meat to munch with gusto",
-    "chomp"
+      "Mike’s stuffing piece of meat to munch with gusto",
+      "Y2hvbXA="
   ],
   [
-    "Trinity right within you",
-    "three"
+      "Trinity right within you",
+      "dGhyZWU="
   ],
   [
-    "Parrot of old lady put with cashew when she is absent",
-    "macaw"
+      "Parrot of old lady put with cashew when she is absent",
+      "bWFjYXc="
   ],
   [
-    "Delete Times puzzle at the end",
-    "erase"
+      "Delete Times puzzle at the end",
+      "ZXJhc2U="
   ],
   [
-    "Suffer at home with vicious mutt",
-    "incur"
+      "Suffer at home with vicious mutt",
+      "aW5jdXI="
   ],
   [
-    "Come gallantly holding final letter",
-    "omega"
+      "Come gallantly holding final letter",
+      "b21lZ2E="
   ],
   [
-    "Very easy task collecting river junk",
-    "dross"
+      "Very easy task collecting river junk",
+      "ZHJvc3M="
   ],
   [
-    "Greek character hiding in handsome garden",
-    "omega"
+      "Greek character hiding in handsome garden",
+      "b21lZ2E="
   ],
   [
-    "Tuna swimming with small relations",
-    "aunts"
+      "Tuna swimming with small relations",
+      "YXVudHM="
   ],
   [
-    "Knock out jockey regularly — that's strange!",
-    "kooky"
+      "Knock out jockey regularly — that's strange!",
+      "a29va3k="
   ],
   [
-    "Robot starts to design rocket on its doorstep",
-    "droid"
+      "Robot starts to design rocket on its doorstep",
+      "ZHJvaWQ="
   ],
   [
-    "Finally clean a pig enclosure that's unpleasant!",
-    "nasty"
+      "Finally clean a pig enclosure that's unpleasant!",
+      "bmFzdHk="
   ],
   [
-    "Custom from American era",
-    "usage"
+      "Custom from American era",
+      "dXNhZ2U="
   ],
   [
-    "Shellfish that’s uncooked put into empty pan",
-    "prawn"
+      "Shellfish that’s uncooked put into empty pan",
+      "cHJhd24="
   ],
   [
-    "Pursue ornament with engraving",
-    "chase"
+      "Pursue ornament with engraving",
+      "Y2hhc2U="
   ],
   [
-    "Deduce number will have escaped fire",
-    "infer"
+      "Deduce number will have escaped fire",
+      "aW5mZXI="
   ],
   [
-    "Be sad for us in midst of glumness",
-    "mourn"
+      "Be sad for us in midst of glumness",
+      "bW91cm4="
   ],
   [
-    "Arrange to bring in computers for people",
-    "laity"
+      "Arrange to bring in computers for people",
+      "bGFpdHk="
   ],
   [
-    "Suspends comments about post finally",
-    "stays"
+      "Suspends comments about post finally",
+      "c3RheXM="
   ],
   [
-    "King taking a position no longer viable",
-    "kaput"
+      "King taking a position no longer viable",
+      "a2FwdXQ="
   ],
   [
-    "Rather wet smell concealed from some Londoner",
-    "humid"
+      "Rather wet smell concealed from some Londoner",
+      "aHVtaWQ="
   ],
   [
-    "Type of city where one does as the locals?",
-    "roman"
+      "Type of city where one does as the locals?",
+      "cm9tYW4="
   ],
   [
-    "Material in patch in overalls",
-    "chino"
+      "Material in patch in overalls",
+      "Y2hpbm8="
   ],
   [
-    "Despairing poet moving end of verse to earlier position",
-    "bleak"
+      "Despairing poet moving end of verse to earlier position",
+      "YmxlYWs="
   ],
   [
-    "Democrat and friend are amorous together",
-    "dally"
+      "Democrat and friend are amorous together",
+      "ZGFsbHk="
   ],
   [
-    "Reminder about university being complacent",
-    "proud"
+      "Reminder about university being complacent",
+      "cHJvdWQ="
   ],
   [
-    "Design on cent’s piece coined for particular occasion",
-    "nonce"
+      "Design on cent’s piece coined for particular occasion",
+      "bm9uY2U="
   ],
   [
-    "Bones in bag next to top drawer?",
-    "sacra"
+      "Bones in bag next to top drawer?",
+      "c2FjcmE="
   ],
   [
-    "Learner in military group not exactly bright",
-    "unlit"
+      "Learner in military group not exactly bright",
+      "dW5saXQ="
   ],
   [
-    "Eponymous heroine saves island home for birds",
-    "eyrie"
+      "Eponymous heroine saves island home for birds",
+      "ZXlyaWU="
   ],
   [
-    "Poet’s residence by river",
-    "homer"
+      "Poet’s residence by river",
+      "aG9tZXI="
   ],
   [
-    "Ate some shortbread in Edinburgh",
-    "dined"
+      "Ate some shortbread in Edinburgh",
+      "ZGluZWQ="
   ],
   [
-    "Book a woman’s back treatment",
-    "rehab"
+      "Book a woman’s back treatment",
+      "cmVoYWI="
   ],
   [
-    "The same detective returned over the top",
-    "ditto"
+      "The same detective returned over the top",
+      "ZGl0dG8="
   ],
   [
-    "Great Britain's flipping harsh",
-    "acerb"
+      "Great Britain's flipping harsh",
+      "YWNlcmI="
   ],
   [
-    "Vehicle broken by butcher’s van in badly neglected state",
-    "limbo"
+      "Vehicle broken by butcher’s van in badly neglected state",
+      "bGltYm8="
   ],
   [
-    "Spray bound to release nitrogen",
-    "sprig"
+      "Spray bound to release nitrogen",
+      "c3ByaWc="
   ],
   [
-    "Do away with Times editorial’s introduction",
-    "erase"
+      "Do away with Times editorial’s introduction",
+      "ZXJhc2U="
   ],
   [
-    "Places quotes from speakers",
-    "sites"
+      "Places quotes from speakers",
+      "c2l0ZXM="
   ],
   [
-    "Meat embargo broken by firm",
-    "bacon"
+      "Meat embargo broken by firm",
+      "YmFjb24="
   ],
   [
-    "Little bird: spot it?",
-    "pipit"
+      "Little bird: spot it?",
+      "cGlwaXQ="
   ],
   [
-    "Assistant brought up to support mass TV etc",
-    "media"
+      "Assistant brought up to support mass TV etc",
+      "bWVkaWE="
   ],
   [
-    "Some discontent on gallant island nation",
-    "tonga"
+      "Some discontent on gallant island nation",
+      "dG9uZ2E="
   ],
   [
-    "Average is capital!",
-    "paris"
+      "Average is capital!",
+      "cGFyaXM="
   ],
   [
-    "Artist mid-morning",
-    "maybe"
+      "Artist mid-morning",
+      "bWF5YmU="
   ],
   [
-    "Arctic fleet",
-    "nippy"
+      "Arctic fleet",
+      "bmlwcHk="
   ],
   [
-    "Pan for cook",
-    "roast"
+      "Pan for cook",
+      "cm9hc3Q="
   ],
   [
-    "Former article and manuscript used for tests",
-    "exams"
+      "Former article and manuscript used for tests",
+      "ZXhhbXM="
   ],
   [
-    "Teacher to express disapproval otherwise",
-    "tutor"
+      "Teacher to express disapproval otherwise",
+      "dHV0b3I="
   ],
   [
-    "Bring down one that goes “moo”",
-    "lower"
+      "Bring down one that goes “moo”",
+      "bG93ZXI="
   ],
   [
-    "Female occupying barn or mansion",
-    "norma"
+      "Female occupying barn or mansion",
+      "bm9ybWE="
   ],
   [
-    "Do well reading out two letters",
-    "excel"
+      "Do well reading out two letters",
+      "ZXhjZWw="
   ],
   [
-    "Open a series of deliveries arriving on time",
-    "overt"
+      "Open a series of deliveries arriving on time",
+      "b3ZlcnQ="
   ],
   [
-    "Fruit drink containing pip's husk",
-    "apple"
+      "Fruit drink containing pip's husk",
+      "YXBwbGU="
   ],
   [
-    "Worry about Democratic campaign group?",
-    "cadre"
+      "Worry about Democratic campaign group?",
+      "Y2FkcmU="
   ],
   [
-    "Old stone prison",
-    "oflag"
+      "Old stone prison",
+      "b2ZsYWc="
   ],
   [
-    "Head of chemistry has a way with English class",
-    "caste"
+      "Head of chemistry has a way with English class",
+      "Y2FzdGU="
   ],
   [
-    "Police inspector seizing stolen garment",
-    "dhoti"
+      "Police inspector seizing stolen garment",
+      "ZGhvdGk="
   ],
   [
-    "US president put on gangster's uniform",
-    "alike"
+      "US president put on gangster's uniform",
+      "YWxpa2U="
   ],
   [
-    "Textual marks written up in Vile Bodies",
-    "obeli"
+      "Textual marks written up in Vile Bodies",
+      "b2JlbGk="
   ],
   [
-    "Sauce bottle?",
-    "nerve"
+      "Sauce bottle?",
+      "bmVydmU="
   ],
   [
-    "Law maker's final words not good",
-    "solon"
+      "Law maker's final words not good",
+      "c29sb24="
   ],
   [
-    "Puzzle concerning naval vessel turning over",
-    "rebus"
+      "Puzzle concerning naval vessel turning over",
+      "cmVidXM="
   ],
   [
-    "Saga inevitably reduced in length once more",
-    "again"
+      "Saga inevitably reduced in length once more",
+      "YWdhaW4="
   ],
   [
-    "Time perhaps upsets heartless old priest",
-    "magus"
+      "Time perhaps upsets heartless old priest",
+      "bWFndXM="
   ],
   [
-    "Idler putting away small drink",
-    "water"
+      "Idler putting away small drink",
+      "d2F0ZXI="
   ],
   [
-    "Symbolic artefact filled scripture the wrong way",
-    "totem"
+      "Symbolic artefact filled scripture the wrong way",
+      "dG90ZW0="
   ],
   [
-    "Bones served up in mean lunch",
-    "ulnae"
+      "Bones served up in mean lunch",
+      "dWxuYWU="
   ],
   [
-    "Some wine put down",
-    "plonk"
+      "Some wine put down",
+      "cGxvbms="
   ],
   [
-    "Pro restricts French and creates a stink",
-    "fetor"
+      "Pro restricts French and creates a stink",
+      "ZmV0b3I="
   ],
   [
-    "Programme run out on this is awaiting confirmation",
-    "appro"
+      "Programme run out on this is awaiting confirmation",
+      "YXBwcm8="
   ],
   [
-    "Enjoy view in common area gardened regularly",
-    "agree"
+      "Enjoy view in common area gardened regularly",
+      "YWdyZWU="
   ],
   [
-    "Bird of river and lake",
-    "ousel"
+      "Bird of river and lake",
+      "b3VzZWw="
   ],
   [
-    "Extract of gum: a mild taste",
-    "umami"
+      "Extract of gum: a mild taste",
+      "dW1hbWk="
   ],
   [
-    "Girl absolutely losing weight",
-    "holly"
+      "Girl absolutely losing weight",
+      "aG9sbHk="
   ],
   [
-    "South American native in Lima with Buddhist monk",
-    "llama"
+      "South American native in Lima with Buddhist monk",
+      "bGxhbWE="
   ],
   [
-    "Deepest point in Mahanadi river",
-    "nadir"
+      "Deepest point in Mahanadi river",
+      "bmFkaXI="
   ],
   [
-    "Romeo among undesirables in riotous struggle",
-    "scrum"
+      "Romeo among undesirables in riotous struggle",
+      "c2NydW0="
   ],
   [
-    "Sitcom’s beginning with Nora Batty giving offence",
-    "arson"
+      "Sitcom’s beginning with Nora Batty giving offence",
+      "YXJzb24="
   ],
   [
-    "Pound making comeback cheers nation",
-    "malta"
+      "Pound making comeback cheers nation",
+      "bWFsdGE="
   ],
   [
-    "Rows of headless corpses",
-    "tiffs"
+      "Rows of headless corpses",
+      "dGlmZnM="
   ],
   [
-    "Turmoil when duke meets a divine being in India",
-    "drama"
+      "Turmoil when duke meets a divine being in India",
+      "ZHJhbWE="
   ],
   [
-    "Deduce number will escape fire",
-    "infer"
+      "Deduce number will escape fire",
+      "aW5mZXI="
   ],
   [
-    "Topic most of you and me will deliver",
-    "theme"
+      "Topic most of you and me will deliver",
+      "dGhlbWU="
   ],
   [
-    "Excessive sign of hesitation in river creature",
-    "otter"
+      "Excessive sign of hesitation in river creature",
+      "b3R0ZXI="
   ],
   [
-    "After the first minute becomes restless",
-    "itchy"
+      "After the first minute becomes restless",
+      "aXRjaHk="
   ],
   [
-    "Cross river close to Romsey",
-    "testy"
+      "Cross river close to Romsey",
+      "dGVzdHk="
   ],
   [
-    "What artist does is attractive",
-    "draws"
+      "What artist does is attractive",
+      "ZHJhd3M="
   ],
   [
-    "Pants son's wearing split more than once",
-    "gasps"
+      "Pants son's wearing split more than once",
+      "Z2FzcHM="
   ],
   [
-    "Lakeland setting for youth leader",
-    "akela"
+      "Lakeland setting for youth leader",
+      "YWtlbGE="
   ],
   [
-    "Soft fabric supplier from America completely revolutionised",
-    "llama"
+      "Soft fabric supplier from America completely revolutionised",
+      "bGxhbWE="
   ],
   [
-    "Loner's curious since travelling north",
-    "saddo"
+      "Loner's curious since travelling north",
+      "c2FkZG8="
   ],
   [
-    "Approximately finishing what's said to be tea chest",
-    "torso"
+      "Approximately finishing what's said to be tea chest",
+      "dG9yc28="
   ],
   [
-    "Minute person on horse maybe a philosopher?",
-    "muser"
+      "Minute person on horse maybe a philosopher?",
+      "bXVzZXI="
   ],
   [
-    "Pair with little time for cathedral",
-    "duomo"
+      "Pair with little time for cathedral",
+      "ZHVvbW8="
   ],
   [
-    "What repeat offender may do for secreted substance",
-    "resin"
+      "What repeat offender may do for secreted substance",
+      "cmVzaW4="
   ],
   [
-    "Keen on captivating start to Rameau prelude",
-    "intro"
+      "Keen on captivating start to Rameau prelude",
+      "aW50cm8="
   ],
   [
-    "Spikes crack large and small walls",
-    "laces"
+      "Spikes crack large and small walls",
+      "bGFjZXM="
   ],
   [
-    "Taxmen once with a measure of intelligence upset Arab?",
-    "iraqi"
+      "Taxmen once with a measure of intelligence upset Arab?",
+      "aXJhcWk="
   ],
   [
-    "Split open part of head",
-    "clove"
+      "Split open part of head",
+      "Y2xvdmU="
   ],
   [
-    "Is mother initially proud of us?",
-    "pours"
+      "Is mother initially proud of us?",
+      "cG91cnM="
   ],
   [
-    "Usual practice of a bishop wearing belt",
-    "habit"
+      "Usual practice of a bishop wearing belt",
+      "aGFiaXQ="
   ],
   [
-    "Gather popular judge retired",
-    "infer"
+      "Gather popular judge retired",
+      "aW5mZXI="
   ],
   [
-    "A flower sprang up",
-    "arose"
+      "A flower sprang up",
+      "YXJvc2U="
   ],
   [
-    "Foreign character shortly put name to parent",
-    "sigma"
+      "Foreign character shortly put name to parent",
+      "c2lnbWE="
   ],
   [
-    "Timid person I click with?",
-    "mouse"
+      "Timid person I click with?",
+      "bW91c2U="
   ],
   [
-    "Transport losing time in monsoon",
-    "rains"
+      "Transport losing time in monsoon",
+      "cmFpbnM="
   ],
   [
-    "Sound investment may be shown in court",
-    "guilt"
+      "Sound investment may be shown in court",
+      "Z3VpbHQ="
   ],
   [
-    "Be suffering? Take on the Bible for help",
-    "avail"
+      "Be suffering? Take on the Bible for help",
+      "YXZhaWw="
   ],
   [
-    "Drama not unknown to philosopher",
-    "plato"
+      "Drama not unknown to philosopher",
+      "cGxhdG8="
   ],
   [
-    "Fit in curve round lake",
-    "blend"
+      "Fit in curve round lake",
+      "YmxlbmQ="
   ],
   [
-    "One impaled on terrible horn — its?",
-    "rhino"
+      "One impaled on terrible horn — its?",
+      "cmhpbm8="
   ],
   [
-    "Quickly grabbing uniform for opera",
-    "faust"
+      "Quickly grabbing uniform for opera",
+      "ZmF1c3Q="
   ],
   [
-    "Avoid Santa Fe Trail city",
-    "dodge"
+      "Avoid Santa Fe Trail city",
+      "ZG9kZ2U="
   ],
   [
-    "Seaweed from liquid realm",
-    "maerl"
+      "Seaweed from liquid realm",
+      "bWFlcmw="
   ],
   [
-    "Drizzle in southern commune overlooking river",
-    "smirr"
+      "Drizzle in southern commune overlooking river",
+      "c21pcnI="
   ],
   [
-    "Rod applied to kiddie’s bottom brings hatred",
-    "spite"
+      "Rod applied to kiddie’s bottom brings hatred",
+      "c3BpdGU="
   ],
   [
-    "Item of archaeological interest curator finally housed in building",
-    "sherd"
+      "Item of archaeological interest curator finally housed in building",
+      "c2hlcmQ="
   ],
   [
-    "Secure area of the sea",
-    "sound"
+      "Secure area of the sea",
+      "c291bmQ="
   ],
   [
-    "High-ranking Asian woman say taken in by tramp",
-    "begum"
+      "High-ranking Asian woman say taken in by tramp",
+      "YmVndW0="
   ],
   [
-    "Hard man with practical skills",
-    "handy"
+      "Hard man with practical skills",
+      "aGFuZHk="
   ],
   [
-    "Single chap from east embracing old woman",
-    "naomi"
+      "Single chap from east embracing old woman",
+      "bmFvbWk="
   ],
   [
-    "Book house overlooking ocean",
-    "hosea"
+      "Book house overlooking ocean",
+      "aG9zZWE="
   ],
   [
-    "Point outside of India that has some pyramids",
-    "nubia"
+      "Point outside of India that has some pyramids",
+      "bnViaWE="
   ],
   [
-    "Sailor trapped by traitor in an Atlantic port",
-    "rabat"
+      "Sailor trapped by traitor in an Atlantic port",
+      "cmFiYXQ="
   ],
   [
-    "Rhymester engaged in Japanese poetry? Just the reverse",
-    "renga"
+      "Rhymester engaged in Japanese poetry? Just the reverse",
+      "cmVuZ2E="
   ],
   [
-    "Fruit couples mentioned in conversation",
-    "pears"
+      "Fruit couples mentioned in conversation",
+      "cGVhcnM="
   ],
   [
-    "Greek for ‘Room at the Top’?",
-    "attic"
+      "Greek for ‘Room at the Top’?",
+      "YXR0aWM="
   ],
   [
-    "Friend promoting a group of associated stores",
-    "chain"
+      "Friend promoting a group of associated stores",
+      "Y2hhaW4="
   ],
   [
-    "More sordid compound north of river",
-    "baser"
+      "More sordid compound north of river",
+      "YmFzZXI="
   ],
   [
-    "Assume that one judge must visit French city",
-    "dijon"
+      "Assume that one judge must visit French city",
+      "ZGlqb24="
   ],
   [
-    "What was taken from Samson and Lot",
-    "sight"
+      "What was taken from Samson and Lot",
+      "c2lnaHQ="
   ],
   [
-    "Covered on the inside with wrinkles",
-    "lined"
+      "Covered on the inside with wrinkles",
+      "bGluZWQ="
   ],
   [
-    "Pan perhaps necessary for recipe — teriyaki?",
-    "peter"
+      "Pan perhaps necessary for recipe — teriyaki?",
+      "cGV0ZXI="
   ],
   [
-    "Space traveller wasn’t the only one to get in contact?",
-    "comet"
+      "Space traveller wasn’t the only one to get in contact?",
+      "Y29tZXQ="
   ],
   [
-    "Turn out fine in the end: I’m out of Casualty",
-    "evict"
+      "Turn out fine in the end: I’m out of Casualty",
+      "ZXZpY3Q="
   ],
   [
-    "The writer contributing to series that could be tripe",
-    "rumen"
+      "The writer contributing to series that could be tripe",
+      "cnVtZW4="
   ],
   [
-    "Some particular premises unfinished",
-    "these"
+      "Some particular premises unfinished",
+      "dGhlc2U="
   ],
   [
-    "Entertainment round piano with English artist",
-    "opera"
+      "Entertainment round piano with English artist",
+      "b3BlcmE="
   ],
   [
-    "Irritable man admits drinking nothing alcoholic",
-    "ratty"
+      "Irritable man admits drinking nothing alcoholic",
+      "cmF0dHk="
   ],
   [
-    "Angelic group you and I will appear in",
-    "sweet"
+      "Angelic group you and I will appear in",
+      "c3dlZXQ="
   ],
   [
-    "Himalayan creature literally covering two fifths of Nepal?",
-    "panda"
+      "Himalayan creature literally covering two fifths of Nepal?",
+      "cGFuZGE="
   ],
   [
-    "State of Florida holidays?",
-    "idaho"
+      "State of Florida holidays?",
+      "aWRhaG8="
   ],
   [
-    "Product that’s widely drunk without whisky",
-    "yield"
+      "Product that’s widely drunk without whisky",
+      "eWllbGQ="
   ],
   [
-    "Supermarket division is cutting beer",
-    "aisle"
+      "Supermarket division is cutting beer",
+      "YWlzbGU="
   ],
   [
-    "Copper retiring is comfortably off",
-    "cushy"
+      "Copper retiring is comfortably off",
+      "Y3VzaHk="
   ],
   [
-    "Buzz coming with a northern person",
-    "human"
+      "Buzz coming with a northern person",
+      "aHVtYW4="
   ],
   [
-    "Party-goer’s setting aside time to have a shot",
-    "guess"
+      "Party-goer’s setting aside time to have a shot",
+      "Z3Vlc3M="
   ],
   [
-    "Complaint: it’s endlessly chilly and frosty",
-    "colic"
+      "Complaint: it’s endlessly chilly and frosty",
+      "Y29saWM="
   ],
   [
-    "Sound of fierce creature in northern habitat",
-    "taiga"
+      "Sound of fierce creature in northern habitat",
+      "dGFpZ2E="
   ],
   [
-    "Difficult bottling oxygen for store",
-    "hoard"
+      "Difficult bottling oxygen for store",
+      "aG9hcmQ="
   ],
   [
-    "Weapon taking top off simple cart",
-    "arrow"
+      "Weapon taking top off simple cart",
+      "YXJyb3c="
   ],
   [
-    "Children that might be taken in disagreement?",
-    "issue"
+      "Children that might be taken in disagreement?",
+      "aXNzdWU="
   ],
   [
-    "Tried to get boss across river",
-    "heard"
+      "Tried to get boss across river",
+      "aGVhcmQ="
   ],
   [
-    "Hollow black blocks arrive",
-    "combe"
+      "Hollow black blocks arrive",
+      "Y29tYmU="
   ],
   [
-    "Become ready to eat beef — no good before noon",
-    "ripen"
+      "Become ready to eat beef — no good before noon",
+      "cmlwZW4="
   ],
   [
-    "Scorer required in Johannesburg match?",
-    "satie"
+      "Scorer required in Johannesburg match?",
+      "c2F0aWU="
   ],
   [
-    "No secret hole on green",
-    "overt"
+      "No secret hole on green",
+      "b3ZlcnQ="
   ],
   [
-    "People’s food likes oddly exposed",
-    "folks"
+      "People’s food likes oddly exposed",
+      "Zm9sa3M="
   ],
   [
-    "Card player’s score put out?",
-    "pique"
+      "Card player’s score put out?",
+      "cGlxdWU="
   ],
   [
-    "Marry supporter of international organisation?",
-    "unite"
+      "Marry supporter of international organisation?",
+      "dW5pdGU="
   ],
   [
-    "Current age of US lawman given in play",
-    "today"
+      "Current age of US lawman given in play",
+      "dG9kYXk="
   ],
   [
-    "Did spring article in Paris: fitting!",
-    "leapt"
+      "Did spring article in Paris: fitting!",
+      "bGVhcHQ="
   ],
   [
-    "Scavenger has briefly to contain hunger",
-    "hyena"
+      "Scavenger has briefly to contain hunger",
+      "aHllbmE="
   ],
   [
-    "Branch to yield to auditors",
-    "bough"
+      "Branch to yield to auditors",
+      "Ym91Z2g="
   ],
   [
-    "Celebrated day school being over",
-    "noted"
+      "Celebrated day school being over",
+      "bm90ZWQ="
   ],
   [
-    "Lover runs rings around yours truly",
-    "romeo"
+      "Lover runs rings around yours truly",
+      "cm9tZW8="
   ],
   [
-    "Very sorry about drinks",
-    "sodas"
+      "Very sorry about drinks",
+      "c29kYXM="
   ],
   [
-    "Almost everyone I see gets a greeting",
-    "aloha"
+      "Almost everyone I see gets a greeting",
+      "YWxvaGE="
   ],
   [
-    "I wander back to see Antipodean people",
-    "maori"
+      "I wander back to see Antipodean people",
+      "bWFvcmk="
   ],
   [
-    "Job centre welcoming husband",
-    "chore"
+      "Job centre welcoming husband",
+      "Y2hvcmU="
   ],
   [
-    "Top money once",
-    "crown"
+      "Top money once",
+      "Y3Jvd24="
   ],
   [
-    "Dishonest part of family in Genoa",
-    "lying"
+      "Dishonest part of family in Genoa",
+      "bHlpbmc="
   ],
   [
-    "What offers support for female opera star’s first half?",
-    "brava"
+      "What offers support for female opera star’s first half?",
+      "YnJhdmE="
   ],
   [
-    "Go around clubs banned from turning tricks",
-    "skirt"
+      "Go around clubs banned from turning tricks",
+      "c2tpcnQ="
   ],
   [
-    "Evidently vote against party",
-    "beano"
+      "Evidently vote against party",
+      "YmVhbm8="
   ],
   [
-    "Shut up about regularly full prison system",
-    "gulag"
+      "Shut up about regularly full prison system",
+      "Z3VsYWc="
   ],
   [
-    "Genderless term the Irish must abandon to some extent",
-    "their"
+      "Genderless term the Irish must abandon to some extent",
+      "dGhlaXI="
   ],
   [
-    "Aim to capture river creature from Asia",
-    "goral"
+      "Aim to capture river creature from Asia",
+      "Z29yYWw="
   ],
   [
-    "One very important obstacle for skiers",
-    "mogul"
+      "One very important obstacle for skiers",
+      "bW9ndWw="
   ],
   [
-    "Figure out number leaving hell",
-    "infer"
+      "Figure out number leaving hell",
+      "aW5mZXI="
   ],
   [
-    "Company invested in mine that’s a feature of Honiton?",
-    "picot"
+      "Company invested in mine that’s a feature of Honiton?",
+      "cGljb3Q="
   ],
   [
-    "One who boxes up gutted porgy fish",
-    "guppy"
+      "One who boxes up gutted porgy fish",
+      "Z3VwcHk="
   ],
   [
-    "Big growth in naval architecture",
-    "larch"
+      "Big growth in naval architecture",
+      "bGFyY2g="
   ],
   [
-    "Raucous number’s the finale of “Company”",
-    "noisy"
+      "Raucous number’s the finale of “Company”",
+      "bm9pc3k="
   ],
   [
-    "Turned pink and then turned into something darker",
-    "rosed"
+      "Turned pink and then turned into something darker",
+      "cm9zZWQ="
   ],
   [
-    "Brisk constable arresting gentleman from the south",
-    "crisp"
+      "Brisk constable arresting gentleman from the south",
+      "Y3Jpc3A="
   ],
   [
-    "Edited Times articles",
-    "items"
+      "Edited Times articles",
+      "aXRlbXM="
   ],
   [
-    "Leader of prayers has obligations for devout",
-    "pious"
+      "Leader of prayers has obligations for devout",
+      "cGlvdXM="
   ],
   [
-    "Surround female and male sheep with pen after shearing",
-    "frame"
+      "Surround female and male sheep with pen after shearing",
+      "ZnJhbWU="
   ],
   [
-    "Indian animal that’s awful crossing a lake",
-    "baloo"
+      "Indian animal that’s awful crossing a lake",
+      "YmFsb28="
   ],
   [
-    "A short time entertaining one good chum abroad",
-    "amigo"
+      "A short time entertaining one good chum abroad",
+      "YW1pZ28="
   ],
   [
-    "Sends back a wee amount",
-    "stime"
+      "Sends back a wee amount",
+      "c3RpbWU="
   ],
   [
-    "Playful lord in court in charge",
-    "ludic"
+      "Playful lord in court in charge",
+      "bHVkaWM="
   ],
   [
-    "Maiden rushed up to meet the first person in embrace",
-    "inarm"
+      "Maiden rushed up to meet the first person in embrace",
+      "aW5hcm0="
   ],
   [
-    "Helps when chance has to be seized",
-    "abets"
+      "Helps when chance has to be seized",
+      "YWJldHM="
   ],
   [
-    "Good material that adds a certain gloss",
-    "glace"
+      "Good material that adds a certain gloss",
+      "Z2xhY2U="
   ],
   [
-    "African with long hair hugging duke",
-    "mande"
+      "African with long hair hugging duke",
+      "bWFuZGU="
   ],
   [
-    "Vehicle coming from Ayr rolled over",
-    "lorry"
+      "Vehicle coming from Ayr rolled over",
+      "bG9ycnk="
   ],
   [
-    "Large cola ordered in neighbourhood pub",
-    "local"
+      "Large cola ordered in neighbourhood pub",
+      "bG9jYWw="
   ],
   [
-    "Fruit pop followed by whisky",
-    "papaw"
+      "Fruit pop followed by whisky",
+      "cGFwYXc="
   ],
   [
-    "Reportedly prison's acceptable for disgraced leader",
-    "nixon"
+      "Reportedly prison's acceptable for disgraced leader",
+      "bml4b24="
   ],
   [
-    "Majestic new composition of Elgar",
-    "regal"
+      "Majestic new composition of Elgar",
+      "cmVnYWw="
   ],
   [
-    "Planet mostly seen over Earth's initial location",
-    "venue"
+      "Planet mostly seen over Earth's initial location",
+      "dmVudWU="
   ],
   [
-    "Love the sound of noses",
-    "prize"
+      "Love the sound of noses",
+      "cHJpemU="
   ],
   [
-    "Traitor not quite right to frame lawyer",
-    "judas"
+      "Traitor not quite right to frame lawyer",
+      "anVkYXM="
   ],
   [
-    "Measure of brightness that would be reversed by degrees",
-    "stilb"
+      "Measure of brightness that would be reversed by degrees",
+      "c3RpbGI="
   ],
   [
-    "Even less friendly company once meeting Queen",
-    "icier"
+      "Even less friendly company once meeting Queen",
+      "aWNpZXI="
   ],
   [
-    "Expenses of companies on the way up",
-    "costs"
+      "Expenses of companies on the way up",
+      "Y29zdHM="
   ],
   [
-    "Profess intention to oust idiot from class",
-    "claim"
+      "Profess intention to oust idiot from class",
+      "Y2xhaW0="
   ],
   [
-    "There's nothing about sort of current needed for nuclear research device",
-    "linac"
+      "There's nothing about sort of current needed for nuclear research device",
+      "bGluYWM="
   ],
   [
-    "Nobody wrote one in the nineteenth century",
-    "diary"
+      "Nobody wrote one in the nineteenth century",
+      "ZGlhcnk="
   ],
   [
-    "Story of competition with someone really good knocked out",
-    "conte"
+      "Story of competition with someone really good knocked out",
+      "Y29udGU="
   ],
   [
-    "Theatre men going over imitation",
-    "repro"
+      "Theatre men going over imitation",
+      "cmVwcm8="
   ],
   [
-    "Back’s ripped from dress in theatre scrap",
-    "scrub"
+      "Back’s ripped from dress in theatre scrap",
+      "c2NydWI="
   ],
   [
-    "How a soldier operates device",
-    "gismo"
+      "How a soldier operates device",
+      "Z2lzbW8="
   ],
   [
-    "Cossack's ready to regret pinning leaders of Light Brigade back",
-    "ruble"
+      "Cossack's ready to regret pinning leaders of Light Brigade back",
+      "cnVibGU="
   ],
   [
-    "Line cut from standard opera",
-    "norma"
+      "Line cut from standard opera",
+      "bm9ybWE="
   ],
   [
-    "Rose’s part in Sophocles’s Antigone finally overcoming friend",
-    "sepal"
+      "Rose’s part in Sophocles’s Antigone finally overcoming friend",
+      "c2VwYWw="
   ],
   [
-    "Emperor's hearing complaint tavern ignored",
-    "titus"
+      "Emperor's hearing complaint tavern ignored",
+      "dGl0dXM="
   ],
   [
-    "Retired musical group's section of joint",
-    "tenon"
+      "Retired musical group's section of joint",
+      "dGVub24="
   ],
   [
-    "One sculpting Mother and Child",
-    "mason"
+      "One sculpting Mother and Child",
+      "bWFzb24="
   ],
   [
-    "Row about bringing in first of frigates for overhaul",
-    "refit"
+      "Row about bringing in first of frigates for overhaul",
+      "cmVmaXQ="
   ],
   [
-    "Plant with insect gathering prime bit of nectar repeatedly",
-    "benne"
+      "Plant with insect gathering prime bit of nectar repeatedly",
+      "YmVubmU="
   ],
   [
-    "Sheep on street close by in Scotland",
-    "ewest"
+      "Sheep on street close by in Scotland",
+      "ZXdlc3Q="
   ],
   [
-    "A zone with oxygen and carbon after one without life",
-    "azoic"
+      "A zone with oxygen and carbon after one without life",
+      "YXpvaWM="
   ],
   [
-    "Nothing the same in spring?",
-    "oasis"
+      "Nothing the same in spring?",
+      "b2FzaXM="
   ],
   [
-    "What's visible if bottom of skirt’s lifted?",
-    "thigh"
+      "What's visible if bottom of skirt’s lifted?",
+      "dGhpZ2g="
   ],
   [
-    "Camp belonging to prisoner?",
-    "oflag"
+      "Camp belonging to prisoner?",
+      "b2ZsYWc="
   ],
   [
-    "Contract for sporting prize",
-    "purse"
+      "Contract for sporting prize",
+      "cHVyc2U="
   ],
   [
-    "Physician became dictator's prisoner",
-    "medic"
+      "Physician became dictator's prisoner",
+      "bWVkaWM="
   ],
   [
-    "Chief heading off westward quaffing island's wine",
-    "rioja"
+      "Chief heading off westward quaffing island's wine",
+      "cmlvamE="
   ],
   [
-    "Find fault with batsman's innings",
-    "knock"
+      "Find fault with batsman's innings",
+      "a25vY2s="
   ],
   [
-    "Attractive female player's first to go in eliminator",
-    "cutie"
+      "Attractive female player's first to go in eliminator",
+      "Y3V0aWU="
   ],
   [
-    "Son in confinement lashed out",
-    "spent"
+      "Son in confinement lashed out",
+      "c3BlbnQ="
   ],
   [
-    "Fine provincial force once set up court abroad",
-    "curia"
+      "Fine provincial force once set up court abroad",
+      "Y3VyaWE="
   ],
   [
-    "Pinch mistress's bottom in gallery",
-    "taste"
+      "Pinch mistress's bottom in gallery",
+      "dGFzdGU="
   ],
   [
-    "Ruined city's favourite artist",
-    "petra"
+      "Ruined city's favourite artist",
+      "cGV0cmE="
   ],
   [
-    "Writer rejected one indoor game for another",
-    "bingo"
+      "Writer rejected one indoor game for another",
+      "YmluZ28="
   ],
   [
-    "Juvenile journalist particularly cut up",
-    "cubed"
+      "Juvenile journalist particularly cut up",
+      "Y3ViZWQ="
   ],
   [
-    "Landmark seen in Australian port after docking",
-    "cairn"
+      "Landmark seen in Australian port after docking",
+      "Y2Fpcm4="
   ],
   [
-    "River taking sulphur to Sumerian city-state",
-    "stour"
+      "River taking sulphur to Sumerian city-state",
+      "c3RvdXI="
   ],
   [
-    "Hospital thanks gift provider",
-    "santa"
+      "Hospital thanks gift provider",
+      "c2FudGE="
   ],
   [
-    "Initially athlete looks lively on arrival in Scottish town",
-    "alloa"
+      "Initially athlete looks lively on arrival in Scottish town",
+      "YWxsb2E="
   ],
   [
-    "Faculty notice about new Society",
-    "sense"
+      "Faculty notice about new Society",
+      "c2Vuc2U="
   ],
   [
-    "Long periods entertaining Northern girl",
-    "agnes"
+      "Long periods entertaining Northern girl",
+      "YWduZXM="
   ],
   [
-    "Error about Washington lover",
-    "swain"
+      "Error about Washington lover",
+      "c3dhaW4="
   ],
   [
-    "Small area one's leased",
-    "islet"
+      "Small area one's leased",
+      "aXNsZXQ="
   ],
   [
-    "Move fast chasing second allocation",
-    "share"
+      "Move fast chasing second allocation",
+      "c2hhcmU="
   ],
   [
-    "Girl in church originally learnt Old English",
-    "chloe"
+      "Girl in church originally learnt Old English",
+      "Y2hsb2U="
   ],
   [
-    "Dizzy and frivolous",
-    "giddy"
+      "Dizzy and frivolous",
+      "Z2lkZHk="
   ],
   [
-    "Radio etc aimed to broadcast",
-    "media"
+      "Radio etc aimed to broadcast",
+      "bWVkaWE="
   ],
   [
-    "Inexpensive hat that man’s wearing",
-    "cheap"
+      "Inexpensive hat that man’s wearing",
+      "Y2hlYXA="
   ],
   [
-    "Conservative opponents of right in split",
-    "cleft"
+      "Conservative opponents of right in split",
+      "Y2xlZnQ="
   ],
   [
-    "Some tales La Fontaine rejected could be untrue",
-    "false"
+      "Some tales La Fontaine rejected could be untrue",
+      "ZmFsc2U="
   ],
   [
-    "Motorist drops velocity with less rain?",
-    "drier"
+      "Motorist drops velocity with less rain?",
+      "ZHJpZXI="
   ],
   [
-    "Step right up for review",
-    "recap"
+      "Step right up for review",
+      "cmVjYXA="
   ],
   [
-    "Husky sounded to be a working animal",
-    "horse"
+      "Husky sounded to be a working animal",
+      "aG9yc2U="
   ],
   [
-    "The same artist's not in Radio Times cutting",
-    "ditto"
+      "The same artist's not in Radio Times cutting",
+      "ZGl0dG8="
   ],
   [
-    "Horse keeps dry round the bend",
-    "batty"
+      "Horse keeps dry round the bend",
+      "YmF0dHk="
   ],
   [
-    "Hint of disgrace? It's not said commonly?",
-    "taint"
+      "Hint of disgrace? It's not said commonly?",
+      "dGFpbnQ="
   ],
   [
-    "Old Greek version of 'Room at the Top'?",
-    "attic"
+      "Old Greek version of 'Room at the Top'?",
+      "YXR0aWM="
   ],
   [
-    "Dug stuff up",
-    "mined"
+      "Dug stuff up",
+      "bWluZWQ="
   ],
   [
-    "Dog rescuers on the road carrying equipment",
-    "akita"
+      "Dog rescuers on the road carrying equipment",
+      "YWtpdGE="
   ],
   [
-    "Celebrate outside with jazzy music",
-    "swing"
+      "Celebrate outside with jazzy music",
+      "c3dpbmc="
   ],
   [
-    "Beliefs of left-winger disrupting firm",
-    "credo"
+      "Beliefs of left-winger disrupting firm",
+      "Y3JlZG8="
   ],
   [
-    "Poet giving answers to binary question",
-    "noyes"
+      "Poet giving answers to binary question",
+      "bm95ZXM="
   ],
   [
-    "Noise of family beginning to gather",
-    "clang"
+      "Noise of family beginning to gather",
+      "Y2xhbmc="
   ],
   [
-    "Cunning plans soldier finally employs",
-    "ruses"
+      "Cunning plans soldier finally employs",
+      "cnVzZXM="
   ],
   [
-    "Record poem about cult hero",
-    "fiche"
+      "Record poem about cult hero",
+      "ZmljaGU="
   ],
   [
-    "Energy and ambition having no place for a Russian author",
-    "gogol"
+      "Energy and ambition having no place for a Russian author",
+      "Z29nb2w="
   ],
   [
-    "Son getting somewhat hot in crowd",
-    "swarm"
+      "Son getting somewhat hot in crowd",
+      "c3dhcm0="
   ],
   [
-    "Home established finally by American river",
-    "indus"
+      "Home established finally by American river",
+      "aW5kdXM="
   ],
   [
-    "Emotional episode when doctor meets an old woman",
-    "drama"
+      "Emotional episode when doctor meets an old woman",
+      "ZHJhbWE="
   ],
   [
-    "Group of monks giving command",
-    "order"
+      "Group of monks giving command",
+      "b3JkZXI="
   ],
   [
-    "Does it grow down as it grows up?",
-    "eider"
+      "Does it grow down as it grows up?",
+      "ZWlkZXI="
   ],
   [
-    "Trouble’s besetting one for so long",
-    "adios"
+      "Trouble’s besetting one for so long",
+      "YWRpb3M="
   ],
   [
-    "Do books acclaim hiding place?",
-    "audit"
+      "Do books acclaim hiding place?",
+      "YXVkaXQ="
   ],
   [
-    "Relations well and truly “cornered”?",
-    "nooky"
+      "Relations well and truly “cornered”?",
+      "bm9va3k="
   ],
   [
-    "Military buff",
-    "khaki"
+      "Military buff",
+      "a2hha2k="
   ],
   [
-    "Energy old politician displayed in backing House",
-    "oomph"
+      "Energy old politician displayed in backing House",
+      "b29tcGg="
   ],
   [
-    "National flag Hibernians originally used?",
-    "irish"
+      "National flag Hibernians originally used?",
+      "aXJpc2g="
   ],
   [
-    "Italian male feeding horse",
-    "roman"
+      "Italian male feeding horse",
+      "cm9tYW4="
   ],
   [
-    "One moves quickly outside decayed buildings",
-    "ruins"
+      "One moves quickly outside decayed buildings",
+      "cnVpbnM="
   ],
   [
-    "Person who digs a gambling game?",
-    "poker"
+      "Person who digs a gambling game?",
+      "cG9rZXI="
   ],
   [
-    "Slumber an old PM’s rejected",
-    "sleep"
+      "Slumber an old PM’s rejected",
+      "c2xlZXA="
   ],
   [
-    "Girl keeping record in warehouse",
-    "depot"
+      "Girl keeping record in warehouse",
+      "ZGVwb3Q="
   ],
   [
-    "Note copy artists primarily draw for tourists",
-    "mecca"
+      "Note copy artists primarily draw for tourists",
+      "bWVjY2E="
   ],
   [
-    "Wasn’t dying about Dickens",
-    "devil"
+      "Wasn’t dying about Dickens",
+      "ZGV2aWw="
   ],
   [
-    "A point behind? No good!",
-    "prong"
+      "A point behind? No good!",
+      "cHJvbmc="
   ],
   [
-    "Group of model Hindus found here",
-    "delhi"
+      "Group of model Hindus found here",
+      "ZGVsaGk="
   ],
   [
-    "Long period of time before noon",
-    "yearn"
+      "Long period of time before noon",
+      "eWVhcm4="
   ],
   [
-    "Dad taking teacher around European capital",
-    "paris"
+      "Dad taking teacher around European capital",
+      "cGFyaXM="
   ],
   [
-    "Doctor rejected attack – a distinctive idea",
-    "motif"
+      "Doctor rejected attack – a distinctive idea",
+      "bW90aWY="
   ],
   [
-    "Musical entertainment viewed in the Adelphi originally?",
-    "evita"
+      "Musical entertainment viewed in the Adelphi originally?",
+      "ZXZpdGE="
   ],
   [
-    "Fabulous flower died taken from wild orchid",
-    "ichor"
+      "Fabulous flower died taken from wild orchid",
+      "aWNob3I="
   ],
   [
-    "Comic sent up Liberal peer",
-    "droll"
+      "Comic sent up Liberal peer",
+      "ZHJvbGw="
   ],
   [
-    "Steep wave on river is a problem for some ships?",
-    "borer"
+      "Steep wave on river is a problem for some ships?",
+      "Ym9yZXI="
   ],
   [
-    "In no sense upstanding!",
-    "lying"
+      "In no sense upstanding!",
+      "bHlpbmc="
   ],
   [
-    "Strain of uncut narcotic",
-    "puree"
+      "Strain of uncut narcotic",
+      "cHVyZWU="
   ],
   [
-    "Parents crossing river in provincial capital",
-    "parma"
+      "Parents crossing river in provincial capital",
+      "cGFybWE="
   ],
   [
-    "Trimmed blossom: it spread leaves out",
-    "omits"
+      "Trimmed blossom: it spread leaves out",
+      "b21pdHM="
   ],
   [
-    "Place for opera’s unfinished melody",
-    "theme"
+      "Place for opera’s unfinished melody",
+      "dGhlbWU="
   ],
   [
-    "Old King taking on difficult question",
-    "grill"
+      "Old King taking on difficult question",
+      "Z3JpbGw="
   ],
   [
-    "A lot of criticism about old philosopher",
-    "stoic"
+      "A lot of criticism about old philosopher",
+      "c3RvaWM="
   ],
   [
-    "University pleasant after eliminating one measure",
-    "ounce"
+      "University pleasant after eliminating one measure",
+      "b3VuY2U="
   ],
   [
-    "Discourage day trip after Juliet drops out",
-    "daunt"
+      "Discourage day trip after Juliet drops out",
+      "ZGF1bnQ="
   ],
   [
-    "Bread is mine? Cheers!",
-    "pitta"
+      "Bread is mine? Cheers!",
+      "cGl0dGE="
   ],
   [
-    "Tree thriving initially on S American cape",
-    "thorn"
+      "Tree thriving initially on S American cape",
+      "dGhvcm4="
   ],
   [
-    "Girl in the morning leaving the US",
-    "erica"
+      "Girl in the morning leaving the US",
+      "ZXJpY2E="
   ],
   [
-    "Drop in current is in prospect with amps lost",
-    "visit"
+      "Drop in current is in prospect with amps lost",
+      "dmlzaXQ="
   ],
   [
-    "Acted as a substitute silk",
-    "satin"
+      "Acted as a substitute silk",
+      "c2F0aW4="
   ],
   [
-    "Troublesome insect perhaps over sauce",
-    "pesto"
+      "Troublesome insect perhaps over sauce",
+      "cGVzdG8="
   ],
   [
-    "Banned volunteers voice displeasure",
-    "taboo"
+      "Banned volunteers voice displeasure",
+      "dGFib28="
   ],
   [
-    "Forest primate getting energy from small parrots",
-    "loris"
+      "Forest primate getting energy from small parrots",
+      "bG9yaXM="
   ],
   [
-    "Seafood’s twenty-one shillings?",
-    "squid"
+      "Seafood’s twenty-one shillings?",
+      "c3F1aWQ="
   ],
   [
-    "Happy if place does not appear relaxed",
-    "eased"
+      "Happy if place does not appear relaxed",
+      "ZWFzZWQ="
   ],
   [
-    "Section of kangaroo’s trusted sleeping place",
-    "roost"
+      "Section of kangaroo’s trusted sleeping place",
+      "cm9vc3Q="
   ],
   [
-    "External route revised",
-    "outer"
+      "External route revised",
+      "b3V0ZXI="
   ],
   [
-    "Italian capitalist?",
-    "roman"
+      "Italian capitalist?",
+      "cm9tYW4="
   ],
   [
-    "One far from wise in Djibouti oddly",
-    "idiot"
+      "One far from wise in Djibouti oddly",
+      "aWRpb3Q="
   ],
   [
-    "Well-kept small trading centre",
-    "smart"
+      "Well-kept small trading centre",
+      "c21hcnQ="
   ],
   [
-    "Roam over island for the language?",
-    "maori"
+      "Roam over island for the language?",
+      "bWFvcmk="
   ],
   [
-    "Downright eccentricity",
-    "sheer"
+      "Downright eccentricity",
+      "c2hlZXI="
   ],
   [
-    "Find tomb by taking little edition out of trunks",
-    "speos"
+      "Find tomb by taking little edition out of trunks",
+      "c3Blb3M="
   ],
   [
-    "Bleat about no good comic",
-    "manga"
+      "Bleat about no good comic",
+      "bWFuZ2E="
   ],
   [
-    "Annoy Republican departing with so much levy",
-    "tythe"
+      "Annoy Republican departing with so much levy",
+      "dHl0aGU="
   ],
   [
-    "We must look up that expression of regret used by Rab C",
-    "ewhow"
+      "We must look up that expression of regret used by Rab C",
+      "ZXdob3c="
   ],
   [
-    "Get into what introduces synonym for benefactor",
-    "donor"
+      "Get into what introduces synonym for benefactor",
+      "ZG9ub3I="
   ],
   [
-    "Renowned — as is musical work?",
-    "noted"
+      "Renowned — as is musical work?",
+      "bm90ZWQ="
   ],
   [
-    "Get into trouble over religious sayings",
-    "logia"
+      "Get into trouble over religious sayings",
+      "bG9naWE="
   ],
   [
-    "Vanilla left in French bread",
-    "plain"
+      "Vanilla left in French bread",
+      "cGxhaW4="
   ],
   [
-    "Bird that woman’s cooking",
-    "heron"
+      "Bird that woman’s cooking",
+      "aGVyb24="
   ],
   [
-    "Poet in a posh study",
-    "auden"
+      "Poet in a posh study",
+      "YXVkZW4="
   ],
   [
-    "Heap — time bagged?",
-    "stack"
+      "Heap — time bagged?",
+      "c3RhY2s="
   ],
   [
-    "Weight conveyed by spectacular talker",
-    "artal"
+      "Weight conveyed by spectacular talker",
+      "YXJ0YWw="
   ],
   [
-    "Fold left stuck in boggy soil?",
-    "pleat"
+      "Fold left stuck in boggy soil?",
+      "cGxlYXQ="
   ],
   [
-    "One choosing a flying machine? Not half!",
-    "opter"
+      "One choosing a flying machine? Not half!",
+      "b3B0ZXI="
   ],
   [
-    "Pulls folk across the Pond",
-    "yanks"
+      "Pulls folk across the Pond",
+      "eWFua3M="
   ],
   [
-    "Bit of irony from drunkard moving right up",
-    "trope"
+      "Bit of irony from drunkard moving right up",
+      "dHJvcGU="
   ],
   [
-    "Characteristic of renegade abandoning the rank and file",
-    "trait"
+      "Characteristic of renegade abandoning the rank and file",
+      "dHJhaXQ="
   ],
   [
-    "Old seaside seller running short",
-    "coste"
+      "Old seaside seller running short",
+      "Y29zdGU="
   ],
   [
-    "Bellow — where does Irishman’s come from?",
-    "troat"
+      "Bellow — where does Irishman’s come from?",
+      "dHJvYXQ="
   ],
   [
-    "Traffic in March moving easily at first",
-    "trade"
+      "Traffic in March moving easily at first",
+      "dHJhZGU="
   ],
   [
-    "A German turning back to welcome city relative",
-    "niece"
+      "A German turning back to welcome city relative",
+      "bmllY2U="
   ],
   [
-    "Almost all the booze knocked back in darkness",
-    "night"
+      "Almost all the booze knocked back in darkness",
+      "bmlnaHQ="
   ],
   [
-    "Round-up of stock was carried over",
-    "rodeo"
+      "Round-up of stock was carried over",
+      "cm9kZW8="
   ],
   [
-    "Knight drinking in hell regularly went on a bender",
-    "knelt"
+      "Knight drinking in hell regularly went on a bender",
+      "a25lbHQ="
   ],
   [
-    "Sound judge brought in by former president",
-    "fjord"
+      "Sound judge brought in by former president",
+      "ZmpvcmQ="
   ],
   [
-    "Graduate aboard boat mounting compass",
-    "gamut"
+      "Graduate aboard boat mounting compass",
+      "Z2FtdXQ="
   ],
   [
-    "Problem children",
-    "issue"
+      "Problem children",
+      "aXNzdWU="
   ],
   [
-    "Diplomat only initially involved in deadly sin",
-    "envoy"
+      "Diplomat only initially involved in deadly sin",
+      "ZW52b3k="
   ],
   [
-    "Sanctimonious bunch producing TV try-out?",
-    "pilot"
+      "Sanctimonious bunch producing TV try-out?",
+      "cGlsb3Q="
   ],
   [
-    "Superior rating given to second-rate back",
-    "abbot"
+      "Superior rating given to second-rate back",
+      "YWJib3Q="
   ],
   [
-    "Explosive start setting one back a bit",
-    "nitro"
+      "Explosive start setting one back a bit",
+      "bml0cm8="
   ],
   [
-    "Foreign drama that’s painful under any conditions",
-    "nohow"
+      "Foreign drama that’s painful under any conditions",
+      "bm9ob3c="
   ],
   [
-    "Students gathering for one drink",
-    "negus"
+      "Students gathering for one drink",
+      "bmVndXM="
   ],
   [
-    "Mends fencing in king’s colours",
-    "skews"
+      "Mends fencing in king’s colours",
+      "c2tld3M="
   ],
   [
-    "Some raised cash to oblige assassin",
-    "booth"
+      "Some raised cash to oblige assassin",
+      "Ym9vdGg="
   ],
   [
-    "One living in southern US around early summer",
-    "cajun"
+      "One living in southern US around early summer",
+      "Y2FqdW4="
   ],
   [
-    "Cross when hearing match lost",
-    "tigon"
+      "Cross when hearing match lost",
+      "dGlnb24="
   ],
   [
-    "Instant good advice to follow up in place of evil?",
-    "sodom"
+      "Instant good advice to follow up in place of evil?",
+      "c29kb20="
   ],
   [
-    "Provide a place for a plant",
-    "hosta"
+      "Provide a place for a plant",
+      "aG9zdGE="
   ],
   [
-    "A new venison supplier served up joint",
-    "ankle"
+      "A new venison supplier served up joint",
+      "YW5rbGU="
   ],
   [
-    "“Flower of Pompeii” publication supported by postgraduate",
-    "magma"
+      "“Flower of Pompeii” publication supported by postgraduate",
+      "bWFnbWE="
   ],
   [
-    "One running through Berlin in binge",
-    "spree"
+      "One running through Berlin in binge",
+      "c3ByZWU="
   ],
   [
-    "Partly glad I thought about such a wave",
-    "tidal"
+      "Partly glad I thought about such a wave",
+      "dGlkYWw="
   ],
   [
-    "Problem getting new start for small person",
-    "titch"
+      "Problem getting new start for small person",
+      "dGl0Y2g="
   ],
   [
-    "Ship’s spar gets spray? Not unknown",
-    "sprit"
+      "Ship’s spar gets spray? Not unknown",
+      "c3ByaXQ="
   ],
   [
-    "A thing growing in the garden is stemmed",
-    "arose"
+      "A thing growing in the garden is stemmed",
+      "YXJvc2U="
   ],
   [
-    "Governed as certain lines may be",
-    "ruled"
+      "Governed as certain lines may be",
+      "cnVsZWQ="
   ],
   [
-    "Follow Europe’s directions to return",
-    "ensue"
+      "Follow Europe’s directions to return",
+      "ZW5zdWU="
   ],
   [
-    "Synthetic polymer unknown in northern half of capital",
-    "nylon"
+      "Synthetic polymer unknown in northern half of capital",
+      "bnlsb24="
   ],
   [
-    "Refugee with no time at all for material",
-    "exile"
+      "Refugee with no time at all for material",
+      "ZXhpbGU="
   ],
   [
-    "Embellish even choices from garden?",
-    "adorn"
+      "Embellish even choices from garden?",
+      "YWRvcm4="
   ],
   [
-    "Story gripping one in the very first episode",
-    "pilot"
+      "Story gripping one in the very first episode",
+      "cGlsb3Q="
   ],
   [
-    "King and leader of armada chat in boat",
-    "kayak"
+      "King and leader of armada chat in boat",
+      "a2F5YWs="
   ],
   [
-    "Villain’s Irish accent putting off British",
-    "rogue"
+      "Villain’s Irish accent putting off British",
+      "cm9ndWU="
   ],
   [
-    "European champion missing out on gold is put out",
-    "evict"
+      "European champion missing out on gold is put out",
+      "ZXZpY3Q="
   ],
   [
-    "Hot Bovril leaving black discoloration",
-    "livor"
+      "Hot Bovril leaving black discoloration",
+      "bGl2b3I="
   ],
   [
-    "A stack of papers question resentment",
-    "quire"
+      "A stack of papers question resentment",
+      "cXVpcmU="
   ],
   [
-    "One of two writers getting material rejected?",
-    "eliot"
+      "One of two writers getting material rejected?",
+      "ZWxpb3Q="
   ],
   [
-    "Governs northern city mentioned in speech",
-    "leads"
+      "Governs northern city mentioned in speech",
+      "bGVhZHM="
   ],
   [
-    "… upset old British PM’s slumber",
-    "sleep"
+      "… upset old British PM’s slumber",
+      "c2xlZXA="
   ],
   [
-    "Open secret Charlie let out",
-    "overt"
+      "Open secret Charlie let out",
+      "b3ZlcnQ="
   ],
   [
-    "Finally did ritual dance in capital",
-    "dhaka"
+      "Finally did ritual dance in capital",
+      "ZGhha2E="
   ],
   [
-    "Men cut and hold covering",
-    "orlop"
+      "Men cut and hold covering",
+      "b3Jsb3A="
   ],
   [
-    "Ace performer’s way of working in study",
-    "demon"
+      "Ace performer’s way of working in study",
+      "ZGVtb24="
   ],
   [
-    "Rover has no crackers",
-    "nomad"
+      "Rover has no crackers",
+      "bm9tYWQ="
   ],
   [
-    "Watch",
-    "maybe"
+      "Watch",
+      "bWF5YmU="
   ],
   [
-    "Nothing in wet rubbish left drier",
-    "towel"
+      "Nothing in wet rubbish left drier",
+      "dG93ZWw="
   ],
   [
-    "Restorative note",
-    "tonic"
+      "Restorative note",
+      "dG9uaWM="
   ],
   [
-    "Treasure finally found under different palm tree",
-    "maple"
+      "Treasure finally found under different palm tree",
+      "bWFwbGU="
   ],
   [
-    "Country ending in tremendous agony",
-    "spain"
+      "Country ending in tremendous agony",
+      "c3BhaW4="
   ],
   [
-    "Direct issue",
-    "point"
+      "Direct issue",
+      "cG9pbnQ="
   ],
   [
-    "Track opening of the bar",
-    "trail"
+      "Track opening of the bar",
+      "dHJhaWw="
   ],
   [
-    "Revered symbol the Egyptians originally found in cat",
-    "totem"
+      "Revered symbol the Egyptians originally found in cat",
+      "dG90ZW0="
   ],
   [
-    "This world famine needs heading off",
-    "earth"
+      "This world famine needs heading off",
+      "ZWFydGg="
   ],
   [
-    "Direct football official about backs",
-    "refer"
+      "Direct football official about backs",
+      "cmVmZXI="
   ],
   [
-    "Expert in a reduced department",
-    "adept"
+      "Expert in a reduced department",
+      "YWRlcHQ="
   ],
   [
-    "Toss first of seals fish",
-    "sling"
+      "Toss first of seals fish",
+      "c2xpbmc="
   ],
   [
-    "Fruit found in Jerusalem once",
-    "lemon"
+      "Fruit found in Jerusalem once",
+      "bGVtb24="
   ],
   [
-    "BBC releasing article for free",
-    "untie"
+      "BBC releasing article for free",
+      "dW50aWU="
   ],
   [
-    "Sailor following one inside port",
-    "lagos"
+      "Sailor following one inside port",
+      "bGFnb3M="
   ],
   [
-    "Expert in Belfast perhaps turned around plant",
-    "orpin"
+      "Expert in Belfast perhaps turned around plant",
+      "b3JwaW4="
   ],
   [
-    "Rich fellow pupil no longer under arrest",
-    "nabob"
+      "Rich fellow pupil no longer under arrest",
+      "bmFib2I="
   ],
   [
-    "What’s said to fasten a feather?",
-    "pinna"
+      "What’s said to fasten a feather?",
+      "cGlubmE="
   ],
   [
-    "Officers producing plans advanced to the front",
-    "aides"
+      "Officers producing plans advanced to the front",
+      "YWlkZXM="
   ],
   [
-    "Jock’s aim is to enter contest",
-    "visie"
+      "Jock’s aim is to enter contest",
+      "dmlzaWU="
   ],
   [
-    "Defeated king being removed and exposed",
-    "outed"
+      "Defeated king being removed and exposed",
+      "b3V0ZWQ="
   ],
   [
-    "Librarian sounding a bit wet?",
-    "dewey"
+      "Librarian sounding a bit wet?",
+      "ZGV3ZXk="
   ],
   [
-    "Peas from marshlands in the Borders male scythed",
-    "erses"
+      "Peas from marshlands in the Borders male scythed",
+      "ZXJzZXM="
   ],
   [
-    "Capuchin against a sectarian",
-    "saiva"
+      "Capuchin against a sectarian",
+      "c2FpdmE="
   ],
   [
-    "No particular interest shown around republic",
-    "gabon"
+      "No particular interest shown around republic",
+      "Z2Fib24="
   ],
   [
-    "Showing great dignity knocking the beer back",
-    "regal"
+      "Showing great dignity knocking the beer back",
+      "cmVnYWw="
   ],
   [
-    "Headdress so long one wears",
-    "tiara"
+      "Headdress so long one wears",
+      "dGlhcmE="
   ],
   [
-    "Drivel for instance Paddy Ashdown put about?",
-    "bilge"
+      "Drivel for instance Paddy Ashdown put about?",
+      "YmlsZ2U="
   ],
   [
-    "Democrat with inadequate backing in decline",
-    "droop"
+      "Democrat with inadequate backing in decline",
+      "ZHJvb3A="
   ],
   [
-    "Problem claiming credit for means of restarting play",
-    "scrum"
+      "Problem claiming credit for means of restarting play",
+      "c2NydW0="
   ],
   [
-    "Bird no longer living on S American islands",
-    "samoa"
+      "Bird no longer living on S American islands",
+      "c2Ftb2E="
   ],
   [
-    "Destruction of marine vegetation?",
-    "wrack"
+      "Destruction of marine vegetation?",
+      "d3JhY2s="
   ],
   [
-    "Periods that may be indicated with a cross",
-    "times"
+      "Periods that may be indicated with a cross",
+      "dGltZXM="
   ],
   [
-    "Last of the Athenian characters",
-    "omega"
+      "Last of the Athenian characters",
+      "b21lZ2E="
   ],
   [
-    "Knowing sort of look — mystery's ending",
-    "leery"
+      "Knowing sort of look — mystery's ending",
+      "bGVlcnk="
   ],
   [
-    "Navy left in bases",
-    "fleet"
+      "Navy left in bases",
+      "ZmxlZXQ="
   ],
   [
-    "Correct height on masts",
-    "sails"
+      "Correct height on masts",
+      "c2FpbHM="
   ],
   [
-    "Drink available from inside cafe",
-    "decaf"
+      "Drink available from inside cafe",
+      "ZGVjYWY="
   ],
   [
-    "Nature god holding one old instrument to play",
-    "piano"
+      "Nature god holding one old instrument to play",
+      "cGlhbm8="
   ],
   [
-    "Nominal fine received by a number",
-    "token"
+      "Nominal fine received by a number",
+      "dG9rZW4="
   ],
   [
-    "A pot I ordered for courtyard",
-    "patio"
+      "A pot I ordered for courtyard",
+      "cGF0aW8="
   ],
   [
-    "Understand king needing knight's backing",
-    "learn"
+      "Understand king needing knight's backing",
+      "bGVhcm4="
   ],
   [
-    "Take a swim in city close to seaside",
-    "bathe"
+      "Take a swim in city close to seaside",
+      "YmF0aGU="
   ],
   [
-    "Pay for part of that on expenses",
-    "atone"
+      "Pay for part of that on expenses",
+      "YXRvbmU="
   ],
   [
-    "What’s swallowed by staff about to provide treatment",
-    "rehab"
+      "What’s swallowed by staff about to provide treatment",
+      "cmVoYWI="
   ],
   [
-    "Grown son wearing nothing from Dior?",
-    "risen"
+      "Grown son wearing nothing from Dior?",
+      "cmlzZW4="
   ],
   [
-    "Small film of chief criminal",
-    "fiche"
+      "Small film of chief criminal",
+      "ZmljaGU="
   ],
   [
-    "Dutch painter has time for second mistake",
-    "botch"
+      "Dutch painter has time for second mistake",
+      "Ym90Y2g="
   ],
   [
-    "Nice day for reporting religious leader",
-    "mahdi"
+      "Nice day for reporting religious leader",
+      "bWFoZGk="
   ],
   [
-    "Open University taking lead on nuclear energy",
-    "unzip"
+      "Open University taking lead on nuclear energy",
+      "dW56aXA="
   ],
   [
-    "Destined to make a leap",
-    "bound"
+      "Destined to make a leap",
+      "Ym91bmQ="
   ],
   [
-    "State chief given a hearing",
-    "maine"
+      "State chief given a hearing",
+      "bWFpbmU="
   ],
   [
-    "Amazing affection masks this mistake",
-    "gaffe"
+      "Amazing affection masks this mistake",
+      "Z2FmZmU="
   ],
   [
-    "Greek character was first on return to get word of gratitude",
-    "delta"
+      "Greek character was first on return to get word of gratitude",
+      "ZGVsdGE="
   ],
   [
-    "Henry’s left fichus arranged in a mysterious order",
-    "sufic"
+      "Henry’s left fichus arranged in a mysterious order",
+      "c3VmaWM="
   ],
   [
-    "Work sailor’s put together for mates",
-    "oppos"
+      "Work sailor’s put together for mates",
+      "b3Bwb3M="
   ],
   [
-    "No reason for cold-callers to ring up? A winning point!",
-    "ippon"
+      "No reason for cold-callers to ring up? A winning point!",
+      "aXBwb24="
   ],
   [
-    "Bloody channel volunteers to put rock music on!",
-    "aorta"
+      "Bloody channel volunteers to put rock music on!",
+      "YW9ydGE="
   ],
   [
-    "Where waiters are passing under bar?",
-    "limbo"
+      "Where waiters are passing under bar?",
+      "bGltYm8="
   ],
   [
-    "Perhaps a sett … the setter’s material",
-    "denim"
+      "Perhaps a sett … the setter’s material",
+      "ZGVuaW0="
   ],
   [
-    "One might see spider on this: howls out loud?",
-    "baize"
+      "One might see spider on this: howls out loud?",
+      "YmFpemU="
   ],
   [
-    "Newspaper taking offence",
-    "theft"
+      "Newspaper taking offence",
+      "dGhlZnQ="
   ],
   [
-    "Don’t take time off work",
-    "leave"
+      "Don’t take time off work",
+      "bGVhdmU="
   ],
   [
-    "Show lack of interest in English rugby",
-    "shrug"
+      "Show lack of interest in English rugby",
+      "c2hydWc="
   ],
   [
-    "Musical losing a good pianist: one of the 14",
-    "chico"
+      "Musical losing a good pianist: one of the 14",
+      "Y2hpY28="
   ],
   [
-    "Large track which cattle go back inside",
-    "roomy"
+      "Large track which cattle go back inside",
+      "cm9vbXk="
   ],
   [
-    "Run alongside Russian river in the country",
-    "rural"
+      "Run alongside Russian river in the country",
+      "cnVyYWw="
   ],
   [
-    "Improper to take forty winks in it",
-    "inapt"
+      "Improper to take forty winks in it",
+      "aW5hcHQ="
   ],
   [
-    "Drive mischief-maker over English lake",
-    "impel"
+      "Drive mischief-maker over English lake",
+      "aW1wZWw="
   ],
   [
-    "Daughter misses meal — it’s part of the target",
-    "inner"
+      "Daughter misses meal — it’s part of the target",
+      "aW5uZXI="
   ],
   [
-    "One who shuts up having caught out failure",
-    "loser"
+      "One who shuts up having caught out failure",
+      "bG9zZXI="
   ],
   [
-    "Major disturbance caused by EU stepping out of line about a king",
-    "quake"
+      "Major disturbance caused by EU stepping out of line about a king",
+      "cXVha2U="
   ],
   [
-    "African fascist changing direction",
-    "swazi"
+      "African fascist changing direction",
+      "c3dhemk="
   ],
   [
-    "No time for toast — it's water you may find here",
-    "oasis"
+      "No time for toast — it's water you may find here",
+      "b2FzaXM="
   ],
   [
-    "Chap having German vote for Eurovision entry reduced",
-    "jason"
+      "Chap having German vote for Eurovision entry reduced",
+      "amFzb24="
   ],
   [
-    "Crust removed from half loaf that could take some cutting?",
-    "album"
+      "Crust removed from half loaf that could take some cutting?",
+      "YWxidW0="
   ],
   [
-    "One wouldn’t succeed the Spanish queen",
-    "loser"
+      "One wouldn’t succeed the Spanish queen",
+      "bG9zZXI="
   ],
   [
-    "Europeans on vacation head for bar",
-    "estop"
+      "Europeans on vacation head for bar",
+      "ZXN0b3A="
   ],
   [
-    "Ace in race vehicle getting measure of Americans",
-    "karat"
+      "Ace in race vehicle getting measure of Americans",
+      "a2FyYXQ="
   ],
   [
-    "Mix gallons in pool",
-    "merge"
+      "Mix gallons in pool",
+      "bWVyZ2U="
   ],
   [
-    "Girl from outskirts of Liverpool grabbed by US agency",
-    "cilla"
+      "Girl from outskirts of Liverpool grabbed by US agency",
+      "Y2lsbGE="
   ],
   [
-    "High-flier that's below par",
-    "eagle"
+      "High-flier that's below par",
+      "ZWFnbGU="
   ],
   [
-    "Day without commencement of night music",
-    "tunes"
+      "Day without commencement of night music",
+      "dHVuZXM="
   ],
   [
-    "Small statues said to be in old parts of Egypt?",
-    "nomes"
+      "Small statues said to be in old parts of Egypt?",
+      "bm9tZXM="
   ],
   [
-    "Devices restricting personal freedom in prisons or clubs",
-    "irons"
+      "Devices restricting personal freedom in prisons or clubs",
+      "aXJvbnM="
   ],
   [
-    "Christmas month has gold ornamentation",
-    "decor"
+      "Christmas month has gold ornamentation",
+      "ZGVjb3I="
   ],
   [
-    "Gas from individual on the east side of Australia",
-    "ozone"
+      "Gas from individual on the east side of Australia",
+      "b3pvbmU="
   ],
   [
-    "This person's plan to ban a chemical",
-    "imide"
+      "This person's plan to ban a chemical",
+      "aW1pZGU="
   ],
   [
-    "Some are rude about Renaissance painter",
-    "durer"
+      "Some are rude about Renaissance painter",
+      "ZHVyZXI="
   ],
   [
-    "Record not the first for Middle America?",
-    "enter"
+      "Record not the first for Middle America?",
+      "ZW50ZXI="
   ],
   [
-    "Came to A&E impaled on cooking utensil",
-    "awoke"
+      "Came to A&E impaled on cooking utensil",
+      "YXdva2U="
   ],
   [
-    "Questions that deal with inflation",
-    "pumps"
+      "Questions that deal with inflation",
+      "cHVtcHM="
   ],
   [
-    "Note repeated about a city in Florida",
-    "miami"
+      "Note repeated about a city in Florida",
+      "bWlhbWk="
   ],
   [
-    "Punch a fragile thing",
-    "china"
+      "Punch a fragile thing",
+      "Y2hpbmE="
   ],
   [
-    "Criminal attempt recalled in regret",
-    "rogue"
+      "Criminal attempt recalled in regret",
+      "cm9ndWU="
   ],
   [
-    "One of Snow White’s dwarfs very quietly brought in grass",
-    "happy"
+      "One of Snow White’s dwarfs very quietly brought in grass",
+      "aGFwcHk="
   ],
   [
-    "Company gathered together to find astronomical object",
-    "comet"
+      "Company gathered together to find astronomical object",
+      "Y29tZXQ="
   ],
   [
-    "Stories about King making responses on social media",
-    "likes"
+      "Stories about King making responses on social media",
+      "bGlrZXM="
   ],
   [
-    "Oxygen required by huge Greek character",
-    "omega"
+      "Oxygen required by huge Greek character",
+      "b21lZ2E="
   ],
   [
-    "Love encapsulated by one obscure turn of phrase",
-    "idiom"
+      "Love encapsulated by one obscure turn of phrase",
+      "aWRpb20="
   ],
   [
-    "Synthetic material in name only abroad",
-    "nylon"
+      "Synthetic material in name only abroad",
+      "bnlsb24="
   ],
   [
-    "Separate set of countries with private code",
-    "unpin"
+      "Separate set of countries with private code",
+      "dW5waW4="
   ],
   [
-    "Sending up of books in French that is old hat",
-    "toque"
+      "Sending up of books in French that is old hat",
+      "dG9xdWU="
   ],
   [
-    "I’m going to pass on gold rings",
-    "adieu"
+      "I’m going to pass on gold rings",
+      "YWRpZXU="
   ],
   [
-    "Pet / that barber keeps",
-    "strop"
+      "Pet / that barber keeps",
+      "c3Ryb3A="
   ],
   [
-    "Pensioner storing it around courtyard",
-    "patio"
+      "Pensioner storing it around courtyard",
+      "cGF0aW8="
   ],
   [
-    "Country having a thousand Polish perhaps returning",
-    "burma"
+      "Country having a thousand Polish perhaps returning",
+      "YnVybWE="
   ],
   [
-    "Accepted statement from a football team over millions",
-    "axiom"
+      "Accepted statement from a football team over millions",
+      "YXhpb20="
   ],
   [
-    "Strangely stark limestone landscape",
-    "karst"
+      "Strangely stark limestone landscape",
+      "a2Fyc3Q="
   ],
   [
-    "Look after harbour",
-    "nurse"
+      "Look after harbour",
+      "bnVyc2U="
   ],
   [
-    "Band on river vessel",
-    "liner"
+      "Band on river vessel",
+      "bGluZXI="
   ],
   [
-    "Greek character in hotel in mountain area",
-    "alpha"
+      "Greek character in hotel in mountain area",
+      "YWxwaGE="
   ],
   [
-    "Composer has change of heart seeing German river",
-    "weser"
+      "Composer has change of heart seeing German river",
+      "d2VzZXI="
   ],
   [
-    "Dark end of mall in part of industrial estate",
-    "unlit"
+      "Dark end of mall in part of industrial estate",
+      "dW5saXQ="
   ],
   [
-    "Bitter account to deliver!",
-    "acrid"
+      "Bitter account to deliver!",
+      "YWNyaWQ="
   ],
   [
-    "Suspect youth leader replacing drug in Kansas City?",
-    "dodgy"
+      "Suspect youth leader replacing drug in Kansas City?",
+      "ZG9kZ3k="
   ],
   [
-    "Take-off always including elevated material",
-    "apery"
+      "Take-off always including elevated material",
+      "YXBlcnk="
   ],
   [
-    "Stern leader of regiment entering mess",
-    "harsh"
+      "Stern leader of regiment entering mess",
+      "aGFyc2g="
   ],
   [
-    "Recalled games with the woman leading mindless followers",
-    "sheep"
+      "Recalled games with the woman leading mindless followers",
+      "c2hlZXA="
   ],
   [
-    "Perhaps an aggressive dog is half-heartedly resentful",
-    "biter"
+      "Perhaps an aggressive dog is half-heartedly resentful",
+      "Yml0ZXI="
   ],
   [
-    "Plaintively express line in rhythm",
-    "bleat"
+      "Plaintively express line in rhythm",
+      "YmxlYXQ="
   ],
   [
-    "It's wet and sticky topping of stewed fruit",
-    "slime"
+      "It's wet and sticky topping of stewed fruit",
+      "c2xpbWU="
   ],
   [
-    "Ray's part in German Tannhäuser",
-    "manta"
+      "Ray's part in German Tannhäuser",
+      "bWFudGE="
   ],
   [
-    "Noise from the herd about race becomes slogan",
-    "motto"
+      "Noise from the herd about race becomes slogan",
+      "bW90dG8="
   ],
   [
-    "Message sensibly delivered in this bottle?",
-    "nerve"
+      "Message sensibly delivered in this bottle?",
+      "bmVydmU="
   ],
   [
-    "Bad blood initially denied young heroine",
-    "alice"
+      "Bad blood initially denied young heroine",
+      "YWxpY2U="
   ],
   [
-    "Celebrity royal: a snake!",
-    "viper"
+      "Celebrity royal: a snake!",
+      "dmlwZXI="
   ],
   [
-    "Medical procedure possibly reduced lameness on reflection",
-    "enema"
+      "Medical procedure possibly reduced lameness on reflection",
+      "ZW5lbWE="
   ],
   [
-    "Crazy bloke in charge",
-    "manic"
+      "Crazy bloke in charge",
+      "bWFuaWM="
   ],
   [
-    "Porter maybe astride queen and king’s racehorse",
-    "arkle"
+      "Porter maybe astride queen and king’s racehorse",
+      "YXJrbGU="
   ],
   [
-    "Windows computer upgrade — Linux originally — interrupting you there!",
-    "oculi"
+      "Windows computer upgrade — Linux originally — interrupting you there!",
+      "b2N1bGk="
   ],
   [
-    "Something to brush up on taking answer for one down",
-    "quaff"
+      "Something to brush up on taking answer for one down",
+      "cXVhZmY="
   ],
   [
-    "Holder of invitation initially shunning President and First Lady",
-    "keeve"
+      "Holder of invitation initially shunning President and First Lady",
+      "a2VldmU="
   ],
   [
-    "Boy Belgian holds up no more like a clod",
-    "gleby"
+      "Boy Belgian holds up no more like a clod",
+      "Z2xlYnk="
   ],
   [
-    "Poison in ancient city going round he got rid of",
-    "venin"
+      "Poison in ancient city going round he got rid of",
+      "dmVuaW4="
   ],
   [
-    "Squat in small enclosed space",
-    "cubby"
+      "Squat in small enclosed space",
+      "Y3ViYnk="
   ],
   [
-    "Walk ostentatiously to show support",
-    "strut"
+      "Walk ostentatiously to show support",
+      "c3RydXQ="
   ],
   [
-    "African mothers sitting by major road",
-    "masai"
+      "African mothers sitting by major road",
+      "bWFzYWk="
   ],
   [
-    "The fellow facing destiny as a lowly worker",
-    "helot"
+      "The fellow facing destiny as a lowly worker",
+      "aGVsb3Q="
   ],
   [
-    "Work out where area of fear is",
-    "infer"
+      "Work out where area of fear is",
+      "aW5mZXI="
   ],
   [
-    "Head of Leeds University entertained by eccentric Scotsman",
-    "calum"
+      "Head of Leeds University entertained by eccentric Scotsman",
+      "Y2FsdW0="
   ],
   [
-    "Model banker at table’s description of what he does?",
-    "ideal"
+      "Model banker at table’s description of what he does?",
+      "aWRlYWw="
   ],
   [
-    "Expression of amusement about leaders of creatures at watering-hole",
-    "local"
+      "Expression of amusement about leaders of creatures at watering-hole",
+      "bG9jYWw="
   ],
   [
-    "A fellow European’s place of residence",
-    "abode"
+      "A fellow European’s place of residence",
+      "YWJvZGU="
   ],
   [
-    "Animal turned peripatetic to some extent",
-    "tapir"
+      "Animal turned peripatetic to some extent",
+      "dGFwaXI="
   ],
   [
-    "Ointment Victor found in discount promotion",
-    "salve"
+      "Ointment Victor found in discount promotion",
+      "c2FsdmU="
   ],
   [
-    "Be in state of shock about parking and drive off",
-    "repel"
+      "Be in state of shock about parking and drive off",
+      "cmVwZWw="
   ],
   [
-    "Amusing free gift from The Sun",
-    "light"
+      "Amusing free gift from The Sun",
+      "bGlnaHQ="
   ],
   [
-    "Where to see one of trio delivering portion of song",
-    "intro"
+      "Where to see one of trio delivering portion of song",
+      "aW50cm8="
   ],
   [
-    "Geese flying east into cover",
-    "skein"
+      "Geese flying east into cover",
+      "c2tlaW4="
   ],
   [
-    "Peasant’s husband seized by large force one heading west",
-    "churl"
+      "Peasant’s husband seized by large force one heading west",
+      "Y2h1cmw="
   ],
   [
-    "Senior man joining up after wife departs",
-    "elder"
+      "Senior man joining up after wife departs",
+      "ZWxkZXI="
   ],
   [
-    "Put down a cow?",
-    "lower"
+      "Put down a cow?",
+      "bG93ZXI="
   ],
   [
-    "Stops head resigning and relaxes",
-    "eases"
+      "Stops head resigning and relaxes",
+      "ZWFzZXM="
   ],
   [
-    "Prickly shrub obtainable from heath or nursery",
-    "thorn"
+      "Prickly shrub obtainable from heath or nursery",
+      "dGhvcm4="
   ],
   [
-    "District accommodating new stadium",
-    "arena"
+      "District accommodating new stadium",
+      "YXJlbmE="
   ],
   [
-    "Arrive at stretch of river",
-    "reach"
+      "Arrive at stretch of river",
+      "cmVhY2g="
   ],
   [
-    "Greek character fencing in horned mammal",
-    "rhino"
+      "Greek character fencing in horned mammal",
+      "cmhpbm8="
   ],
   [
-    "Newspaper editor originally employed in cricket sidefrequently",
-    "often"
+      "Newspaper editor originally employed in cricket sidefrequently",
+      "b2Z0ZW4="
   ],
   [
-    "Call up woman protecting old king",
-    "evoke"
+      "Call up woman protecting old king",
+      "ZXZva2U="
   ],
   [
-    "Benefactor's name inside entrance",
-    "donor"
+      "Benefactor's name inside entrance",
+      "ZG9ub3I="
   ],
   [
-    "Trust I placed in big hospital",
-    "faith"
+      "Trust I placed in big hospital",
+      "ZmFpdGg="
   ],
   [
-    "Gem carved in relief arrived with ring",
-    "cameo"
+      "Gem carved in relief arrived with ring",
+      "Y2FtZW8="
   ],
   [
-    "Material vital to many Londoners",
-    "nylon"
+      "Material vital to many Londoners",
+      "bnlsb24="
   ],
   [
-    "Gruesome Hardy monster",
-    "hydra"
+      "Gruesome Hardy monster",
+      "aHlkcmE="
   ],
   [
-    "Dug up material coming over",
-    "mined"
+      "Dug up material coming over",
+      "bWluZWQ="
   ],
   [
-    "Fabric salesman introduced to church",
-    "crepe"
+      "Fabric salesman introduced to church",
+      "Y3JlcGU="
   ],
   [
-    "I’d invested in wager — cleaned out here?",
-    "bidet"
+      "I’d invested in wager — cleaned out here?",
+      "YmlkZXQ="
   ],
   [
-    "Digger’s card",
-    "spade"
+      "Digger’s card",
+      "c3BhZGU="
   ],
   [
-    "Competitor — one in luxury car...",
-    "racer"
+      "Competitor — one in luxury car...",
+      "cmFjZXI="
   ],
   [
-    "A composer’s decision to avoid court",
-    "verdi"
+      "A composer’s decision to avoid court",
+      "dmVyZGk="
   ],
   [
-    "Where mourners might be attentive",
-    "awake"
+      "Where mourners might be attentive",
+      "YXdha2U="
   ],
   [
-    "Caribbean native born a month before others",
-    "bajan"
+      "Caribbean native born a month before others",
+      "YmFqYW4="
   ],
   [
-    "Island not displaying any aquarium oddly",
-    "nauru"
+      "Island not displaying any aquarium oddly",
+      "bmF1cnU="
   ],
   [
-    "Home with mostly clean running water in Asia",
-    "indus"
+      "Home with mostly clean running water in Asia",
+      "aW5kdXM="
   ],
   [
-    "Jacob rashly holding something poisonous",
-    "cobra"
+      "Jacob rashly holding something poisonous",
+      "Y29icmE="
   ],
   [
-    "Male is having hesitation — he doesn't like spending money",
-    "miser"
+      "Male is having hesitation — he doesn't like spending money",
+      "bWlzZXI="
   ],
   [
-    "State of uncertainty with member gaining nothing",
-    "limbo"
+      "State of uncertainty with member gaining nothing",
+      "bGltYm8="
   ],
   [
-    "Game one of four card players has left",
-    "sport"
+      "Game one of four card players has left",
+      "c3BvcnQ="
   ],
   [
-    "Twilled fabric used in looser gear",
-    "serge"
+      "Twilled fabric used in looser gear",
+      "c2VyZ2U="
   ],
   [
-    "Racecourse spy eating river fish",
-    "trout"
+      "Racecourse spy eating river fish",
+      "dHJvdXQ="
   ],
   [
-    "Ring doughnut at last comes in for my sweet",
-    "petal"
+      "Ring doughnut at last comes in for my sweet",
+      "cGV0YWw="
   ],
   [
-    "Eastern European going west? Get away!",
-    "elope"
+      "Eastern European going west? Get away!",
+      "ZWxvcGU="
   ],
   [
-    "Direct favour initially ignored",
-    "refer"
+      "Direct favour initially ignored",
+      "cmVmZXI="
   ],
   [
-    "Beverage knocked back with others drinking what sounds like tea",
-    "latte"
+      "Beverage knocked back with others drinking what sounds like tea",
+      "bGF0dGU="
   ],
   [
-    "Fly without large type of battery",
-    "solar"
+      "Fly without large type of battery",
+      "c29sYXI="
   ],
   [
-    "Bill's given university grant",
-    "admit"
+      "Bill's given university grant",
+      "YWRtaXQ="
   ],
   [
-    "On the up: pressman with skill for business",
-    "trade"
+      "On the up: pressman with skill for business",
+      "dHJhZGU="
   ],
   [
-    "Silly accommodation in US state",
-    "ninny"
+      "Silly accommodation in US state",
+      "bmlubnk="
   ],
   [
-    "Composer's first to hum a little sound",
-    "creek"
+      "Composer's first to hum a little sound",
+      "Y3JlZWs="
   ],
   [
-    "Unopened alcohol that is rum",
-    "eerie"
+      "Unopened alcohol that is rum",
+      "ZWVyaWU="
   ],
   [
-    "Raving person has love for a man in broadcast message",
-    "roger"
+      "Raving person has love for a man in broadcast message",
+      "cm9nZXI="
   ],
   [
-    "Female shows spite rejecting male",
-    "alice"
+      "Female shows spite rejecting male",
+      "YWxpY2U="
   ],
   [
-    "Toilet one gets stuck in with accountant — magic",
-    "wicca"
+      "Toilet one gets stuck in with accountant — magic",
+      "d2ljY2E="
   ],
   [
-    "Minister to commence action in court before judges?",
-    "serve"
+      "Minister to commence action in court before judges?",
+      "c2VydmU="
   ],
   [
-    "Term for excessive luminance involved with 60% of argon",
-    "glare"
+      "Term for excessive luminance involved with 60% of argon",
+      "Z2xhcmU="
   ],
   [
-    "Dismissal involves 50 becoming careless",
-    "slack"
+      "Dismissal involves 50 becoming careless",
+      "c2xhY2s="
   ],
   [
-    "Rocketry experts taking line regarding nose",
-    "nasal"
+      "Rocketry experts taking line regarding nose",
+      "bmFzYWw="
   ],
   [
-    "Loot regularly hidden by idiot Egyptian resident?",
-    "nilot"
+      "Loot regularly hidden by idiot Egyptian resident?",
+      "bmlsb3Q="
   ],
   [
-    "Secret initially suppressed in public",
-    "overt"
+      "Secret initially suppressed in public",
+      "b3ZlcnQ="
   ],
   [
-    "Board’s strategy number eleven?",
-    "plank"
+      "Board’s strategy number eleven?",
+      "cGxhbms="
   ],
   [
-    "Senior Cockney grabbed that girl",
-    "elder"
+      "Senior Cockney grabbed that girl",
+      "ZWxkZXI="
   ],
   [
-    "Correct interpretation of noon?",
-    "amend"
+      "Correct interpretation of noon?",
+      "YW1lbmQ="
   ],
   [
-    "Mum has to dress up some gloomy youth?",
-    "goths"
+      "Mum has to dress up some gloomy youth?",
+      "Z290aHM="
   ],
   [
-    "Bag deposited outside hotel building",
-    "shack"
+      "Bag deposited outside hotel building",
+      "c2hhY2s="
   ],
   [
-    "Showed unhappiness with two-wheeled vehicle",
-    "moped"
+      "Showed unhappiness with two-wheeled vehicle",
+      "bW9wZWQ="
   ],
   [
-    "Country's leader's moving along showing sense",
-    "taste"
+      "Country's leader's moving along showing sense",
+      "dGFzdGU="
   ],
   [
-    "What's obvious all through time",
-    "overt"
+      "What's obvious all through time",
+      "b3ZlcnQ="
   ],
   [
-    "Snooker feature in Christmas season",
-    "masse"
+      "Snooker feature in Christmas season",
+      "bWFzc2U="
   ],
   [
-    "Bishop in car somewhere en route to heavenly destination?",
-    "limbo"
+      "Bishop in car somewhere en route to heavenly destination?",
+      "bGltYm8="
   ],
   [
-    "Oversized motor wins award",
-    "oscar"
+      "Oversized motor wins award",
+      "b3NjYXI="
   ],
   [
-    "Lack of land set back African nation",
-    "gabon"
+      "Lack of land set back African nation",
+      "Z2Fib24="
   ],
   [
-    "Types of bacteria — over 200 found in Channel Islands",
-    "cocci"
+      "Types of bacteria — over 200 found in Channel Islands",
+      "Y29jY2k="
   ],
   [
-    "Workers in A&E reversed invasive procedure",
-    "enema"
+      "Workers in A&E reversed invasive procedure",
+      "ZW5lbWE="
   ],
   [
-    "Piece of cake labelled a Kipling creation",
-    "akela"
+      "Piece of cake labelled a Kipling creation",
+      "YWtlbGE="
   ],
   [
-    "Stick English after History",
-    "paste"
+      "Stick English after History",
+      "cGFzdGU="
   ],
   [
-    "Foot of salesman where it might be seen? Generous chap!",
-    "donor"
+      "Foot of salesman where it might be seen? Generous chap!",
+      "ZG9ub3I="
   ],
   [
-    "Note a reviver?",
-    "tonic"
+      "Note a reviver?",
+      "dG9uaWM="
   ],
   [
-    "Villain to throttle in execution",
-    "doing"
+      "Villain to throttle in execution",
+      "ZG9pbmc="
   ],
   [
-    "Hang out first of washing in valley",
-    "dwell"
+      "Hang out first of washing in valley",
+      "ZHdlbGw="
   ],
   [
-    "Back-to-back golds by previously unknown Spanish hero",
-    "zorro"
+      "Back-to-back golds by previously unknown Spanish hero",
+      "em9ycm8="
   ],
   [
-    "Square loaf mostly devoured by old man",
-    "plaza"
+      "Square loaf mostly devoured by old man",
+      "cGxhemE="
   ],
   [
-    "Boy climbing tree with minimal energy",
-    "emile"
+      "Boy climbing tree with minimal energy",
+      "ZW1pbGU="
   ],
   [
-    "Some strudel I saw in food shops",
-    "delis"
+      "Some strudel I saw in food shops",
+      "ZGVsaXM="
   ],
   [
-    "Fellow otherwise from whom charity benefits?",
-    "donor"
+      "Fellow otherwise from whom charity benefits?",
+      "ZG9ub3I="
   ],
   [
-    "Eight carat ring someone not from this world possesses",
-    "octet"
+      "Eight carat ring someone not from this world possesses",
+      "b2N0ZXQ="
   ],
   [
-    "Material from track given name",
-    "linen"
+      "Material from track given name",
+      "bGluZW4="
   ],
   [
-    "Like Flight of the Bumblebee?  A thing to play it on endlessly",
-    "apian"
+      "Like Flight of the Bumblebee?  A thing to play it on endlessly",
+      "YXBpYW4="
   ],
   [
-    "Exchange involving Mike’s waterlogged area",
-    "swamp"
+      "Exchange involving Mike’s waterlogged area",
+      "c3dhbXA="
   ],
   [
-    "Speaker’s arguments for ordinary writing",
-    "prose"
+      "Speaker’s arguments for ordinary writing",
+      "cHJvc2U="
   ],
   [
-    "Make changes in plug fitting",
-    "adapt"
+      "Make changes in plug fitting",
+      "YWRhcHQ="
   ],
   [
-    "Left-winger returning with English cake",
-    "torte"
+      "Left-winger returning with English cake",
+      "dG9ydGU="
   ],
   [
-    "Sign left by one supporter",
-    "libra"
+      "Sign left by one supporter",
+      "bGlicmE="
   ],
   [
-    "Dark lake one goes round",
-    "unlit"
+      "Dark lake one goes round",
+      "dW5saXQ="
   ],
   [
-    "Greek character in mouth of river",
-    "delta"
+      "Greek character in mouth of river",
+      "ZGVsdGE="
   ],
   [
-    "First of bids in auction for a fur",
-    "sable"
+      "First of bids in auction for a fur",
+      "c2FibGU="
   ],
   [
-    "Woman like Bertha Rochester and a Fleming character",
-    "madam"
+      "Woman like Bertha Rochester and a Fleming character",
+      "bWFkYW0="
   ],
   [
-    "Tucked in to endless meat: we might",
-    "power"
+      "Tucked in to endless meat: we might",
+      "cG93ZXI="
   ],
   [
-    "Tips for perfect miso soup side order: lush!",
-    "toper"
+      "Tips for perfect miso soup side order: lush!",
+      "dG9wZXI="
   ],
   [
-    "Extra large fungus",
-    "morel"
+      "Extra large fungus",
+      "bW9yZWw="
   ],
   [
-    "Chicks originally look to pull up worm",
-    "creep"
+      "Chicks originally look to pull up worm",
+      "Y3JlZXA="
   ],
   [
-    "Range is clear",
-    "sweep"
+      "Range is clear",
+      "c3dlZXA="
   ],
   [
-    "Have contempt for small crop",
-    "scorn"
+      "Have contempt for small crop",
+      "c2Nvcm4="
   ],
   [
-    "Some children always concerned with part of body",
-    "renal"
+      "Some children always concerned with part of body",
+      "cmVuYWw="
   ],
   [
-    "Seat for sort of pigeon",
-    "stool"
+      "Seat for sort of pigeon",
+      "c3Rvb2w="
   ],
   [
-    "Serious honour senior accepts",
-    "sober"
+      "Serious honour senior accepts",
+      "c29iZXI="
   ],
   [
-    "Yard excavation turns frivolous",
-    "giddy"
+      "Yard excavation turns frivolous",
+      "Z2lkZHk="
   ],
   [
-    "Urgent message in taxi left half hidden",
-    "cable"
+      "Urgent message in taxi left half hidden",
+      "Y2FibGU="
   ],
   [
-    "Plant covered in plot usually",
-    "lotus"
+      "Plant covered in plot usually",
+      "bG90dXM="
   ],
   [
-    "Painter formerly concealing name",
-    "ernst"
+      "Painter formerly concealing name",
+      "ZXJuc3Q="
   ],
   [
-    "Prioress denied port and jam",
-    "press"
+      "Prioress denied port and jam",
+      "cHJlc3M="
   ],
   [
-    "Mark fell finally into flowing water",
-    "tilde"
+      "Mark fell finally into flowing water",
+      "dGlsZGU="
   ],
   [
-    "Revolving component in car maybe unchanged on reversal",
-    "rotor"
+      "Revolving component in car maybe unchanged on reversal",
+      "cm90b3I="
   ],
   [
-    "Happy suggestions at end of day",
-    "tipsy"
+      "Happy suggestions at end of day",
+      "dGlwc3k="
   ],
   [
-    "Oddly ignored Zambian seen as lower in rank",
-    "abase"
+      "Oddly ignored Zambian seen as lower in rank",
+      "YWJhc2U="
   ],
   [
-    "Composer from South – a draw",
-    "satie"
+      "Composer from South – a draw",
+      "c2F0aWU="
   ],
   [
-    "Fiction penned by an incomer",
-    "alien"
+      "Fiction penned by an incomer",
+      "YWxpZW4="
   ],
   [
-    "Silk cloth known to Scots and English",
-    "kente"
+      "Silk cloth known to Scots and English",
+      "a2VudGU="
   ],
   [
-    "Quiet drink? Not quiet drink!",
-    "perry"
+      "Quiet drink? Not quiet drink!",
+      "cGVycnk="
   ],
   [
-    "Macbeth an example? His status can be seen",
-    "thane"
+      "Macbeth an example? His status can be seen",
+      "dGhhbmU="
   ],
   [
-    "Dad won a piece of fruit",
-    "papaw"
+      "Dad won a piece of fruit",
+      "cGFwYXc="
   ],
   [
-    "Goodwill shown by little woman embracing modern technology",
-    "amity"
+      "Goodwill shown by little woman embracing modern technology",
+      "YW1pdHk="
   ],
   [
-    "Yesteryear’s well-off youngster said to get reproof from Mac",
-    "sloan"
+      "Yesteryear’s well-off youngster said to get reproof from Mac",
+      "c2xvYW4="
   ],
   [
-    "City district with no hotel",
-    "paris"
+      "City district with no hotel",
+      "cGFyaXM="
   ],
   [
-    "Nearly get wed without ring and symbolic meal",
-    "maror"
+      "Nearly get wed without ring and symbolic meal",
+      "bWFyb3I="
   ],
   [
-    "Lover’s letter read out",
-    "romeo"
+      "Lover’s letter read out",
+      "cm9tZW8="
   ],
   [
-    "What’s regularly taken round in party in Agra?",
-    "raita"
+      "What’s regularly taken round in party in Agra?",
+      "cmFpdGE="
   ],
   [
-    "Robot to operate lunar excursion module",
-    "golem"
+      "Robot to operate lunar excursion module",
+      "Z29sZW0="
   ],
   [
-    "Uproar of billions over murdered brother",
-    "babel"
+      "Uproar of billions over murdered brother",
+      "YmFiZWw="
   ],
   [
-    "Burst ball seen after Slav fouled",
-    "salvo"
+      "Burst ball seen after Slav fouled",
+      "c2Fsdm8="
   ],
   [
-    "Round relative sheds pound in weight",
-    "ounce"
+      "Round relative sheds pound in weight",
+      "b3VuY2U="
   ],
   [
-    "Fools seen within the French city",
-    "lhasa"
+      "Fools seen within the French city",
+      "bGhhc2E="
   ],
   [
-    "Join group that's on the rise",
-    "tenon"
+      "Join group that's on the rise",
+      "dGVub24="
   ],
   [
-    "Grace maybe saving man — but there's wickedness!",
-    "wrong"
+      "Grace maybe saving man — but there's wickedness!",
+      "d3Jvbmc="
   ],
   [
-    "Public rights guardian bans one Parisian race",
-    "tribe"
+      "Public rights guardian bans one Parisian race",
+      "dHJpYmU="
   ],
   [
-    "Returned pet I had with little enthusiasm",
-    "tepid"
+      "Returned pet I had with little enthusiasm",
+      "dGVwaWQ="
   ],
   [
-    "Olympian character of some games",
-    "omega"
+      "Olympian character of some games",
+      "b21lZ2E="
   ],
   [
-    "Where gladiators fought a long time back",
-    "arena"
+      "Where gladiators fought a long time back",
+      "YXJlbmE="
   ],
   [
-    "At least twenty-four months is a long time",
-    "years"
+      "At least twenty-four months is a long time",
+      "eWVhcnM="
   ],
   [
-    "Mature writer on middle of trip",
-    "ripen"
+      "Mature writer on middle of trip",
+      "cmlwZW4="
   ],
   [
-    "Pip covers head of timid horse",
-    "steed"
+      "Pip covers head of timid horse",
+      "c3RlZWQ="
   ],
   [
-    "Element damaging organ",
-    "argon"
+      "Element damaging organ",
+      "YXJnb24="
   ],
   [
-    "Di leaves daily records for person born in early April",
-    "aries"
+      "Di leaves daily records for person born in early April",
+      "YXJpZXM="
   ],
   [
-    "Riches entice grabbing Conservative",
-    "lucre"
+      "Riches entice grabbing Conservative",
+      "bHVjcmU="
   ],
   [
-    "Tall building initially tempts one in debt",
-    "tower"
+      "Tall building initially tempts one in debt",
+      "dG93ZXI="
   ],
   [
-    "Layabout seen in bridle road",
-    "idler"
+      "Layabout seen in bridle road",
+      "aWRsZXI="
   ],
   [
-    "Memorial of antiquity priest kept in church",
-    "relic"
+      "Memorial of antiquity priest kept in church",
+      "cmVsaWM="
   ],
   [
-    "Meander is a feature of some rivers around east",
-    "weave"
+      "Meander is a feature of some rivers around east",
+      "d2VhdmU="
   ],
   [
-    "Drive back and look on return journey to secure parking",
-    "repel"
+      "Drive back and look on return journey to secure parking",
+      "cmVwZWw="
   ],
   [
-    "What’s freaky has some of you trembling",
-    "outre"
+      "What’s freaky has some of you trembling",
+      "b3V0cmU="
   ],
   [
-    "Soul of personal assistant bishop’s ignored",
-    "atman"
+      "Soul of personal assistant bishop’s ignored",
+      "YXRtYW4="
   ],
   [
-    "Location of son hiding in woody plant",
-    "visne"
+      "Location of son hiding in woody plant",
+      "dmlzbmU="
   ],
   [
-    "Some vile activity in part of the gut",
-    "ileac"
+      "Some vile activity in part of the gut",
+      "aWxlYWM="
   ],
   [
-    "In Scotland dreary old men start to irritate English",
-    "oorie"
+      "In Scotland dreary old men start to irritate English",
+      "b29yaWU="
   ],
   [
-    "Plant getting shelter in East End and minimal sun",
-    "avens"
+      "Plant getting shelter in East End and minimal sun",
+      "YXZlbnM="
   ],
   [
-    "Artist using colour that’s “female” rather than “male”",
-    "fauve"
+      "Artist using colour that’s “female” rather than “male”",
+      "ZmF1dmU="
   ],
   [
-    "Vet mostly stopping alcoholic drink for Lent",
-    "given"
+      "Vet mostly stopping alcoholic drink for Lent",
+      "Z2l2ZW4="
   ],
   [
-    "Lie that one’s missing following bean count?",
-    "noble"
+      "Lie that one’s missing following bean count?",
+      "bm9ibGU="
   ],
   [
-    "One no doubt taking interest or delight in speaking",
-    "saver"
+      "One no doubt taking interest or delight in speaking",
+      "c2F2ZXI="
   ],
   [
-    "Surly youth to come and go with Boys Brigade for a year",
-    "yobbo"
+      "Surly youth to come and go with Boys Brigade for a year",
+      "eW9iYm8="
   ],
   [
-    "Lowest point in Florida now receding",
-    "nadir"
+      "Lowest point in Florida now receding",
+      "bmFkaXI="
   ],
   [
-    "Warning a member about lake",
-    "alarm"
+      "Warning a member about lake",
+      "YWxhcm0="
   ],
   [
-    "Send race official over",
-    "remit"
+      "Send race official over",
+      "cmVtaXQ="
   ],
   [
-    "In which you'll find this range of mountains?",
-    "atlas"
+      "In which you'll find this range of mountains?",
+      "YXRsYXM="
   ],
   [
-    "A bone to pick with children?",
-    "issue"
+      "A bone to pick with children?",
+      "aXNzdWU="
   ],
   [
-    "Pole playing a part in television or theatre",
-    "north"
+      "Pole playing a part in television or theatre",
+      "bm9ydGg="
   ],
   [
-    "Element in technical speech Jack ignored",
-    "argon"
+      "Element in technical speech Jack ignored",
+      "YXJnb24="
   ],
   [
-    "Heartless dame resides in Greek island and works as a programmer",
-    "codes"
+      "Heartless dame resides in Greek island and works as a programmer",
+      "Y29kZXM="
   ],
   [
-    "Self-assertive bachelor lacking prudence",
-    "brash"
+      "Self-assertive bachelor lacking prudence",
+      "YnJhc2g="
   ],
   [
-    "Warning when first couple have left room",
-    "amber"
+      "Warning when first couple have left room",
+      "YW1iZXI="
   ],
   [
-    "Planting kiss on cheek after love can be a bloomer",
-    "oxlip"
+      "Planting kiss on cheek after love can be a bloomer",
+      "b3hsaXA="
   ],
   [
-    "Raise previous key?",
-    "exalt"
+      "Raise previous key?",
+      "ZXhhbHQ="
   ],
   [
-    "Reporter's sent up handbook",
-    "guide"
+      "Reporter's sent up handbook",
+      "Z3VpZGU="
   ],
   [
-    "... a Labour politician with courage",
-    "balls"
+      "... a Labour politician with courage",
+      "YmFsbHM="
   ],
   [
-    "Stop ticket-collector? That shows some nerve",
-    "optic"
+      "Stop ticket-collector? That shows some nerve",
+      "b3B0aWM="
   ],
   [
-    "Coarse people from Victoria and Newcastle areas?",
-    "swine"
+      "Coarse people from Victoria and Newcastle areas?",
+      "c3dpbmU="
   ],
   [
-    "Starters for those arriving peckish at Seville?",
-    "tapas"
+      "Starters for those arriving peckish at Seville?",
+      "dGFwYXM="
   ],
   [
-    "Hindu worshipper’s object cut with thanks",
-    "sakta"
+      "Hindu worshipper’s object cut with thanks",
+      "c2FrdGE="
   ],
   [
-    "Looking up enough said possibly dramatically for early coppers",
-    "asses"
+      "Looking up enough said possibly dramatically for early coppers",
+      "YXNzZXM="
   ],
   [
-    "Source of cutting gear and machinery",
-    "plant"
+      "Source of cutting gear and machinery",
+      "cGxhbnQ="
   ],
   [
-    "Unseats judge avoiding historic conflicts",
-    "ousts"
+      "Unseats judge avoiding historic conflicts",
+      "b3VzdHM="
   ],
   [
-    "Cultivated bush sheltering rook perhaps?",
-    "shrub"
+      "Cultivated bush sheltering rook perhaps?",
+      "c2hydWI="
   ],
   [
-    "Try case of larceny hesitantly",
-    "shyly"
+      "Try case of larceny hesitantly",
+      "c2h5bHk="
   ],
   [
-    "Stable workers banking nothing very much.",
-    "loads"
+      "Stable workers banking nothing very much.",
+      "bG9hZHM="
   ],
   [
-    "Divided with a hundred over.",
-    "cleft"
+      "Divided with a hundred over.",
+      "Y2xlZnQ="
   ],
   [
-    "West Yorkshire city is ahead according to reports",
-    "leeds"
+      "West Yorkshire city is ahead according to reports",
+      "bGVlZHM="
   ],
   [
-    "Collection of products chimed with English",
-    "range"
+      "Collection of products chimed with English",
+      "cmFuZ2U="
   ],
   [
-    "Rascal to rip off page",
-    "scamp"
+      "Rascal to rip off page",
+      "c2NhbXA="
   ],
   [
-    "Current arrangement could be perfect",
-    "ideal"
+      "Current arrangement could be perfect",
+      "aWRlYWw="
   ],
   [
-    "Snare wild ones crossing over",
-    "noose"
+      "Snare wild ones crossing over",
+      "bm9vc2U="
   ],
   [
-    "Search round for dance band?",
-    "combo"
+      "Search round for dance band?",
+      "Y29tYm8="
   ],
   [
-    "One who has depression after losing daughter",
-    "owner"
+      "One who has depression after losing daughter",
+      "b3duZXI="
   ],
   [
-    "Preserving agent’s bulletin: it recommends contracting",
-    "nitre"
+      "Preserving agent’s bulletin: it recommends contracting",
+      "bml0cmU="
   ],
   [
-    "Immigrant lives west of Southwark area",
-    "issei"
+      "Immigrant lives west of Southwark area",
+      "aXNzZWk="
   ],
   [
-    "Put out verse about Irish dancers",
-    "kirov"
+      "Put out verse about Irish dancers",
+      "a2lyb3Y="
   ],
   [
-    "Drawing support and comfort first from lover",
-    "easel"
+      "Drawing support and comfort first from lover",
+      "ZWFzZWw="
   ],
   [
-    "Tent peg found outside gym",
-    "tepee"
+      "Tent peg found outside gym",
+      "dGVwZWU="
   ],
   [
-    "Poet’s line recalled in good French",
-    "byron"
+      "Poet’s line recalled in good French",
+      "Ynlyb24="
   ],
   [
-    "Nearly all with a second mission",
-    "alamo"
+      "Nearly all with a second mission",
+      "YWxhbW8="
   ],
   [
-    "Forward Hearts found in Scottish city",
-    "perth"
+      "Forward Hearts found in Scottish city",
+      "cGVydGg="
   ],
   [
-    "Argument over railway concern",
-    "worry"
+      "Argument over railway concern",
+      "d29ycnk="
   ],
   [
-    "Duck is able to get across eastern sea",
-    "ocean"
+      "Duck is able to get across eastern sea",
+      "b2NlYW4="
   ],
   [
-    "Asp that is without power to puncture old queen?",
-    "viper"
+      "Asp that is without power to puncture old queen?",
+      "dmlwZXI="
   ],
   [
-    "Note men on Territorial Army vessel",
-    "aorta"
+      "Note men on Territorial Army vessel",
+      "YW9ydGE="
   ],
   [
-    "Hard to tamper with identity",
-    "rigid"
+      "Hard to tamper with identity",
+      "cmlnaWQ="
   ],
   [
-    "Salmon served in hotel in my quarter",
-    "cohoe"
+      "Salmon served in hotel in my quarter",
+      "Y29ob2U="
   ],
   [
-    "Record books kept by English queen",
-    "enter"
+      "Record books kept by English queen",
+      "ZW50ZXI="
   ],
   [
-    "Graduate set up equipment for printing process",
-    "batik"
+      "Graduate set up equipment for printing process",
+      "YmF0aWs="
   ],
   [
-    "Mark goes to health resorts for muscular problem",
-    "spasm"
+      "Mark goes to health resorts for muscular problem",
+      "c3Bhc20="
   ],
   [
-    "A good individual no longer here? No longer here",
-    "agone"
+      "A good individual no longer here? No longer here",
+      "YWdvbmU="
   ],
   [
-    "Intermediate exam finally taken by old slave",
-    "mesne"
+      "Intermediate exam finally taken by old slave",
+      "bWVzbmU="
   ],
   [
-    "Losing head is more daring — and maybe more mature?",
-    "older"
+      "Losing head is more daring — and maybe more mature?",
+      "b2xkZXI="
   ],
   [
-    "Preach love before reproof",
-    "orate"
+      "Preach love before reproof",
+      "b3JhdGU="
   ],
   [
-    "Old-fashioned grab concealed by Chinese is extraordinary",
-    "seise"
+      "Old-fashioned grab concealed by Chinese is extraordinary",
+      "c2Vpc2U="
   ],
   [
-    "Rulers of society entertained by seafarers",
-    "tsars"
+      "Rulers of society entertained by seafarers",
+      "dHNhcnM="
   ],
   [
-    "A holy one involved with honey-makers?",
-    "apian"
+      "A holy one involved with honey-makers?",
+      "YXBpYW4="
   ],
   [
-    "Grass? An Aussie animal needs it",
-    "roosa"
+      "Grass? An Aussie animal needs it",
+      "cm9vc2E="
   ],
   [
-    "Guild formed by group of companies about to take off",
-    "artel"
+      "Guild formed by group of companies about to take off",
+      "YXJ0ZWw="
   ],
   [
-    "End with Romeo in fit of temper",
-    "strop"
+      "End with Romeo in fit of temper",
+      "c3Ryb3A="
   ],
   [
-    "Professional brings in editor: a Spaniard?",
-    "pedro"
+      "Professional brings in editor: a Spaniard?",
+      "cGVkcm8="
   ],
   [
-    "Strong point favouring team — first half",
-    "forte"
+      "Strong point favouring team — first half",
+      "Zm9ydGU="
   ],
   [
-    "Promise not to use top shelf",
-    "ledge"
+      "Promise not to use top shelf",
+      "bGVkZ2U="
   ],
   [
-    "5 catching a monster",
-    "beast"
+      "5 catching a monster",
+      "YmVhc3Q="
   ],
   [
-    "Get too hot while slicing baloney",
-    "roast"
+      "Get too hot while slicing baloney",
+      "cm9hc3Q="
   ],
   [
-    "Guy taking time to relax",
-    "tease"
+      "Guy taking time to relax",
+      "dGVhc2U="
   ],
   [
-    "Very energetic and touchy person fraying at the edges",
-    "hyper"
+      "Very energetic and touchy person fraying at the edges",
+      "aHlwZXI="
   ],
   [
-    "Spread of food with litres for drinking",
-    "flare"
+      "Spread of food with litres for drinking",
+      "ZmxhcmU="
   ],
   [
-    "Headgear for criminals in US districts",
-    "hoods"
+      "Headgear for criminals in US districts",
+      "aG9vZHM="
   ],
   [
-    "Instrument is abused with old rocker clearing off",
-    "viola"
+      "Instrument is abused with old rocker clearing off",
+      "dmlvbGE="
   ],
   [
-    "Not set to race where famous marathon takes place",
-    "runny"
+      "Not set to race where famous marathon takes place",
+      "cnVubnk="
   ],
   [
-    "Hit one displaying speed",
-    "clock"
+      "Hit one displaying speed",
+      "Y2xvY2s="
   ],
   [
-    "Quiet church containing gold architectural feature",
-    "porch"
+      "Quiet church containing gold architectural feature",
+      "cG9yY2g="
   ],
   [
-    "Doom's spelt out for this place",
-    "sodom"
+      "Doom's spelt out for this place",
+      "c29kb20="
   ],
   [
-    "Court of King Arthur",
-    "garth"
+      "Court of King Arthur",
+      "Z2FydGg="
   ],
   [
-    "Opening of a test's beginning at the southern end",
-    "stoma"
+      "Opening of a test's beginning at the southern end",
+      "c3RvbWE="
   ],
   [
-    "Weapon to throw or shoot",
-    "spear"
+      "Weapon to throw or shoot",
+      "c3BlYXI="
   ],
   [
-    "Fantastic salesperson getting us to the top",
-    "super"
+      "Fantastic salesperson getting us to the top",
+      "c3VwZXI="
   ],
   [
-    "Top symbol of home ground",
-    "earth"
+      "Top symbol of home ground",
+      "ZWFydGg="
   ],
   [
-    "One cutting hair in a state",
-    "maine"
+      "One cutting hair in a state",
+      "bWFpbmU="
   ],
   [
-    "U-turn",
-    "large"
+      "U-turn",
+      "bGFyZ2U="
   ],
   [
-    "Outbreak where filming takes place",
-    "onset"
+      "Outbreak where filming takes place",
+      "b25zZXQ="
   ],
   [
-    "All the players make nearly half the ice cream",
-    "tutti"
+      "All the players make nearly half the ice cream",
+      "dHV0dGk="
   ],
   [
-    "Daggers produced by old boy and priest",
-    "obeli"
+      "Daggers produced by old boy and priest",
+      "b2JlbGk="
   ],
   [
-    "US city entertaining male climber",
-    "liana"
+      "US city entertaining male climber",
+      "bGlhbmE="
   ],
   [
-    "Stuff oneself with something close to Cheddar?",
-    "gorge"
+      "Stuff oneself with something close to Cheddar?",
+      "Z29yZ2U="
   ],
   [
-    "Letter revealing a union problem after seven years?",
-    "aitch"
+      "Letter revealing a union problem after seven years?",
+      "YWl0Y2g="
   ],
   [
-    "In action it resembles saltpetre",
-    "nitre"
+      "In action it resembles saltpetre",
+      "bml0cmU="
   ],
   [
-    "Originally such a strange Wiltshire diocese",
-    "sarum"
+      "Originally such a strange Wiltshire diocese",
+      "c2FydW0="
   ],
   [
-    "The cheek of some musicians!",
-    "brass"
+      "The cheek of some musicians!",
+      "YnJhc3M="
   ],
   [
-    "Man has nearly forty days to find girl",
-    "helen"
+      "Man has nearly forty days to find girl",
+      "aGVsZW4="
   ],
   [
-    "Rich fellow’s finally given a shilling",
-    "nabob"
+      "Rich fellow’s finally given a shilling",
+      "bmFib2I="
   ],
   [
-    "Brilliant display of yarn wound around cape",
-    "eclat"
+      "Brilliant display of yarn wound around cape",
+      "ZWNsYXQ="
   ],
   [
-    "Copper pen in form of box?",
-    "cubic"
+      "Copper pen in form of box?",
+      "Y3ViaWM="
   ],
   [
-    "Shoe to briefly knock up",
-    "sabot"
+      "Shoe to briefly knock up",
+      "c2Fib3Q="
   ],
   [
-    "Weight trouble? Cereal’s your answer",
-    "wheat"
+      "Weight trouble? Cereal’s your answer",
+      "d2hlYXQ="
   ],
   [
-    "See Government file that’s coarse",
-    "grasp"
+      "See Government file that’s coarse",
+      "Z3Jhc3A="
   ],
   [
-    "Look round ground first",
-    "decko"
+      "Look round ground first",
+      "ZGVja28="
   ],
   [
-    "Something for all ages to enjoy inside biting eucalyptus",
-    "tuart"
+      "Something for all ages to enjoy inside biting eucalyptus",
+      "dHVhcnQ="
   ],
   [
-    "End of the British Legion is a devil",
-    "eblis"
+      "End of the British Legion is a devil",
+      "ZWJsaXM="
   ],
   [
-    "Flipping smashed exam entering college — it’ll help travel",
-    "decca"
+      "Flipping smashed exam entering college — it’ll help travel",
+      "ZGVjY2E="
   ],
   [
-    "Fit madam supporting hydros",
-    "spasm"
+      "Fit madam supporting hydros",
+      "c3Bhc20="
   ],
   [
-    "Protective garment some initially make fun of",
-    "smock"
+      "Protective garment some initially make fun of",
+      "c21vY2s="
   ],
   [
-    "Man following retired woman’s turn of phrase",
-    "idiom"
+      "Man following retired woman’s turn of phrase",
+      "aWRpb20="
   ],
   [
-    "Crane-like bird Turkish commander found by main road",
-    "agami"
+      "Crane-like bird Turkish commander found by main road",
+      "YWdhbWk="
   ],
   [
-    "Took risks — kicked bucket across entrance to crescent",
-    "diced"
+      "Took risks — kicked bucket across entrance to crescent",
+      "ZGljZWQ="
   ],
   [
-    "Carbon copies for heads",
-    "capes"
+      "Carbon copies for heads",
+      "Y2FwZXM="
   ],
   [
-    "A racket taking in head of mafia organisation",
-    "admin"
+      "A racket taking in head of mafia organisation",
+      "YWRtaW4="
   ],
   [
-    "Holy object oddly laid in playing field",
-    "relic"
+      "Holy object oddly laid in playing field",
+      "cmVsaWM="
   ],
   [
-    "Prophet’s artistic grandma",
-    "moses"
+      "Prophet’s artistic grandma",
+      "bW9zZXM="
   ],
   [
-    "Lots of seats here are not available",
-    "arena"
+      "Lots of seats here are not available",
+      "YXJlbmE="
   ],
   [
-    "Gentle drunk outside Grand Hotel",
-    "light"
+      "Gentle drunk outside Grand Hotel",
+      "bGlnaHQ="
   ],
   [
-    "Top seed's English racket",
-    "noise"
+      "Top seed's English racket",
+      "bm9pc2U="
   ],
   [
-    "Sporting events: matches?",
-    "meets"
+      "Sporting events: matches?",
+      "bWVldHM="
   ],
   [
-    "Did DIY in bathroom I’d let out",
-    "tiled"
+      "Did DIY in bathroom I’d let out",
+      "dGlsZWQ="
   ],
   [
-    "Consult match official here in middle",
-    "refer"
+      "Consult match official here in middle",
+      "cmVmZXI="
   ],
   [
-    "Sweetener your drink contains",
-    "syrup"
+      "Sweetener your drink contains",
+      "c3lydXA="
   ],
   [
-    "‘‘Jaws’’ bound to be shown in empty cinemas",
-    "chops"
+      "‘‘Jaws’’ bound to be shown in empty cinemas",
+      "Y2hvcHM="
   ],
   [
-    "Perfect lines to fill little volume",
-    "model"
+      "Perfect lines to fill little volume",
+      "bW9kZWw="
   ],
   [
-    "Buff coach horse every so often",
-    "ochre"
+      "Buff coach horse every so often",
+      "b2NocmU="
   ],
   [
-    "Vital to tour hospital as part of routine",
-    "chore"
+      "Vital to tour hospital as part of routine",
+      "Y2hvcmU="
   ],
   [
-    "Ton pig eats new leather strip",
-    "thong"
+      "Ton pig eats new leather strip",
+      "dGhvbmc="
   ],
   [
-    "Ruler’s still virtually one foot",
-    "calif"
+      "Ruler’s still virtually one foot",
+      "Y2FsaWY="
   ],
   [
-    "Annals of Tacitus or Ovid’s poem? Sound bit of instruction",
-    "fasti"
+      "Annals of Tacitus or Ovid’s poem? Sound bit of instruction",
+      "ZmFzdGk="
   ],
   [
-    "No good and tiny bit of African rhino",
-    "ngwee"
+      "No good and tiny bit of African rhino",
+      "bmd3ZWU="
   ],
   [
-    "Locksmith does this on getting into restraints",
-    "loids"
+      "Locksmith does this on getting into restraints",
+      "bG9pZHM="
   ],
   [
-    "Clues of that bloke including those bordering on naughtiest",
-    "hints"
+      "Clues of that bloke including those bordering on naughtiest",
+      "aGludHM="
   ],
   [
-    "Angry person holds in grouse",
-    "ryper"
+      "Angry person holds in grouse",
+      "cnlwZXI="
   ],
   [
-    "Horace’s in the presence of Owen initially in the old lie",
-    "coram"
+      "Horace’s in the presence of Owen initially in the old lie",
+      "Y29yYW0="
   ],
   [
-    "Migrant with spare brass appearing in street",
-    "stint"
+      "Migrant with spare brass appearing in street",
+      "c3RpbnQ="
   ],
   [
-    "Sound catty without direct upset",
-    "miaow"
+      "Sound catty without direct upset",
+      "bWlhb3c="
   ],
   [
-    "Part of insect rolling on stomach",
-    "notum"
+      "Part of insect rolling on stomach",
+      "bm90dW0="
   ],
   [
-    "Number one's appeal",
-    "issue"
+      "Number one's appeal",
+      "aXNzdWU="
   ],
   [
-    "Means of transport to get case of merchandise through part of America",
-    "camel"
+      "Means of transport to get case of merchandise through part of America",
+      "Y2FtZWw="
   ],
   [
-    "East German capital erected in Roman port",
-    "ostia"
+      "East German capital erected in Roman port",
+      "b3N0aWE="
   ],
   [
-    "Like birds initially imported in a commercial vehicle",
-    "avian"
+      "Like birds initially imported in a commercial vehicle",
+      "YXZpYW4="
   ],
   [
-    "Fellow engaged in moral philosophy",
-    "ralph"
+      "Fellow engaged in moral philosophy",
+      "cmFscGg="
   ],
   [
-    "Outstanding old part of house",
-    "owing"
+      "Outstanding old part of house",
+      "b3dpbmc="
   ],
   [
-    "Track taking dog across river",
-    "trail"
+      "Track taking dog across river",
+      "dHJhaWw="
   ],
   [
-    "Son isn't a good person",
-    "saint"
+      "Son isn't a good person",
+      "c2FpbnQ="
   ],
   [
-    "One group getting left in small place beset by water",
-    "islet"
+      "One group getting left in small place beset by water",
+      "aXNsZXQ="
   ],
   [
-    "Particular group may be performers with energy",
-    "caste"
+      "Particular group may be performers with energy",
+      "Y2FzdGU="
   ],
   [
-    "Place overlooked in film star's series",
-    "chain"
+      "Place overlooked in film star's series",
+      "Y2hhaW4="
   ],
   [
-    "Indicators of further commentary crucial to no believers.",
-    "obeli"
+      "Indicators of further commentary crucial to no believers.",
+      "b2JlbGk="
   ],
   [
-    "Find out glass at first not full",
-    "glean"
+      "Find out glass at first not full",
+      "Z2xlYW4="
   ],
   [
-    "Play that amuses worker in Post Office?",
-    "panto"
+      "Play that amuses worker in Post Office?",
+      "cGFudG8="
   ],
   [
-    "Exhausted writer in street",
-    "spent"
+      "Exhausted writer in street",
+      "c3BlbnQ="
   ],
   [
-    "Greek character has not finished passing mountain",
-    "alpha"
+      "Greek character has not finished passing mountain",
+      "YWxwaGE="
   ],
   [
-    "Beast arrived late at the start",
-    "camel"
+      "Beast arrived late at the start",
+      "Y2FtZWw="
   ],
   [
-    "Convincingly defeat on English course",
-    "route"
+      "Convincingly defeat on English course",
+      "cm91dGU="
   ],
   [
-    "Allow elderly relative time",
-    "grant"
+      "Allow elderly relative time",
+      "Z3JhbnQ="
   ],
   [
-    "Sounds like a mistake on which to stand?",
-    "floor"
+      "Sounds like a mistake on which to stand?",
+      "Zmxvb3I="
   ],
   [
-    "The way to keep head from clonking bed",
-    "patch"
+      "The way to keep head from clonking bed",
+      "cGF0Y2g="
   ],
   [
-    "See you in Ibiza having ace parties across island",
-    "adios"
+      "See you in Ibiza having ace parties across island",
+      "YWRpb3M="
   ],
   [
-    "Answer with almost complete rubbish",
-    "awful"
+      "Answer with almost complete rubbish",
+      "YXdmdWw="
   ],
   [
-    "Something of a rake pinches women’s threads",
-    "twine"
+      "Something of a rake pinches women’s threads",
+      "dHdpbmU="
   ],
   [
-    "A couple start to go around Dutch town",
-    "gouda"
+      "A couple start to go around Dutch town",
+      "Z291ZGE="
   ],
   [
-    "Turner oil at Hepworth shows",
-    "lathe"
+      "Turner oil at Hepworth shows",
+      "bGF0aGU="
   ],
   [
-    "Beast of burden carrying large Tibetan priest",
-    "llama"
+      "Beast of burden carrying large Tibetan priest",
+      "bGxhbWE="
   ],
   [
-    "Apply authority without power",
-    "exert"
+      "Apply authority without power",
+      "ZXhlcnQ="
   ],
   [
-    "Old-fashioned beer brought back without pressure",
-    "retro"
+      "Old-fashioned beer brought back without pressure",
+      "cmV0cm8="
   ],
   [
-    "Tedium starts to exhaust now nothing usually interests",
-    "ennui"
+      "Tedium starts to exhaust now nothing usually interests",
+      "ZW5udWk="
   ],
   [
-    "Coat in two sizes gaining appreciation",
-    "smear"
+      "Coat in two sizes gaining appreciation",
+      "c21lYXI="
   ],
   [
-    "Right page in incorrect order?",
-    "recto"
+      "Right page in incorrect order?",
+      "cmVjdG8="
   ],
   [
-    "European clubs wearing black kick out",
-    "eject"
+      "European clubs wearing black kick out",
+      "ZWplY3Q="
   ],
   [
-    "Ring through snout a form of restraint",
-    "noose"
+      "Ring through snout a form of restraint",
+      "bm9vc2U="
   ],
   [
-    "Socialist bound by firm principles",
-    "credo"
+      "Socialist bound by firm principles",
+      "Y3JlZG8="
   ],
   [
-    "Thailand's last queen raised money abroad",
-    "dinar"
+      "Thailand's last queen raised money abroad",
+      "ZGluYXI="
   ],
   [
-    "Man appearing in bazaar once",
-    "aaron"
+      "Man appearing in bazaar once",
+      "YWFyb24="
   ],
   [
-    "Scottish Linesman is on fire!",
-    "burns"
+      "Scottish Linesman is on fire!",
+      "YnVybnM="
   ],
   [
-    "N Ireland footballer conserving energy in attack",
-    "beset"
+      "N Ireland footballer conserving energy in attack",
+      "YmVzZXQ="
   ],
   [
-    "Find the net?  One can be composed!",
-    "score"
+      "Find the net?  One can be composed!",
+      "c2NvcmU="
   ],
   [
-    "At first they were all nervous; finally showing pluck",
-    "twang"
+      "At first they were all nervous; finally showing pluck",
+      "dHdhbmc="
   ],
   [
-    "Pinch small duck",
-    "steal"
+      "Pinch small duck",
+      "c3RlYWw="
   ],
   [
-    "Cry over queen’s grave",
-    "sober"
+      "Cry over queen’s grave",
+      "c29iZXI="
   ],
   [
-    "Revolutionary essence derived from turning over leaf",
-    "folio"
+      "Revolutionary essence derived from turning over leaf",
+      "Zm9saW8="
   ],
   [
-    "Believer in return of a former ruler",
-    "rasta"
+      "Believer in return of a former ruler",
+      "cmFzdGE="
   ],
-
   [
-    "Colour of any two short bananas",
-    "tawny"
+      "Colour of any two short bananas",
+      "dGF3bnk="
   ],
   [
-    "Restraint for dog while a shopper's absorbed",
-    "leash"
+      "Restraint for dog while a shopper's absorbed",
+      "bGVhc2g="
   ],
   [
-    "Defendant's third book essential in court case",
-    "facts"
+      "Defendant's third book essential in court case",
+      "ZmFjdHM="
   ],
   [
-    "Radiant silver-blue",
-    "aglow"
+      "Radiant silver-blue",
+      "YWdsb3c="
   ],
   [
-    "About to interrupt theatre review",
-    "recap"
+      "About to interrupt theatre review",
+      "cmVjYXA="
   ],
   [
-    "Run across a pirate",
-    "rover"
+      "Run across a pirate",
+      "cm92ZXI="
   ],
   [
-    "Wash first of nightclothes in advance",
-    "rinse"
+      "Wash first of nightclothes in advance",
+      "cmluc2U="
   ],
   [
-    "Former leaders in Chelsea evidently like to do well",
-    "excel"
+      "Former leaders in Chelsea evidently like to do well",
+      "ZXhjZWw="
   ],
   [
-    "Negative male in America",
-    "minus"
+      "Negative male in America",
+      "bWludXM="
   ],
   [
-    "Grey and unfashionable plaster",
-    "grout"
+      "Grey and unfashionable plaster",
+      "Z3JvdXQ="
   ],
   [
-    "Employment of learned person after university",
-    "usage"
+      "Employment of learned person after university",
+      "dXNhZ2U="
   ],
   [
-    "Record includes unknown composer",
-    "liszt"
+      "Record includes unknown composer",
+      "bGlzenQ="
   ],
   [
-    "Shape character of Greek doctor",
-    "rhomb"
+      "Shape character of Greek doctor",
+      "cmhvbWI="
   ],
   [
-    "Old cricketer’s grand career",
-    "grace"
+      "Old cricketer’s grand career",
+      "Z3JhY2U="
   ],
   [
-    "Plant fibre packed round large slate",
-    "blast"
+      "Plant fibre packed round large slate",
+      "Ymxhc3Q="
   ],
   [
-    "Trouble following space communication",
-    "email"
+      "Trouble following space communication",
+      "ZW1haWw="
   ],
   [
-    "Really old oak trees survive principally — on these",
-    "roots"
+      "Really old oak trees survive principally — on these",
+      "cm9vdHM="
   ],
   [
-    "Mess up surface of front edge of sail",
-    "fluff"
+      "Mess up surface of front edge of sail",
+      "Zmx1ZmY="
   ],
   [
-    "Periodical by graduate is hot stuff!",
-    "magma"
+      "Periodical by graduate is hot stuff!",
+      "bWFnbWE="
   ],
   [
-    "Through which spirit is poured out of sight",
-    "optic"
+      "Through which spirit is poured out of sight",
+      "b3B0aWM="
   ],
   [
-    "Character waited for leave period",
-    "godot"
+      "Character waited for leave period",
+      "Z29kb3Q="
   ],
   [
-    "Knowing a king is held in great respect",
-    "aware"
+      "Knowing a king is held in great respect",
+      "YXdhcmU="
   ],
   [
-    "Each leading",
-    "ahead"
+      "Each leading",
+      "YWhlYWQ="
   ],
   [
-    "People taking position about sex",
-    "laity"
+      "People taking position about sex",
+      "bGFpdHk="
   ],
   [
-    "Partners embracing single hour of prayer",
-    "nones"
+      "Partners embracing single hour of prayer",
+      "bm9uZXM="
   ],
   [
-    "Getting rid of a whole lot of players no good",
-    "axing"
+      "Getting rid of a whole lot of players no good",
+      "YXhpbmc="
   ],
   [
-    "Cake that’s part of breakfast or tea",
-    "torte"
+      "Cake that’s part of breakfast or tea",
+      "dG9ydGU="
   ],
   [
-    "Phlegmatic type almost shut in thus",
-    "stoic"
+      "Phlegmatic type almost shut in thus",
+      "c3RvaWM="
   ],
   [
-    "Woman’s contribution finally accepted by Times",
-    "agnes"
+      "Woman’s contribution finally accepted by Times",
+      "YWduZXM="
   ],
   [
-    "Work trapeze artistes are ill-advised to have",
-    "nonet"
+      "Work trapeze artistes are ill-advised to have",
+      "bm9uZXQ="
   ],
   [
-    "Manage to catch son in wood",
-    "copse"
+      "Manage to catch son in wood",
+      "Y29wc2U="
   ],
   [
-    "Loud shouting from one imprisoned by beak?",
-    "noise"
+      "Loud shouting from one imprisoned by beak?",
+      "bm9pc2U="
   ],
   [
-    "Strengthening device left in holiday site",
-    "clamp"
+      "Strengthening device left in holiday site",
+      "Y2xhbXA="
   ],
   [
-    "Politician protected by first-class defence",
-    "alibi"
+      "Politician protected by first-class defence",
+      "YWxpYmk="
   ],
   [
-    "Quick-witted character on the staff",
-    "sharp"
+      "Quick-witted character on the staff",
+      "c2hhcnA="
   ],
   [
-    "Highest-ranked group in personnel I tested",
-    "elite"
+      "Highest-ranked group in personnel I tested",
+      "ZWxpdGU="
   ],
   [
-    "Proper to accommodate a Trojan king",
-    "priam"
+      "Proper to accommodate a Trojan king",
+      "cHJpYW0="
   ],
   [
-    "Lip — part of the face",
-    "cheek"
+      "Lip — part of the face",
+      "Y2hlZWs="
   ],
   [
-    "Fire close to club lounge",
-    "blaze"
+      "Fire close to club lounge",
+      "YmxhemU="
   ],
   [
-    "One arrested by the force?",
-    "thief"
+      "One arrested by the force?",
+      "dGhpZWY="
   ],
   [
-    "Republican is greeting Hindu sage",
-    "rishi"
+      "Republican is greeting Hindu sage",
+      "cmlzaGk="
   ],
   [
-    "Iranians at last in American airspace",
-    "sinus"
+      "Iranians at last in American airspace",
+      "c2ludXM="
   ],
   [
-    "Puzzle about public transport",
-    "rebus"
+      "Puzzle about public transport",
+      "cmVidXM="
   ],
   [
-    "Can't do without Geordie news bosses?",
-    "needs"
+      "Can't do without Geordie news bosses?",
+      "bmVlZHM="
   ],
   [
-    "Stay like newly laid asphalt?",
-    "tarry"
+      "Stay like newly laid asphalt?",
+      "dGFycnk="
   ],
   [
-    "Child learner seen around a comprehensive",
-    "total"
+      "Child learner seen around a comprehensive",
+      "dG90YWw="
   ],
   [
-    "Stick cooling eggs in the trash",
-    "cling"
+      "Stick cooling eggs in the trash",
+      "Y2xpbmc="
   ],
   [
-    "Was a jumper extremely loose fitting?",
-    "leapt"
+      "Was a jumper extremely loose fitting?",
+      "bGVhcHQ="
   ],
   [
-    "Difficult to hide ring in collection",
-    "hoard"
+      "Difficult to hide ring in collection",
+      "aG9hcmQ="
   ],
   [
-    "Native home on Scottish island son escapes from",
-    "inuit"
+      "Native home on Scottish island son escapes from",
+      "aW51aXQ="
   ],
   [
-    "Mum’s working for a member of a secret society",
-    "mason"
+      "Mum’s working for a member of a secret society",
+      "bWFzb24="
   ],
   [
-    "Composer’s final jazz piece included in catalogue",
-    "liszt"
+      "Composer’s final jazz piece included in catalogue",
+      "bGlzenQ="
   ],
   [
-    "Married in Polish before a dance",
-    "rumba"
+      "Married in Polish before a dance",
+      "cnVtYmE="
   ],
   [
-    "Bird with rook and duck on waste container",
-    "robin"
+      "Bird with rook and duck on waste container",
+      "cm9iaW4="
   ],
   [
-    "Difficult to hide ring in collection",
-    "hoard"
+      "Difficult to hide ring in collection",
+      "aG9hcmQ="
   ],
   [
-    "Make a note of eating in informal establishment",
-    "joint"
+      "Make a note of eating in informal establishment",
+      "am9pbnQ="
   ],
   [
-    "Man on board eating right seafood",
-    "prawn"
+      "Man on board eating right seafood",
+      "cHJhd24="
   ],
   [
-    "Donut deli flips cooking grease",
-    "oiled"
+      "Donut deli flips cooking grease",
+      "b2lsZWQ="
   ],
   [
-    "Place lightning struck partly sent skyward",
-    "ninth"
+      "Place lightning struck partly sent skyward",
+      "bmludGg="
   ],
   [
-    "Some slumber therein",
-    "berth"
+      "Some slumber therein",
+      "YmVydGg="
   ],
   [
-    "Difficult to hide ring in collection",
-    "hoard",
-    "https://youtu.be/8c6cOiDDVas"
+      "Difficult to hide ring in collection",
+      "aG9hcmQ="
   ],
   [
-    "Animal oddly eats bat head",
-    "beast",
-    "https://youtu.be/-1ibijv_Cfs"
+      "Animal oddly eats bat head",
+      "YmVhc3Q="
   ],
   [
-    "Faces in the city hear you scratching",
-    "itchy",
-    "https://youtu.be/UvNd3iigs5I"
+      "Faces in the city hear you scratching",
+      "aXRjaHk="
   ],
   [
-    "Original poster with epoch concert",
-    "opera",
-    "https://youtu.be/Adrbg72pues"
+      "Original poster with epoch concert",
+      "b3BlcmE="
   ],
   [
-    "Land of the heart in chaos",
-    "earth",
-    "https://youtu.be/7NJAEXgGe1U"
+      "Land of the heart in chaos",
+      "ZWFydGg="
   ],
   [
-    "Holiday troops without eyes eat me",
-    "trips",
-    "https://youtu.be/ZKEKFkYdZos"
+      "Holiday troops without eyes eat me",
+      "dHJpcHM="
   ],
   [
-    "Game inside catches steam",
-    "chess",
-    "https://youtu.be/ouHaxCSey-g"
+      "Game inside catches steam",
+      "Y2hlc3M="
   ],
   [
-    "Bottomless salad dish tossed and turned",
-    "dials",
-    "https://youtu.be/280iMqHMJNA"
+      "Bottomless salad dish tossed and turned",
+      "ZGlhbHM="
   ],
   [
-    "Spring out of jail payment to embrace university",
-    "bound",
-    "https://youtu.be/usI7II3oQbE"
+      "Spring out of jail payment to embrace university",
+      "Ym91bmQ="
   ],
   [
-    "Man on board eating right seafood",
-    "prawn",
-    "https://youtu.be/OnADsE-fPM8"
+      "Man on board eating right seafood",
+      "cHJhd24="
   ],
   [
-    "Trunk and tangled roots",
-    "torso",
-    "https://youtube.com/shorts/V3p_cDxhsw8"
+      "Trunk and tangled roots",
+      "dG9yc28="
   ],
   [
-    "Maybe canines in part of golf course on Thursday",
-    "teeth",
-    "https://youtu.be/UFBpC1jidVY"
+      "Maybe canines in part of golf course on Thursday",
+      "dGVldGg="
   ],
   [
-    "Mined inside out jeans",
-    "denim",
-    "https://youtu.be/4zWNbhkgSec"
+      "Mined inside out jeans",
+      "ZGVuaW0="
   ],
   [
-    "Flee in rest without direction lead on",
-    "flirt",
-    "https://youtu.be/RjYIUGIfiUk"
+      "Flee in rest without direction lead on",
+      "ZmxpcnQ="
   ],
   [
-    "Blade splitting peoples word",
-    "sword",
-    "https://youtu.be/B_2C4FoGF_c"
+      "Blade splitting peoples word",
+      "c3dvcmQ="
   ],
   [
-    "Check a Buddhist at regular intervals",
-    "audit",
-    "https://youtu.be/kV7LCjr2Meo"
+      "Check a Buddhist at regular intervals",
+      "YXVkaXQ="
   ],
   [
-    "Southern Sisters invade young male with authority",
-    "bossy",
-    "https://youtu.be/o5XVDx_3t_U"
+      "Southern Sisters invade young male with authority",
+      "Ym9zc3k="
   ],
   [
-    "Scottish snack offered in disco nearby",
-    "scone",
-    "https://youtu.be/nEULIvPVj5k"
+      "Scottish snack offered in disco nearby",
+      "c2NvbmU="
   ],
   [
-    "My holding? One dollar!",
-    "money",
-    "https://youtu.be/Xqwp6nG8ZKo"
+      "My holding? One dollar!",
+      "bW9uZXk="
   ],
   [
-    "Utilize America with General Electric",
-    "usage",
-    "https://youtu.be/5VafI0wS5sQ"
+      "Utilize America with General Electric",
+      "dXNhZ2U="
   ],
   [
-    "Girl trapping judge’s assassin",
-    "ninja",
-    "https://youtu.be/5lYP9FrJ_qs"
+      "Girl trapping judge’s assassin",
+      "bmluamE="
   ],
   [
-    "Trinity right within you",
-    "three",
-    "https://youtu.be/lnx2B5p5bJg"
+      "Trinity right within you",
+      "dGhyZWU="
   ],
   [
-    "Knock out jockey regularly — that's strange!",
-    "kooky",
-    "https://youtu.be/m2SHivuWFh8"
+      "Knock out jockey regularly — that's strange!",
+      "a29va3k="
   ],
   [
-    "Strong Lee flipped street",
-    "steel",
-    "https://youtu.be/5LaF1XR-FRY"
+      "Strong Lee flipped street",
+      "c3RlZWw="
   ],
   [
-    "Bravo! Right playing card held up!",
-    "brace",
-    "https://youtu.be/GLINWL77gMU"
+      "Bravo! Right playing card held up!",
+      "YnJhY2U="
   ],
   [
-    "Different occasionally lost girl",
-    "other",
-    "https://youtu.be/a1N49UcoasA"
+      "Different occasionally lost girl",
+      "b3RoZXI="
   ],
   [
-    "Garbage Thursday Sandwich with brass belly",
-    "trash",
-    "https://youtu.be/6q_c5dtfafY"
+      "Garbage Thursday Sandwich with brass belly",
+      "dHJhc2g="
   ],
   [
-    "Pay 100 rings to destroy sin",
-    "coins",
-    "https://youtu.be/pExvnD2ZGCY"
+      "Pay 100 rings to destroy sin",
+      "Y29pbnM="
   ],
   [
-    "Scandium shattered ear terrifies",
-    "scare",
-    "https://youtu.be/3jQ5X54O-a4"
+      "Scandium shattered ear terrifies",
+      "c2NhcmU="
   ],
   [
-    "Donut deli flips cooking grease",
-    "oiled",
-    "https://youtu.be/CsQuiWu9OLw"
+      "Donut deli flips cooking grease",
+      "b2lsZWQ="
   ],
   [
-    "Patient's back starts to cause intermittent, often terrible, suffering",
-    "stoic",
-    "https://youtube.com/shorts/dz3a-SON4fQ"
+      "Patient's back starts to cause intermittent, often terrible, suffering",
+      "c3RvaWM="
   ],
   [
-    "Server missing one essential liquid",
-    "water",
-    "https://youtu.be/pTwjIVkuJkw" 
+      "Server missing one essential liquid",
+      "d2F0ZXI="
   ],
   [
-    "Be left with large and ultimately unlovely stomach",
-    "belly",
-    "https://youtu.be/q8qWPTDnMNM"
+      "Be left with large and ultimately unlovely stomach",
+      "YmVsbHk="
   ],
   [
-    "Aircraft ugly, did you say?",
-    "plane",
-    "https://youtu.be/u5QWWfAFA7w"
+      "Aircraft ugly, did you say?",
+      "cGxhbmU="
   ],
   [
-    "By Hollywood location, delve regularly for scoop",
-    "ladle",
-    "https://youtu.be/XKLTw0Q877Y"
+      "By Hollywood location, delve regularly for scoop",
+      "bGFkbGU="
   ],
   [
-    "A record held by a hotel in Alcoholics Anonymous",
-    "alpha",
-    "https://youtu.be/O83h3bdnxgE"
+      "A record held by a hotel in Alcoholics Anonymous",
+      "YWxwaGE="
   ],
   [
-    "Excusing Artifical Intelligence for capturing library",
-    "alibi",
-    "https://youtube.com/shorts/GS4ELA6Z5Mo"
+      "Excusing Artifical Intelligence for capturing library",
+      "YWxpYmk="
   ],
   [
-    "Driver flipped car, goes to emergency room!",
-    "racer",
-    "https://youtube.com/shorts/x9T26NmTEsk"
+      "Driver flipped car, goes to emergency room!",
+      "cmFjZXI="
   ],
   [
-    "Certification only initially accepted by senior academic",
-    "proof",
-    "https://youtu.be/2mbeXBWNEXs"
+      "Certification only initially accepted by senior academic",
+      "cHJvb2Y="
   ],
   [
-    "Bread crust covers sound iron slab",
-    "board",
-    "https://youtu.be/nLKMB-T0EFI"
+      "Bread crust covers sound iron slab",
+      "Ym9hcmQ="
   ],
   [
-    "Brag about large, playful farm animal",
-    "gloat",
-    "https://youtube.com/shorts/IyVeq8cnflA"
+      "Brag about large, playful farm animal",
+      "Z2xvYXQ="
   ],
   [
-    "Scratching head in coffee shop",
-    "chafe",
-    "https://youtu.be/dlZ0LSRhnOo"
+      "Scratching head in coffee shop",
+      "Y2hhZmU="
   ],
   [
-    "One sticky mess has got left in hut",
-    "igloo",
-    "https://youtu.be/hqdexa99vHE"
+      "One sticky mess has got left in hut",
+      "aWdsb28="
   ],
   [
-    "Win over by tucking into clutch arm",
-    "charm",
-    "https://youtube.com/shorts/8TcwBYIfGg4"
+      "Win over by tucking into clutch arm",
+      "Y2hhcm0="
   ],
   [
-    "Bitter Romeo drowning in toxic waste",
-    "acrid",
-    "https://youtube.com/shorts/j4kWEaOz3oE"
+      "Bitter Romeo drowning in toxic waste",
+      "YWNyaWQ="
   ],
   [
-    "Rock star to out new EP debut",
-    "stone",
-    "https://youtu.be/crq4_SCH9Wo"
+      "Rock star to out new EP debut",
+      "c3RvbmU="
   ],
   [
-    "Even chance to dye mixed with sweetener",
-    "honey",
-    "https://youtu.be/W-P5YjgszTQ"
+      "Even chance to dye mixed with sweetener",
+      "aG9uZXk="
   ],
   [
-    "Beat half of us in the water",
-    "pound",
-    "https://youtu.be/SgUg-oCq8xE"
+      "Beat half of us in the water",
+      "cG91bmQ="
   ],
   [
-    "Captain destroys plot I am in",
-    "pilot",
-    "https://youtu.be/EjKSUyBZyvg"
+      "Captain destroys plot I am in",
+      "cGlsb3Q="
   ],
   [
-    "Find, small amount",
-    "trace",
-    "https://youtu.be/UUzyRjfwR1w"
+      "Find, small amount",
+      "dHJhY2U="
   ],
   [
-    "One page coming out of directory",
-    "recto",
-    "https://youtu.be/viU5sfExgxs"
+      "One page coming out of directory",
+      "cmVjdG8="
   ],
   [
-    "Slowly transform school party going over hotel",
-    "morph",
-    "https://youtu.be/DpwuugIgbiU"
+      "Slowly transform school party going over hotel",
+      "bW9ycGg="
   ],
   [
-    "Spotted scavenger bringing foreign money into Hawaii",
-    "hyena",
-    "https://youtu.be/2NMuRfCK4XI"
+      "Spotted scavenger bringing foreign money into Hawaii",
+      "aHllbmE="
   ],
   [
-    "Might be indebted for interrupting press release",
-    "power",
-    "https://youtu.be/wlY4MfB-Ff8"
+      "Might be indebted for interrupting press release",
+      "cG93ZXI="
   ],
   [
-    "Snare wild ones crossing over at first",
-    "noose",
-    "https://youtu.be/izQiz-oMCfg"
+      "Snare wild ones crossing over at first",
+      "bm9vc2U="
   ],
   [
-    "Played the part of cadet at sea",
-    "acted",
-    "https://youtu.be/_bGHph9NNZI"
+      "Played the part of cadet at sea",
+      "YWN0ZWQ="
   ],
   [
-    "Reporter’s dispatched perfume",
-    "scent",
-    "https://youtu.be/N9yHGRR-WxA"
+      "Reporter’s dispatched perfume",
+      "c2NlbnQ="
   ],
   [
-    "Encirclement, say, if enemy gets energetic at outset",
-    "siege",
-    "https://youtu.be/5zTOc7X8pSg"
+      "Encirclement, say, if enemy gets energetic at outset",
+      "c2llZ2U="
   ],
   [
-    "Bad time to bring back group of soldiers",
-    "troop",
-    "https://youtu.be/FfcHeT6kVeM"
+      "Bad time to bring back group of soldiers",
+      "dHJvb3A="
   ],
   [
-    "Fold petal another way",
-    "pleat",
-    "https://youtu.be/s34uNkY0rDI"
+      "Fold petal another way",
+      "cGxlYXQ="
   ],
   [
-    "Meaning to float along",
-    "drift",
-    "https://youtu.be/K8d9_S4P98E"
+      "Meaning to float along",
+      "ZHJpZnQ="
   ],
   [
-    "No small seat for Roman magistrate",
-    "edile"
+      "No small seat for Roman magistrate",
+      "ZWRpbGU="
   ],
   [
-    "Stone taken off instead of getting over",
-    "again"
+      "Stone taken off instead of getting over",
+      "YWdhaW4="
   ],
   [
-    "Old explorer spoken of harshly",
-    "rawly"
+      "Old explorer spoken of harshly",
+      "cmF3bHk="
   ],
   [
-    "For singing in cathedral",
-    "maybe"
+      "For singing in cathedral",
+      "bWF5YmU="
   ],
   [
-    "Get pasty and bloomer that’s hand-picked for chain in north?",
-    "gowan"
+      "Get pasty and bloomer that’s hand-picked for chain in north?",
+      "Z293YW4="
   ],
   [
-    "Old pack: presumably not the only member of rowdy one to show up?",
-    "taroc"
+      "Old pack: presumably not the only member of rowdy one to show up?",
+      "dGFyb2M="
   ],
   [
-    "Long twelvemonth at end of campaign",
-    "yearn"
+      "Long twelvemonth at end of campaign",
+      "eWVhcm4="
   ],
   [
-    "Vain attempt you keep hidden",
-    "empty"
+      "Vain attempt you keep hidden",
+      "ZW1wdHk="
   ],
   [
-    "Son nervous describing grasses",
-    "sedgy"
+      "Son nervous describing grasses",
+      "c2VkZ3k="
   ],
   [
-    "Assistant keeps son out of the way",
-    "aside"
+      "Assistant keeps son out of the way",
+      "YXNpZGU="
   ],
   [
-    "A pastoral letter: some felt it useful",
-    "titus"
+      "A pastoral letter: some felt it useful",
+      "dGl0dXM="
   ],
   [
-    "God takes a long time turning over ancient city",
-    "horus"
+      "God takes a long time turning over ancient city",
+      "aG9ydXM="
   ],
   [
-    "Fountain: in it tossed up clergyman",
-    "trevi"
+      "Fountain: in it tossed up clergyman",
+      "dHJldmk="
   ],
   [
-    "Moved to take-off after disembarking one becoming stressed",
-    "taxed"
+      "Moved to take-off after disembarking one becoming stressed",
+      "dGF4ZWQ="
   ],
   [
-    "I'd recalled way of working one part of speech",
-    "idiom"
+      "I'd recalled way of working one part of speech",
+      "aWRpb20="
   ],
   [
-    "Row about component of education for painstaking student?",
-    "trier"
+      "Row about component of education for painstaking student?",
+      "dHJpZXI="
   ],
   [
-    "Civic dignitary dressing right",
-    "mayor"
+      "Civic dignitary dressing right",
+      "bWF5b3I="
   ],
   [
-    "Old people off home to reflect",
-    "iceni"
+      "Old people off home to reflect",
+      "aWNlbmk="
   ],
   [
-    "Put swimmer on the phone?",
-    "place"
+      "Put swimmer on the phone?",
+      "cGxhY2U="
   ],
   [
-    "Don't spend penny on brush",
-    "skimp"
+      "Don't spend penny on brush",
+      "c2tpbXA="
   ],
   [
-    "Middle card",
-    "heart"
+      "Middle card",
+      "aGVhcnQ="
   ],
   [
-    "Revolution inspiring Italian leader somewhere in Italy",
-    "turin"
+      "Revolution inspiring Italian leader somewhere in Italy",
+      "dHVyaW4="
   ],
   [
-    "Country lane winding around first of poplars",
-    "nepal"
+      "Country lane winding around first of poplars",
+      "bmVwYWw="
   ],
   [
-    "Island serving some mediocre tempura",
-    "crete"
+      "Island serving some mediocre tempura",
+      "Y3JldGU="
   ],
   [
-    "Only altered new fabric",
-    "nylon"
+      "Only altered new fabric",
+      "bnlsb24="
   ],
   [
-    "Man on board eating right seafood",
-    "prawn"
+      "Man on board eating right seafood",
+      "cHJhd24="
   ],
   [
-    "Strong second row",
-    "stiff"
+      "Strong second row",
+      "c3RpZmY="
   ],
   [
-    "Powerful drug: one taken with expression of doubt after operation",
-    "opium"
+      "Powerful drug: one taken with expression of doubt after operation",
+      "b3BpdW0="
   ],
   [
-    "Shot below joint",
-    "elbow"
+      "Shot below joint",
+      "ZWxib3c="
   ],
   [
-    "Sound coming from piano is extraordinary",
-    "noise"
+      "Sound coming from piano is extraordinary",
+      "bm9pc2U="
   ],
   [
-    "Trunk and tangled roots",
-    "torso"
+      "Trunk and tangled roots",
+      "dG9yc28="
   ],
   [
-    "Courage of owner finally entering flat that's been turned over",
-    "nerve"
+      "Courage of owner finally entering flat that's been turned over",
+      "bmVydmU="
   ],
   [
-    "Large portion of church in decline",
-    "lapse"
+      "Large portion of church in decline",
+      "bGFwc2U="
   ],
   [
-    "Carnivore's length added to value",
-    "ratel"
+      "Carnivore's length added to value",
+      "cmF0ZWw="
   ],
   [
-    "Territory that’s visible on borders of this country",
-    "yukon"
+      "Territory that’s visible on borders of this country",
+      "eXVrb24="
   ],
   [
-    "Feeble Democrat raised flag",
-    "droop"
+      "Feeble Democrat raised flag",
+      "ZHJvb3A="
   ],
   [
-    "One means of conveying news feature the French banned",
-    "artic"
+      "One means of conveying news feature the French banned",
+      "YXJ0aWM="
   ],
   [
-    "Effeminate guy has one tough game for United",
-    "girly"
+      "Effeminate guy has one tough game for United",
+      "Z2lybHk="
   ],
   [
-    "Your tip for marinade? Eastern herb",
-    "thyme"
+      "Your tip for marinade? Eastern herb",
+      "dGh5bWU="
   ],
   [
-    "Coloured chilli sauce back inside of American guts to a degree",
-    "celom"
+      "Coloured chilli sauce back inside of American guts to a degree",
+      "Y2Vsb20="
   ],
   [
-    "Body-swerving trustee end for release of old Scots",
-    "exeme"
+      "Body-swerving trustee end for release of old Scots",
+      "ZXhlbWU="
   ],
   [
-    "Welsh nurse finds bear",
-    "whelp"
+      "Welsh nurse finds bear",
+      "d2hlbHA="
   ],
   [
-    "Vigorous mum who’s flush and likely to blow up?",
-    "yappy"
+      "Vigorous mum who’s flush and likely to blow up?",
+      "eWFwcHk="
   ],
   [
-    "Subject in history such as fiction contains",
-    "liege"
+      "Subject in history such as fiction contains",
+      "bGllZ2U="
   ],
   [
-    "Soul so lacking in quiet place of detention",
-    "gulag"
+      "Soul so lacking in quiet place of detention",
+      "Z3VsYWc="
   ],
   [
-    "Old Swahilis appear to rise invaded by Zulu",
-    "mzees"
+      "Old Swahilis appear to rise invaded by Zulu",
+      "bXplZXM="
   ],
   [
-    "Lens for camera cases returned",
-    "macro"
+      "Lens for camera cases returned",
+      "bWFjcm8="
   ],
   [
-    "Pole appearing earlier in Gdansk",
-    "north"
+      "Pole appearing earlier in Gdansk",
+      "bm9ydGg="
   ],
   [
-    "Extract from a little white lie",
-    "wrest"
+      "Extract from a little white lie",
+      "d3Jlc3Q="
   ],
   [
-    "Asian country dismissing cases of Hindu bias",
-    "india"
+      "Asian country dismissing cases of Hindu bias",
+      "aW5kaWE="
   ],
   [
-    "Informant inside that is angry",
-    "irate"
+      "Informant inside that is angry",
+      "aXJhdGU="
   ],
   [
-    "Maybe canines in part of golf course on Thursday",
-    "teeth"
+      "Maybe canines in part of golf course on Thursday",
+      "dGVldGg="
   ],
   [
-    "Stranger died in north European river",
-    "odder"
+      "Stranger died in north European river",
+      "b2RkZXI="
   ],
   [
-    "Wagon broken by a weight of stones",
-    "carat"
+      "Wagon broken by a weight of stones",
+      "Y2FyYXQ="
   ],
   [
-    "I had clerk starting late and finishing early — layabout",
-    "idler"
+      "I had clerk starting late and finishing early — layabout",
+      "aWRsZXI="
   ],
   [
-    "Organised criminals intend rising about a fine",
-    "mafia"
+      "Organised criminals intend rising about a fine",
+      "bWFmaWE="
   ],
   [
-    "Tree’s more bare with top removed",
-    "alder"
+      "Tree’s more bare with top removed",
+      "YWxkZXI="
   ],
   [
-    "Heap of dust finally placed in bag",
-    "stack"
+      "Heap of dust finally placed in bag",
+      "c3RhY2s="
   ],
   [
-    "A pudding sent back cold",
-    "aloof"
+      "A pudding sent back cold",
+      "YWxvb2Y="
   ],
   [
-    "Ultimately serious desire to be fashionable",
-    "swish"
+      "Ultimately serious desire to be fashionable",
+      "c3dpc2g="
   ],
   [
-    "Murder victim given grave at last in Poplar?",
-    "abele"
+      "Murder victim given grave at last in Poplar?",
+      "YWJlbGU="
   ],
   [
-    "Old railwaymen with points to look after",
-    "nurse"
+      "Old railwaymen with points to look after",
+      "bnVyc2U="
   ],
   [
-    "Lily’s yoga position",
-    "lotus"
+      "Lily’s yoga position",
+      "bG90dXM="
   ],
   [
-    "Burst with old enthusiasm",
-    "gusto"
+      "Burst with old enthusiasm",
+      "Z3VzdG8="
   ],
   [
-    "Proper to welcome a Trojan king",
-    "priam"
+      "Proper to welcome a Trojan king",
+      "cHJpYW0="
   ],
   [
-    "Cube consumed orally",
-    "eight"
+      "Cube consumed orally",
+      "ZWlnaHQ="
   ],
   [
-    "Ceremony read out? Correct!",
-    "right"
+      "Ceremony read out? Correct!",
+      "cmlnaHQ="
   ],
   [
-    "Dominant idea or word from French Count’s prison island",
-    "motif"
+      "Dominant idea or word from French Count’s prison island",
+      "bW90aWY="
   ],
   [
-    "Maybe tokes from bit of grass after rolling",
-    "draws"
+      "Maybe tokes from bit of grass after rolling",
+      "ZHJhd3M="
   ],
   [
-    "Part of an antler’s secured with cord",
-    "twine"
+      "Part of an antler’s secured with cord",
+      "dHdpbmU="
   ],
   [
-    "Remove equipment from rocky ridge",
-    "derig"
+      "Remove equipment from rocky ridge",
+      "ZGVyaWc="
   ],
   [
-    "Artistic appreciation almost stifling member’s dismal verse",
-    "elegy"
+      "Artistic appreciation almost stifling member’s dismal verse",
+      "ZWxlZ3k="
   ],
   [
-    "Fine places for the seriously ill house plant?",
-    "ficus"
+      "Fine places for the seriously ill house plant?",
+      "ZmljdXM="
   ],
   [
-    "Prepared to attach paper of particular dimensions",
-    "sized"
+      "Prepared to attach paper of particular dimensions",
+      "c2l6ZWQ="
   ],
   [
-    "It’s bad to be left in this list suddenly",
-    "lurch"
+      "It’s bad to be left in this list suddenly",
+      "bHVyY2g="
   ],
   [
-    "Volunteers ate up: prepare for Jack to?",
-    "defat"
+      "Volunteers ate up: prepare for Jack to?",
+      "ZGVmYXQ="
   ],
   [
-    "This S American native no good for a film",
-    "coati"
+      "This S American native no good for a film",
+      "Y29hdGk="
   ],
   [
-    "A long way round a state for itinerant",
-    "friar"
+      "A long way round a state for itinerant",
+      "ZnJpYXI="
   ],
   [
-    "Long-distance traveller from Maine sleeping like a baby?",
-    "comet"
+      "Long-distance traveller from Maine sleeping like a baby?",
+      "Y29tZXQ="
   ],
   [
-    "Given further term in high school for dances",
-    "hakas"
+      "Given further term in high school for dances",
+      "aGFrYXM="
   ],
   [
-    "Four pairs of volunteers beset by obsessive behaviour",
-    "octad"
+      "Four pairs of volunteers beset by obsessive behaviour",
+      "b2N0YWQ="
   ],
   [
-    "Painter stern after spilling a thinner on the ground",
-    "rarer"
+      "Painter stern after spilling a thinner on the ground",
+      "cmFyZXI="
   ],
   [
-    "One makes a packet in one’s field",
-    "baler"
+      "One makes a packet in one’s field",
+      "YmFsZXI="
   ],
   [
-    "Crack from unknown imbecile",
-    "goofy"
+      "Crack from unknown imbecile",
+      "Z29vZnk="
   ],
   [
-    "Marshal calm when changing side repeatedly",
-    "array"
+      "Marshal calm when changing side repeatedly",
+      "YXJyYXk="
   ],
   [
-    "Cold dish using incomplete vessels (below and above water)",
-    "sushi"
+      "Cold dish using incomplete vessels (below and above water)",
+      "c3VzaGk="
   ],
   [
-    "Trader’s tip diluted small change",
-    "tweak"
+      "Trader’s tip diluted small change",
+      "dHdlYWs="
   ],
   [
-    "Reason males are excluded from rummage around",
-    "argue"
+      "Reason males are excluded from rummage around",
+      "YXJndWU="
   ],
   [
-    "Heel’s neighbour caused anger after undressing",
-    "ankle"
+      "Heel’s neighbour caused anger after undressing",
+      "YW5rbGU="
   ],
   [
-    "Quietly utter joke",
-    "prank"
+      "Quietly utter joke",
+      "cHJhbms="
   ],
   [
-    "Free and easy",
-    "loose"
+      "Free and easy",
+      "bG9vc2U="
   ],
   [
-    "Cheers and jeers largely disapproved of",
-    "taboo"
+      "Cheers and jeers largely disapproved of",
+      "dGFib28="
   ],
   [
-    "Scottish League One team’s first in division",
-    "split"
+      "Scottish League One team’s first in division",
+      "c3BsaXQ="
   ],
   [
-    "Woman I grumble about",
-    "naomi"
+      "Woman I grumble about",
+      "bmFvbWk="
   ],
   [
-    "Cue imparting spin on for example brown",
-    "nudge"
+      "Cue imparting spin on for example brown",
+      "bnVkZ2U="
   ],
   [
-    "Picture firm haggle regularly",
-    "image"
+      "Picture firm haggle regularly",
+      "aW1hZ2U="
   ],
   [
-    "Garret room to some extent reminiscent of past",
-    "retro"
+      "Garret room to some extent reminiscent of past",
+      "cmV0cm8="
   ],
   [
-    "Strange plea associated with introduction of passion fruit",
-    "apple"
+      "Strange plea associated with introduction of passion fruit",
+      "YXBwbGU="
   ],
   [
-    "Comparatively risky to ignore daughter becoming more aloof",
-    "icier"
+      "Comparatively risky to ignore daughter becoming more aloof",
+      "aWNpZXI="
   ],
   [
-    "Expect to be away briefly at computer study",
-    "await"
+      "Expect to be away briefly at computer study",
+      "YXdhaXQ="
   ],
   [
-    "Quiet nobleman one valued",
-    "pearl"
+      "Quiet nobleman one valued",
+      "cGVhcmw="
   ],
   [
-    "Group of jolly dimwits set up a happy scene",
-    "idyll"
+      "Group of jolly dimwits set up a happy scene",
+      "aWR5bGw="
   ],
   [
-    "Register of leaderless soldiers with inadequate function",
-    "enrol"
+      "Register of leaderless soldiers with inadequate function",
+      "ZW5yb2w="
   ],
   [
-    "Leading character abroad captured by female photographer",
-    "aleph"
+      "Leading character abroad captured by female photographer",
+      "YWxlcGg="
   ],
   [
-    "Some dry goods in untidy heap at front of hospital",
-    "ephah"
+      "Some dry goods in untidy heap at front of hospital",
+      "ZXBoYWg="
   ],
   [
-    "Film providing some lurid entertainment",
-    "ident"
+      "Film providing some lurid entertainment",
+      "aWRlbnQ="
   ],
   [
-    "Paintings of fashion princess",
-    "tondi"
+      "Paintings of fashion princess",
+      "dG9uZGk="
   ],
   [
-    "Eel is cooked in vinegar no longer",
-    "esile"
+      "Eel is cooked in vinegar no longer",
+      "ZXNpbGU="
   ],
   [
-    "Sun in this place no longer bright?",
-    "shere"
+      "Sun in this place no longer bright?",
+      "c2hlcmU="
   ],
   [
-    "Father maybe to ask for money with extremes of embarrassment",
-    "beget"
+      "Father maybe to ask for money with extremes of embarrassment",
+      "YmVnZXQ="
   ],
   [
-    "Old Chinese coins left in sofa returned",
-    "taels"
+      "Old Chinese coins left in sofa returned",
+      "dGFlbHM="
   ],
   [
-    "Nothing written about sort of current needed for scientific apparatus",
-    "linac"
+      "Nothing written about sort of current needed for scientific apparatus",
+      "bGluYWM="
   ],
   [
-    "Primate is following God for the most part",
-    "loris"
+      "Primate is following God for the most part",
+      "bG9yaXM="
   ],
   [
-    "Unfashionable game generates cost",
-    "outgo"
+      "Unfashionable game generates cost",
+      "b3V0Z28="
   ],
   [
-    "Kitchen item stuffs centre of marrow with something very cold",
-    "ricer"
+      "Kitchen item stuffs centre of marrow with something very cold",
+      "cmljZXI="
   ],
   [
-    "Publication shows discretion with writer's final piece included",
-    "tract"
+      "Publication shows discretion with writer's final piece included",
+      "dHJhY3Q="
   ],
   [
-    "One laying track for a green engine",
-    "henry"
+      "One laying track for a green engine",
+      "aGVucnk="
   ],
   [
-    "Face that a woman usually has on a certain day in May?",
-    "brave"
+      "Face that a woman usually has on a certain day in May?",
+      "YnJhdmU="
   ],
   [
-    "Passage one’s going to read out",
-    "aisle"
+      "Passage one’s going to read out",
+      "YWlzbGU="
   ],
   [
-    "Running time required by commercial",
-    "admin"
+      "Running time required by commercial",
+      "YWRtaW4="
   ],
   [
-    "Old storyteller regularly made use of PA",
-    "aesop"
+      "Old storyteller regularly made use of PA",
+      "YWVzb3A="
   ],
   [
-    "Third grade glossy turned over by graduate",
-    "gamma"
+      "Third grade glossy turned over by graduate",
+      "Z2FtbWE="
   ],
   [
-    "Picture held up by popular umpire",
-    "mural"
+      "Picture held up by popular umpire",
+      "bXVyYWw="
   ],
   [
-    "Sleep after swallowing tablet and lots of medicine?",
-    "doses"
+      "Sleep after swallowing tablet and lots of medicine?",
+      "ZG9zZXM="
   ],
   [
-    "Grow this plant in the tropics – the Scots cannot",
-    "canna"
+      "Grow this plant in the tropics – the Scots cannot",
+      "Y2FubmE="
   ],
   [
-    "American cigarette end with prime tar rating",
-    "abuse"
+      "American cigarette end with prime tar rating",
+      "YWJ1c2U="
   ],
   [
-    "Expletive as heard before 9’s last part in opera",
-    "ruddy"
+      "Expletive as heard before 9’s last part in opera",
+      "cnVkZHk="
   ],
   [
-    "Some climb Eiger to get a tan",
-    "beige"
+      "Some climb Eiger to get a tan",
+      "YmVpZ2U="
   ],
   [
-    "Doctor the tea and get coffee?",
-    "mocha"
+      "Doctor the tea and get coffee?",
+      "bW9jaGE="
   ],
   [
-    "Platter with food originally banned in strict diet",
-    "trayf"
+      "Platter with food originally banned in strict diet",
+      "dHJheWY="
   ],
   [
-    "Classically elegant trellis with sides lopped",
-    "attic"
+      "Classically elegant trellis with sides lopped",
+      "YXR0aWM="
   ],
   [
-    "No end of interest in payment for use of an organ",
-    "renal"
+      "No end of interest in payment for use of an organ",
+      "cmVuYWw="
   ],
   [
-    "Arabs rebuilt Iraqi city",
-    "basra"
+      "Arabs rebuilt Iraqi city",
+      "YmFzcmE="
   ],
   [
-    "A snake - that computes?",
-    "adder"
+      "A snake - that computes?",
+      "YWRkZXI="
   ],
   [
-    "Old card game found in tomb recently",
-    "ombre"
+      "Old card game found in tomb recently",
+      "b21icmU="
   ],
   [
-    "Primate finding bird with left and right wings?",
-    "lemur"
+      "Primate finding bird with left and right wings?",
+      "bGVtdXI="
   ],
   [
-    "Increasingly just ignoring first item in laundry",
-    "airer"
+      "Increasingly just ignoring first item in laundry",
+      "YWlyZXI="
   ],
   [
-    "Wrestles with God when worship is heard",
-    "prays"
+      "Wrestles with God when worship is heard",
+      "cHJheXM="
   ],
   [
-    "Minimal air traffic to hold back pilot",
-    "trial"
+      "Minimal air traffic to hold back pilot",
+      "dHJpYWw="
   ],
   [
-    "Christmas tree decoration made by a new setter",
-    "angel"
+      "Christmas tree decoration made by a new setter",
+      "YW5nZWw="
   ],
   [
-    "Bend a rim around dish",
-    "pilau"
+      "Bend a rim around dish",
+      "cGlsYXU="
   ],
   [
-    "This writer's about to chop wood for people associated with PA",
-    "amish"
+      "This writer's about to chop wood for people associated with PA",
+      "YW1pc2g="
   ],
   [
-    "Shelter chief doctor of old",
-    "leech"
+      "Shelter chief doctor of old",
+      "bGVlY2g="
   ],
   [
-    "Officer in charge of early complaint",
-    "colic"
+      "Officer in charge of early complaint",
+      "Y29saWM="
   ],
   [
-    "Expression of disapproval about church showing filmstrip",
-    "fiche"
+      "Expression of disapproval about church showing filmstrip",
+      "ZmljaGU="
   ],
   [
-    "Small American city shown on casual shirt",
-    "teeny"
+      "Small American city shown on casual shirt",
+      "dGVlbnk="
   ],
   [
-    "Once again plan modern music to entertain them",
-    "remap"
+      "Once again plan modern music to entertain them",
+      "cmVtYXA="
   ],
   [
-    "Sample artist's penultimate piece in gallery",
-    "taste"
+      "Sample artist's penultimate piece in gallery",
+      "dGFzdGU="
   ],
   [
-    "Spice children initially think the world of",
-    "clove"
+      "Spice children initially think the world of",
+      "Y2xvdmU="
   ],
   [
-    "Big house in local police area",
-    "manor"
+      "Big house in local police area",
+      "bWFub3I="
   ],
   [
-    "State of oblivion of bishop in posh car",
-    "limbo"
+      "State of oblivion of bishop in posh car",
+      "bGltYm8="
   ],
   [
-    "Simpleton’s lodging-place in US city",
-    "ninny"
+      "Simpleton’s lodging-place in US city",
+      "bmlubnk="
   ],
   [
-    "Youth from east extremely knowledgeable about robot",
-    "dalek"
+      "Youth from east extremely knowledgeable about robot",
+      "ZGFsZWs="
   ],
   [
-    "Church land where bird has swapped river for lake?",
-    "glebe"
+      "Church land where bird has swapped river for lake?",
+      "Z2xlYmU="
   ],
   [
-    "Friend’s note written during a match",
-    "amigo"
+      "Friend’s note written during a match",
+      "YW1pZ28="
   ],
   [
-    "Tree-dweller appearing in sundry advertisements",
-    "dryad"
+      "Tree-dweller appearing in sundry advertisements",
+      "ZHJ5YWQ="
   ],
   [
-    "Like an order mocking customer finally leaves",
-    "ionic"
+      "Like an order mocking customer finally leaves",
+      "aW9uaWM="
   ],
   [
-    "Greeting a man will love?",
-    "hello"
+      "Greeting a man will love?",
+      "aGVsbG8="
   ],
   [
-    "What Green is making sacrifice?",
-    "forgo"
+      "What Green is making sacrifice?",
+      "Zm9yZ28="
   ],
   [
-    "Article that’s seized by bird",
-    "avian"
+      "Article that’s seized by bird",
+      "YXZpYW4="
   ],
   [
-    "Oil press for two",
-    "media"
+      "Oil press for two",
+      "bWVkaWE="
   ],
   [
-    "Fleet's power in attack",
-    "rapid"
+      "Fleet's power in attack",
+      "cmFwaWQ="
   ],
   [
-    "Destination Kentucky's old capital",
-    "tokyo"
+      "Destination Kentucky's old capital",
+      "dG9reW8="
   ],
   [
-    "Wave from urchin holding up crown",
-    "crimp"
+      "Wave from urchin holding up crown",
+      "Y3JpbXA="
   ],
   [
-    "Distribute vote to oust leader",
-    "allot"
+      "Distribute vote to oust leader",
+      "YWxsb3Q="
   ],
   [
-    "Newspaper etc omitting indefinite number in statistical quantity",
-    "media"
+      "Newspaper etc omitting indefinite number in statistical quantity",
+      "bWVkaWE="
   ],
   [
-    "Bill loves what’s prohibited",
-    "taboo"
+      "Bill loves what’s prohibited",
+      "dGFib28="
   ],
   [
-    "Foreign letter about popular zoo animal",
-    "rhino"
+      "Foreign letter about popular zoo animal",
+      "cmhpbm8="
   ],
   [
-    "Permission to take off",
-    "leave"
+      "Permission to take off",
+      "bGVhdmU="
   ],
   [
-    "Artist breaking 60% of laws of the country",
-    "rural"
+      "Artist breaking 60% of laws of the country",
+      "cnVyYWw="
   ],
   [
-    "Instant judgment initially dubious",
-    "jiffy"
+      "Instant judgment initially dubious",
+      "amlmZnk="
   ],
   [
-    "First of editors on the Times to make history?",
-    "erase"
+      "First of editors on the Times to make history?",
+      "ZXJhc2U="
   ],
   [
-    "Reason why Australian is in Church?",
-    "cause"
+      "Reason why Australian is in Church?",
+      "Y2F1c2U="
   ],
   [
-    "Girl welcomes Italian friendship",
-    "amity"
+      "Girl welcomes Italian friendship",
+      "YW1pdHk="
   ],
   [
-    "State: 'Times to invest in brewing products'",
-    "texas"
+      "State: 'Times to invest in brewing products'",
+      "dGV4YXM="
   ],
   [
-    "Fight involving energy weapon",
-    "spear"
+      "Fight involving energy weapon",
+      "c3BlYXI="
   ],
   [
-    "Father to admit a show of displeasure",
-    "frown"
+      "Father to admit a show of displeasure",
+      "ZnJvd24="
   ],
   [
-    "Aid when strolling round love boat",
-    "canoe"
+      "Aid when strolling round love boat",
+      "Y2Fub2U="
   ],
   [
-    "Nitrogen close to ocean absorbed by marine plant",
-    "senna"
+      "Nitrogen close to ocean absorbed by marine plant",
+      "c2VubmE="
   ],
   [
-    "Tend to run up banks of Seine",
-    "nurse"
+      "Tend to run up banks of Seine",
+      "bnVyc2U="
   ],
   [
-    "Beat learner driver involved in crash",
-    "flail"
+      "Beat learner driver involved in crash",
+      "ZmxhaWw="
   ],
   [
-    "Delay beginning to seem unlikely",
-    "stall"
+      "Delay beginning to seem unlikely",
+      "c3RhbGw="
   ],
   [
-    "Waterway with biblical town on left",
-    "canal"
+      "Waterway with biblical town on left",
+      "Y2FuYWw="
   ],
   [
-    "Pounds carried by monk's beast of burden",
-    "llama"
+      "Pounds carried by monk's beast of burden",
+      "bGxhbWE="
   ],
   [
-    "Change flag when heading off",
-    "alter"
+      "Change flag when heading off",
+      "YWx0ZXI="
   ],
   [
-    "Pay for another nurse",
-    "treat"
+      "Pay for another nurse",
+      "dHJlYXQ="
   ],
   [
-    "Fear about being caught by the old man",
-    "dread"
+      "Fear about being caught by the old man",
+      "ZHJlYWQ="
   ],
   [
-    "Soldier’s brought back mother’s letter from Greece",
-    "sigma"
+      "Soldier’s brought back mother’s letter from Greece",
+      "c2lnbWE="
   ],
   [
-    "Second girl for fish",
-    "skate"
+      "Second girl for fish",
+      "c2thdGU="
   ],
   [
-    "Organ’s playing — a gas!",
-    "argon"
+      "Organ’s playing — a gas!",
+      "YXJnb24="
   ],
   [
-    "Beam: at first surveyor measures its length exactly",
-    "smile"
+      "Beam: at first surveyor measures its length exactly",
+      "c21pbGU="
   ],
   [
-    "Mock ultimately decadent leisure",
-    "tease"
+      "Mock ultimately decadent leisure",
+      "dGVhc2U="
   ],
   [
-    "Repeat section of core curriculum",
-    "recur"
+      "Repeat section of core curriculum",
+      "cmVjdXI="
   ],
   [
-    "Part of engine unaffected by reversal",
-    "rotor"
+      "Part of engine unaffected by reversal",
+      "cm90b3I="
   ],
   [
-    "Body initially concealed in murderer's hut",
-    "cabin"
+      "Body initially concealed in murderer's hut",
+      "Y2FiaW4="
   ],
   [
-    "Long period of time before end of Ramadan",
-    "yearn"
+      "Long period of time before end of Ramadan",
+      "eWVhcm4="
   ],
   [
-    "Bishop leaves to unfairly influence aristocrat",
-    "noble"
+      "Bishop leaves to unfairly influence aristocrat",
+      "bm9ibGU="
   ],
   [
-    "One in no hurry to whizz round north",
-    "snail"
+      "One in no hurry to whizz round north",
+      "c25haWw="
   ],
   [
-    "Zoo unceremoniously caging leopard",
-    "ounce"
+      "Zoo unceremoniously caging leopard",
+      "b3VuY2U="
   ],
   [
-    "Beg Penny to go first",
-    "plead"
+      "Beg Penny to go first",
+      "cGxlYWQ="
   ],
   [
-    "Weapon found in famous school in East End",
-    "arrow"
+      "Weapon found in famous school in East End",
+      "YXJyb3c="
   ],
   [
-    "Nice bakery's production troubles?",
-    "pains"
+      "Nice bakery's production troubles?",
+      "cGFpbnM="
   ],
   [
-    "Chairman wants at first to stifle one catty remark",
-    "miaow"
+      "Chairman wants at first to stifle one catty remark",
+      "bWlhb3c="
   ],
   [
-    "Swimmer seen among icebergs heading west",
-    "grebe"
+      "Swimmer seen among icebergs heading west",
+      "Z3JlYmU="
   ],
   [
-    "Occupying fast car circling round block",
-    "ingot"
+      "Occupying fast car circling round block",
+      "aW5nb3Q="
   ],
   [
-    "Wool supplier from a shopping complex turning up",
-    "llama"
+      "Wool supplier from a shopping complex turning up",
+      "bGxhbWE="
   ],
   [
-    "Parade order with list",
-    "wheel"
+      "Parade order with list",
+      "d2hlZWw="
   ],
   [
-    "Fly jet carrying duke east",
-    "midge"
+      "Fly jet carrying duke east",
+      "bWlkZ2U="
   ],
   [
-    "Musical maestro offering one note after another",
-    "solti"
+      "Musical maestro offering one note after another",
+      "c29sdGk="
   ],
   [
-    "Overexcited person pushing a product very hard?",
-    "hyper"
+      "Overexcited person pushing a product very hard?",
+      "aHlwZXI="
   ],
   [
-    "City's food shop being reported",
-    "delhi"
+      "City's food shop being reported",
+      "ZGVsaGk="
   ],
   [
-    "Small volume to devour is without ostentation",
-    "eclat"
+      "Small volume to devour is without ostentation",
+      "ZWNsYXQ="
   ],
   [
-    "Platforms being erected help operation",
-    "podia"
+      "Platforms being erected help operation",
+      "cG9kaWE="
   ],
   [
-    "Office clerk maybe initially fallible is later extremely reliable",
-    "filer"
+      "Office clerk maybe initially fallible is later extremely reliable",
+      "ZmlsZXI="
   ],
   [
-    "Cold atmosphere at new stone mound",
-    "cairn"
+      "Cold atmosphere at new stone mound",
+      "Y2Fpcm4="
   ],
   [
-    "European vote result – only half rejoice",
-    "exult"
+      "European vote result – only half rejoice",
+      "ZXh1bHQ="
   ],
   [
-    "Head over for a knees-up",
-    "beano"
+      "Head over for a knees-up",
+      "YmVhbm8="
   ],
   [
-    "In revolution he died a certain western hero",
-    "boone"
+      "In revolution he died a certain western hero",
+      "Ym9vbmU="
   ],
   [
-    "Worker in night club and pub supplying spirits",
-    "djinn"
+      "Worker in night club and pub supplying spirits",
+      "ZGppbm4="
   ],
   [
-    "Brute rounds on pretentious toff",
-    "yahoo"
+      "Brute rounds on pretentious toff",
+      "eWFob28="
   ],
   [
-    "Nothing put forward in musketeer’s pledges",
-    "oaths"
+      "Nothing put forward in musketeer’s pledges",
+      "b2F0aHM="
   ],
   [
-    "Scene of action initially settled on years before",
-    "ypres"
+      "Scene of action initially settled on years before",
+      "eXByZXM="
   ],
   [
-    "Header missed in tight draw",
-    "lotto"
+      "Header missed in tight draw",
+      "bG90dG8="
   ],
   [
-    "Card cheat of old",
-    "knave"
+      "Card cheat of old",
+      "a25hdmU="
   ],
   [
-    "One in England missing out on defence",
-    "alibi"
+      "One in England missing out on defence",
+      "YWxpYmk="
   ],
   [
-    "Run commercial on two lines",
-    "radii"
+      "Run commercial on two lines",
+      "cmFkaWk="
   ],
   [
-    "Go off to match unexpectedly?",
-    "elope"
+      "Go off to match unexpectedly?",
+      "ZWxvcGU="
   ],
   [
-    "Five having fever hard to pin down",
-    "vague"
+      "Five having fever hard to pin down",
+      "dmFndWU="
   ],
   [
-    "Slightly adjust end of saw penetrating wood",
-    "tweak"
+      "Slightly adjust end of saw penetrating wood",
+      "dHdlYWs="
   ],
   [
-    "Little person – bit of a pain after short time",
-    "titch"
+      "Little person – bit of a pain after short time",
+      "dGl0Y2g="
   ],
   [
-    "Slightly adjust end of saw penetrating wood",
-    "tweak"
+      "Slightly adjust end of saw penetrating wood",
+      "dHdlYWs="
   ],
   [
-    "Spar joining front half of ship to rear",
-    "shaft"
+      "Spar joining front half of ship to rear",
+      "c2hhZnQ="
   ],
   [
-    "Expression of surprise about recording getting top position?",
-    "alpha"
+      "Expression of surprise about recording getting top position?",
+      "YWxwaGE="
   ],
   [
-    "Flower: item for sale by our group",
-    "lotus"
+      "Flower: item for sale by our group",
+      "bG90dXM="
   ],
   [
-    "Weapon a Parisian dropped being pierced",
-    "stung"
+      "Weapon a Parisian dropped being pierced",
+      "c3R1bmc="
   ],
   [
-    "Unusual uproar after loss of silver",
-    "outre"
+      "Unusual uproar after loss of silver",
+      "b3V0cmU="
   ],
   [
-    "Support a bit of leisure — after relaxation",
-    "easel"
+      "Support a bit of leisure — after relaxation",
+      "ZWFzZWw="
   ],
   [
-    "US-born poet upset John? Not entirely",
-    "eliot"
+      "US-born poet upset John? Not entirely",
+      "ZWxpb3Q="
   ],
   [
-    "Try quitting business for an Asian river",
-    "indus"
+      "Try quitting business for an Asian river",
+      "aW5kdXM="
   ],
   [
-    "Some fancy nice person holding sceptical views",
-    "cynic"
+      "Some fancy nice person holding sceptical views",
+      "Y3luaWM="
   ],
   [
-    "Presbyter of greater seniority in the family",
-    "elder"
+      "Presbyter of greater seniority in the family",
+      "ZWxkZXI="
   ],
   [
-    "Island nation — it is secured by endless locks",
-    "haiti"
+      "Island nation — it is secured by endless locks",
+      "aGFpdGk="
   ],
   [
-    "Feature about right for old language",
-    "norse"
+      "Feature about right for old language",
+      "bm9yc2U="
   ],
   [
-    "Ill-tempered woman ignoring a sign",
-    "virgo"
+      "Ill-tempered woman ignoring a sign",
+      "dmlyZ28="
   ],
   [
-    "Rubbish can be left in large receptacle at the end",
-    "bilge"
+      "Rubbish can be left in large receptacle at the end",
+      "YmlsZ2U="
   ],
   [
-    "Permit inexperienced leader to drop out",
-    "allow"
+      "Permit inexperienced leader to drop out",
+      "YWxsb3c="
   ],
   [
-    "Reference book sadly includes typos at the start",
-    "atlas"
+      "Reference book sadly includes typos at the start",
+      "YXRsYXM="
   ],
   [
-    "Lose weight? Finish off attempt in Irish county",
-    "sligo"
+      "Lose weight? Finish off attempt in Irish county",
+      "c2xpZ28="
   ],
   [
-    "Descendant touring Channel Islands finding another one",
-    "scion"
+      "Descendant touring Channel Islands finding another one",
+      "c2Npb24="
   ],
   [
-    "Meander in South with no clothes on cut short",
-    "snake"
+      "Meander in South with no clothes on cut short",
+      "c25ha2U="
   ],
   [
-    "Dropped off pelts needing treatment",
-    "slept"
+      "Dropped off pelts needing treatment",
+      "c2xlcHQ="
   ],
   [
-    "Star circle oddly ignored for moment",
-    "trice"
+      "Star circle oddly ignored for moment",
+      "dHJpY2U="
   ],
   [
-    "Rise of drag performer?",
-    "tower"
+      "Rise of drag performer?",
+      "dG93ZXI="
   ],
   [
-    "Villain shows vigour heading north in Parisian street",
-    "rogue"
+      "Villain shows vigour heading north in Parisian street",
+      "cm9ndWU="
   ],
   [
-    "Revolutionary nearly put frighteners on Mrs Siddons?",
-    "sarah"
+      "Revolutionary nearly put frighteners on Mrs Siddons?",
+      "c2FyYWg="
   ],
   [
-    "Steer then give way finding large bend",
-    "oxbow"
+      "Steer then give way finding large bend",
+      "b3hib3c="
   ],
   [
-    "Bush having tip of spine inside to pierce",
-    "gorse"
+      "Bush having tip of spine inside to pierce",
+      "Z29yc2U="
   ],
   [
-    "Early computers from America bankers rejected",
-    "abaci"
+      "Early computers from America bankers rejected",
+      "YWJhY2k="
   ],
   [
-    "King Edward possibly taking bath with Queen",
-    "tuber"
+      "King Edward possibly taking bath with Queen",
+      "dHViZXI="
   ],
   [
-    "Get up around noon to wash",
-    "rinse"
+      "Get up around noon to wash",
+      "cmluc2U="
   ],
   [
-    "A woman’s set up supplying laxative",
-    "senna"
+      "A woman’s set up supplying laxative",
+      "c2VubmE="
   ],
   [
-    "Circular paintings yours truly wouldn’t put up!",
-    "tondi"
+      "Circular paintings yours truly wouldn’t put up!",
+      "dG9uZGk="
   ],
   [
-    "Murderer concealing first of bodies in shack",
-    "cabin"
+      "Murderer concealing first of bodies in shack",
+      "Y2FiaW4="
   ],
   [
-    "Current parliament returns early work",
-    "iliad"
+      "Current parliament returns early work",
+      "aWxpYWQ="
   ],
   [
-    "Armstrong’s heard of what prayers do",
-    "kneel"
+      "Armstrong’s heard of what prayers do",
+      "a25lZWw="
   ],
   [
-    "In which the beast of Siberia is caught?",
-    "taiga"
+      "In which the beast of Siberia is caught?",
+      "dGFpZ2E="
   ],
   [
-    "Toy with no head found in sack",
-    "rifle"
+      "Toy with no head found in sack",
+      "cmlmbGU="
   ],
   [
-    "Some delightfully rich little poem",
-    "lyric"
+      "Some delightfully rich little poem",
+      "bHlyaWM="
   ],
   [
-    "Poles in Brussels start to examine result",
-    "ensue"
+      "Poles in Brussels start to examine result",
+      "ZW5zdWU="
   ],
   [
-    "Composer left in temper when rejected",
-    "elgar"
+      "Composer left in temper when rejected",
+      "ZWxnYXI="
   ],
   [
-    "Noble Oscar shed clothes",
-    "baron"
+      "Noble Oscar shed clothes",
+      "YmFyb24="
   ],
   [
-    "Drink drug in round tin",
-    "ocean"
+      "Drink drug in round tin",
+      "b2NlYW4="
   ],
   [
-    "Wax cylinder recorder",
-    "taper"
+      "Wax cylinder recorder",
+      "dGFwZXI="
   ],
   [
-    "Editor recruits staff to do what he does",
-    "emend"
+      "Editor recruits staff to do what he does",
+      "ZW1lbmQ="
   ],
   [
-    "Car wheel's sound",
-    "audio"
+      "Car wheel's sound",
+      "YXVkaW8="
   ],
   [
-    "Posh girl yours truly raised to get settled",
-    "embed"
+      "Posh girl yours truly raised to get settled",
+      "ZW1iZWQ="
   ],
   [
-    "Cry quietly in a public place",
-    "shout"
+      "Cry quietly in a public place",
+      "c2hvdXQ="
   ],
   [
-    "Pursue legal action around hospital",
-    "chase"
+      "Pursue legal action around hospital",
+      "Y2hhc2U="
   ],
   [
-    "Feature on a country",
-    "china"
+      "Feature on a country",
+      "Y2hpbmE="
   ],
   [
-    "Germany's leader entering naked jog",
-    "nudge"
+      "Germany's leader entering naked jog",
+      "bnVkZ2U="
   ],
   [
-    "What could hold tape of privy last words turned up",
-    "spool"
+      "What could hold tape of privy last words turned up",
+      "c3Bvb2w="
   ],
   [
-    "Unsightly mark on European causing fright",
-    "scare"
+      "Unsightly mark on European causing fright",
+      "c2NhcmU="
   ],
   [
-    "A mug served up cold",
-    "aloof"
+      "A mug served up cold",
+      "YWxvb2Y="
   ],
   [
-    "Sponge divers tire?",
-    "dipso"
+      "Sponge divers tire?",
+      "ZGlwc28="
   ],
   [
-    "Lift up sauce boat",
-    "ketch"
+      "Lift up sauce boat",
+      "a2V0Y2g="
   ],
   [
-    "Millions invested in auctioning site — it was steep",
-    "embay"
+      "Millions invested in auctioning site — it was steep",
+      "ZW1iYXk="
   ],
   [
-    "Paddy’s bowled over with second flight",
-    "steps"
+      "Paddy’s bowled over with second flight",
+      "c3RlcHM="
   ],
   [
-    "Underworld goddess grabbing last of these small stilettos?",
-    "heels"
+      "Underworld goddess grabbing last of these small stilettos?",
+      "aGVlbHM="
   ],
   [
-    "Tag left next on murderee",
-    "label"
+      "Tag left next on murderee",
+      "bGFiZWw="
   ],
   [
-    "Mitsotakis’s business is therefore back from oblivion",
-    "ergon"
+      "Mitsotakis’s business is therefore back from oblivion",
+      "ZXJnb24="
   ],
   [
-    "Acts damn politely with those kettling demonstrators",
-    "deeds"
+      "Acts damn politely with those kettling demonstrators",
+      "ZGVlZHM="
   ],
   [
-    "Variety of forbidden fruit",
-    "range"
+      "Variety of forbidden fruit",
+      "cmFuZ2U="
   ],
   [
-    "I’m unlikely to get out rifle which has been discharged",
-    "lifer"
+      "I’m unlikely to get out rifle which has been discharged",
+      "bGlmZXI="
   ],
   [
-    "Informally go trapping a lieutenant — go easy",
-    "waltz"
+      "Informally go trapping a lieutenant — go easy",
+      "d2FsdHo="
   ],
   [
-    "Beet is British and low in calories",
-    "blite"
+      "Beet is British and low in calories",
+      "YmxpdGU="
   ],
   [
-    "Military unit’s chaplain quietly becoming Conservative",
-    "cadre"
+      "Military unit’s chaplain quietly becoming Conservative",
+      "Y2FkcmU="
   ],
   [
-    "No-hoper’s new role picking up seaweed at front",
-    "loser"
+      "No-hoper’s new role picking up seaweed at front",
+      "bG9zZXI="
   ],
   [
-    "Sound made by learner involved in row",
-    "splat"
+      "Sound made by learner involved in row",
+      "c3BsYXQ="
   ],
   [
-    "Hotel with quite special uniform?",
-    "habit"
+      "Hotel with quite special uniform?",
+      "aGFiaXQ="
   ],
   [
-    "Appeal made by church member",
-    "charm"
+      "Appeal made by church member",
+      "Y2hhcm0="
   ],
   [
-    "Food on either side of street trail",
-    "piste"
+      "Food on either side of street trail",
+      "cGlzdGU="
   ],
   [
-    "Female writer briefly including a mystic syllable",
-    "naomi"
+      "Female writer briefly including a mystic syllable",
+      "bmFvbWk="
   ],
   [
-    "Covert mercenary in position in Jamaica",
-    "ninja"
+      "Covert mercenary in position in Jamaica",
+      "bmluamE="
   ],
   [
-    "Fool in school system",
-    "schmo"
+      "Fool in school system",
+      "c2NobW8="
   ],
   [
-    "Broadcast brings controversy",
-    "issue"
+      "Broadcast brings controversy",
+      "aXNzdWU="
   ],
   [
-    "Tree more bare with bark initially removed",
-    "alder"
+      "Tree more bare with bark initially removed",
+      "YWxkZXI="
   ],
   [
-    "Absurd how dialogue ends",
-    "inane"
+      "Absurd how dialogue ends",
+      "aW5hbmU="
   ],
   [
-    "Charged for contract",
-    "tense"
+      "Charged for contract",
+      "dGVuc2U="
   ],
   [
-    "Opponents at table go to law for result",
-    "ensue"
+      "Opponents at table go to law for result",
+      "ZW5zdWU="
   ],
   [
-    "Resin from tree around eastern India",
-    "elemi"
+      "Resin from tree around eastern India",
+      "ZWxlbWk="
   ],
   [
-    "Tree line to extend over",
-    "larch"
+      "Tree line to extend over",
+      "bGFyY2g="
   ],
   [
-    "In conversation one derides instant tea and coffee",
-    "mocha"
+      "In conversation one derides instant tea and coffee",
+      "bW9jaGE="
   ],
   [
-    "Recurrent note for all to see on large sticker",
-    "gluer"
+      "Recurrent note for all to see on large sticker",
+      "Z2x1ZXI="
   ],
   [
-    "China in case of silver-gilt is apt to break",
-    "spalt"
+      "China in case of silver-gilt is apt to break",
+      "c3BhbHQ="
   ],
   [
-    "Praise that's vague after change of direction",
-    "roose"
+      "Praise that's vague after change of direction",
+      "cm9vc2U="
   ],
   [
-    "Mount horse on ring from behind? For starters bit of luck’s needed",
-    "logan"
+      "Mount horse on ring from behind? For starters bit of luck’s needed",
+      "bG9nYW4="
   ],
   [
-    "University hospital riddled with difficulty? Repeatedly as before",
-    "uneth"
+      "University hospital riddled with difficulty? Repeatedly as before",
+      "dW5ldGg="
   ],
   [
-    "Man goes into headland for the birds",
-    "rheas"
+      "Man goes into headland for the birds",
+      "cmhlYXM="
   ],
   [
-    "Narrative made up about one foreign resort",
-    "eilat"
+      "Narrative made up about one foreign resort",
+      "ZWlsYXQ="
   ],
   [
-    "Fencing post is large stake",
-    "spile"
+      "Fencing post is large stake",
+      "c3BpbGU="
   ],
   [
-    "Missouri team’s energy?",
-    "moxie"
+      "Missouri team’s energy?",
+      "bW94aWU="
   ],
   [
-    "Soldier turned up bearing news from down under",
-    "poilu"
+      "Soldier turned up bearing news from down under",
+      "cG9pbHU="
   ],
   [
-    "Tips for Toulouse waiter attached to club?",
-    "tronc"
+      "Tips for Toulouse waiter attached to club?",
+      "dHJvbmM="
   ],
   [
-    "Picked out cape and stockings",
-    "chose"
+      "Picked out cape and stockings",
+      "Y2hvc2U="
   ],
   [
-    "Faithless fellow's missing at job",
-    "heist"
+      "Faithless fellow's missing at job",
+      "aGVpc3Q="
   ],
   [
-    "Sign in book store missing line",
-    "libra"
+      "Sign in book store missing line",
+      "bGlicmE="
   ],
   [
-    "Drop litter with domestic servant",
-    "whelp"
+      "Drop litter with domestic servant",
+      "d2hlbHA="
   ],
   [
-    "Some stock book by Latin poet",
-    "bovid"
+      "Some stock book by Latin poet",
+      "Ym92aWQ="
   ],
   [
-    "Stand or move gently left",
-    "easel"
+      "Stand or move gently left",
+      "ZWFzZWw="
   ],
   [
-    "Blog resists accommodating trolls",
-    "ogres"
+      "Blog resists accommodating trolls",
+      "b2dyZXM="
   ],
   [
-    "Famous school rejected by daughter",
-    "noted"
+      "Famous school rejected by daughter",
+      "bm90ZWQ="
   ],
   [
-    "Old doctor who’s after your blood?",
-    "leech"
+      "Old doctor who’s after your blood?",
+      "bGVlY2g="
   ],
   [
-    "Lean on the papers",
-    "press"
+      "Lean on the papers",
+      "cHJlc3M="
   ],
   [
-    "Index finger perhaps where one has a hand?",
-    "poker"
+      "Index finger perhaps where one has a hand?",
+      "cG9rZXI="
   ],
   [
-    "Judge and godly type meeting",
-    "tryst"
+      "Judge and godly type meeting",
+      "dHJ5c3Q="
   ],
   [
-    "Motto I’m going by as much as possible",
-    "maxim"
+      "Motto I’m going by as much as possible",
+      "bWF4aW0="
   ],
   [
-    "Poetry volume: the Queen’s English",
-    "verse"
+      "Poetry volume: the Queen’s English",
+      "dmVyc2U="
   ],
   [
-    "Yet these might be the odds",
-    "evens"
+      "Yet these might be the odds",
+      "ZXZlbnM="
   ],
   [
-    "Pound for one's bucks?",
-    "hutch"
+      "Pound for one's bucks?",
+      "aHV0Y2g="
   ],
   [
-    "Far from strenuous match",
-    "light"
+      "Far from strenuous match",
+      "bGlnaHQ="
   ],
   [
-    "Disclosure no longer affected behaviour",
-    "expos"
+      "Disclosure no longer affected behaviour",
+      "ZXhwb3M="
   ],
   [
-    "Disregard female accompanied by yob",
-    "flout"
+      "Disregard female accompanied by yob",
+      "ZmxvdXQ="
   ],
   [
-    "Lazybones is uncommonly riled",
-    "idler"
+      "Lazybones is uncommonly riled",
+      "aWRsZXI="
   ],
   [
-    "Service station concealing defects",
-    "vices"
+      "Service station concealing defects",
+      "dmljZXM="
   ],
   [
-    "One way or another she's a precocious female",
-    "madam"
+      "One way or another she's a precocious female",
+      "bWFkYW0="
   ],
   [
-    "Little Valerie describing information technology as crucial",
-    "vital"
+      "Little Valerie describing information technology as crucial",
+      "dml0YWw="
   ],
   [
-    "Weapon — something of little value with tip broken off",
-    "rifle"
+      "Weapon — something of little value with tip broken off",
+      "cmlmbGU="
   ],
   [
-    "Greek island's request for help to save American",
-    "samos"
+      "Greek island's request for help to save American",
+      "c2Ftb3M="
   ],
   [
-    "Strikes on the wrists?",
-    "cuffs"
+      "Strikes on the wrists?",
+      "Y3VmZnM="
   ],
   [
-    "Carbon copier for skip",
-    "caper"
+      "Carbon copier for skip",
+      "Y2FwZXI="
   ],
   [
-    "Mayonnaise sent back contains this bug",
-    "annoy"
+      "Mayonnaise sent back contains this bug",
+      "YW5ub3k="
   ],
   [
-    "Link with facilities interspersed in Times2?",
-    "twice"
+      "Link with facilities interspersed in Times2?",
+      "dHdpY2U="
   ],
   [
-    "Lad with an eye for the male or female cattle",
-    "bison"
+      "Lad with an eye for the male or female cattle",
+      "Ymlzb24="
   ],
   [
-    "Tool to pick up name on inside of clothing",
-    "tongs"
+      "Tool to pick up name on inside of clothing",
+      "dG9uZ3M="
   ],
   [
-    "Quiet sound of pain in body cavity",
-    "pouch"
+      "Quiet sound of pain in body cavity",
+      "cG91Y2g="
   ],
   [
-    "Stealthily pursue long-legged wader in sound",
-    "stalk"
+      "Stealthily pursue long-legged wader in sound",
+      "c3RhbGs="
   ],
   [
-    "Bones sailors primarily identified",
-    "tarsi"
+      "Bones sailors primarily identified",
+      "dGFyc2k="
   ],
   [
-    "Work trapeze artists are ill-advised to have?",
-    "nonet"
+      "Work trapeze artists are ill-advised to have?",
+      "bm9uZXQ="
   ],
   [
-    "Tropical plant Auntie originally donated",
-    "agave"
+      "Tropical plant Auntie originally donated",
+      "YWdhdmU="
   ],
   [
-    "An irrational king executed a mathematician",
-    "euler"
+      "An irrational king executed a mathematician",
+      "ZXVsZXI="
   ],
   [
-    "Pair including a novelist",
-    "twain"
+      "Pair including a novelist",
+      "dHdhaW4="
   ],
   [
-    "Arab artillery invading islands without question",
-    "iraqi"
+      "Arab artillery invading islands without question",
+      "aXJhcWk="
   ],
   [
-    "Bird identified by a good friend in Paris",
-    "agami"
+      "Bird identified by a good friend in Paris",
+      "YWdhbWk="
   ],
   [
-    "Live with wooded area around",
-    "dwell"
+      "Live with wooded area around",
+      "ZHdlbGw="
   ],
   [
-    "Primate's mischievous child overwhelmed by church",
-    "chimp"
+      "Primate's mischievous child overwhelmed by church",
+      "Y2hpbXA="
   ],
   [
-    "Move suddenly east after a breather",
-    "lunge"
+      "Move suddenly east after a breather",
+      "bHVuZ2U="
   ],
   [
-    "Excited cry over Lenin's first revolutionary device",
-    "wheel"
+      "Excited cry over Lenin's first revolutionary device",
+      "d2hlZWw="
   ],
   [
-    "Bungling writer brought up in centre of Linlithgow",
-    "inept"
+      "Bungling writer brought up in centre of Linlithgow",
+      "aW5lcHQ="
   ],
   [
-    "They might tramp up and down pollarded trees",
-    "acers"
+      "They might tramp up and down pollarded trees",
+      "YWNlcnM="
   ],
   [
-    "To put up with that woman is not like you",
-    "other"
+      "To put up with that woman is not like you",
+      "b3RoZXI="
   ],
   [
-    "Offer view over tree",
-    "opine"
+      "Offer view over tree",
+      "b3BpbmU="
   ],
   [
-    "Wrote about tall building",
-    "tower"
+      "Wrote about tall building",
+      "dG93ZXI="
   ],
   [
-    "Collect in a church service",
-    "amass"
+      "Collect in a church service",
+      "YW1hc3M="
   ],
   [
-    "A stunner — stare wildly",
-    "taser"
+      "A stunner — stare wildly",
+      "dGFzZXI="
   ],
   [
-    "Example given in current understanding",
-    "ideal"
+      "Example given in current understanding",
+      "aWRlYWw="
   ],
   [
-    "Thick-skinned sort making cash",
-    "rhino"
+      "Thick-skinned sort making cash",
+      "cmhpbm8="
   ],
   [
-    "Language used by Magwitch in Dickens",
-    "hindi"
+      "Language used by Magwitch in Dickens",
+      "aGluZGk="
   ],
   [
-    "Pleased haze at last is clearing",
-    "glade"
+      "Pleased haze at last is clearing",
+      "Z2xhZGU="
   ],
   [
-    "Mountain up north on small maps",
-    "plans"
+      "Mountain up north on small maps",
+      "cGxhbnM="
   ],
   [
-    "Geordie mother is taken round to see holy men",
-    "imams"
+      "Geordie mother is taken round to see holy men",
+      "aW1hbXM="
   ],
   [
-    "Stars at leaving speech",
-    "orion"
+      "Stars at leaving speech",
+      "b3Jpb24="
   ],
   [
-    "Drop of liquid: you may get this in bar",
-    "minim"
+      "Drop of liquid: you may get this in bar",
+      "bWluaW0="
   ],
   [
-    "First character to go under in river trips",
-    "tours"
+      "First character to go under in river trips",
+      "dG91cnM="
   ],
   [
-    "Head off opening compass",
-    "ambit"
+      "Head off opening compass",
+      "YW1iaXQ="
   ],
   [
-    "Polish right for small flower",
-    "rhine"
+      "Polish right for small flower",
+      "cmhpbmU="
   ],
   [
-    "Inert substance oceanographer carries back",
-    "argon"
+      "Inert substance oceanographer carries back",
+      "YXJnb24="
   ],
   [
-    "Look around lake and an extensive 24",
-    "llano"
+      "Look around lake and an extensive 24",
+      "bGxhbm8="
   ],
   [
-    "It thus set up a Roman port",
-    "ostia"
+      "It thus set up a Roman port",
+      "b3N0aWE="
   ],
   [
-    "Join a former partner collecting news",
-    "annex"
+      "Join a former partner collecting news",
+      "YW5uZXg="
   ],
   [
-    "Addition to letter after mother’s disease",
-    "mumps"
+      "Addition to letter after mother’s disease",
+      "bXVtcHM="
   ],
   [
-    "Stick English after History?",
-    "paste"
+      "Stick English after History?",
+      "cGFzdGU="
   ],
   [
-    "Small cake’s small pointed shape",
-    "scone"
+      "Small cake’s small pointed shape",
+      "c2NvbmU="
   ],
   [
-    "Lure embodied in “caveat emptor”",
-    "tempt"
+      "Lure embodied in “caveat emptor”",
+      "dGVtcHQ="
   ],
   [
-    "I suffer without complaining ’cos it is different",
-    "stoic"
+      "I suffer without complaining ’cos it is different",
+      "c3RvaWM="
   ],
   [
-    "Billions invested in English medical implant",
-    "embed"
+      "Billions invested in English medical implant",
+      "ZW1iZWQ="
   ],
   [
-    "Company prospector’s casing a source of oil",
-    "copra"
+      "Company prospector’s casing a source of oil",
+      "Y29wcmE="
   ],
   [
-    "Local resident having no time to be green",
-    "naive"
+      "Local resident having no time to be green",
+      "bmFpdmU="
   ],
   [
-    "What fighter may carry out through following cunning",
-    "flyby"
+      "What fighter may carry out through following cunning",
+      "Zmx5Ynk="
   ],
   [
-    "Light timber that’s a piece of cake to turn over?",
-    "balsa"
+      "Light timber that’s a piece of cake to turn over?",
+      "YmFsc2E="
   ],
   [
-    "Dad getting over friend’s outrage",
-    "appal"
+      "Dad getting over friend’s outrage",
+      "YXBwYWw="
   ],
   [
-    "Saw too much within a second",
-    "motto"
+      "Saw too much within a second",
+      "bW90dG8="
   ],
   [
-    "A team order that’s generally accepted",
-    "axiom"
+      "A team order that’s generally accepted",
+      "YXhpb20="
   ],
   [
-    "Lovely metal link",
-    "cutie"
+      "Lovely metal link",
+      "Y3V0aWU="
   ],
   [
-    "Latest Sun delivery at last for Baltimore paperboy",
-    "newsy"
+      "Latest Sun delivery at last for Baltimore paperboy",
+      "bmV3c3k="
   ],
   [
-    "Rob once a governor Head ignored",
-    "rieve"
+      "Rob once a governor Head ignored",
+      "cmlldmU="
   ],
   [
-    "Chart again showing Jack and Queen coming from South",
-    "remap"
+      "Chart again showing Jack and Queen coming from South",
+      "cmVtYXA="
   ],
   [
-    "Enthusiasm of boxer finally ready to mate?",
-    "heart"
+      "Enthusiasm of boxer finally ready to mate?",
+      "aGVhcnQ="
   ],
   [
-    "Magistrate seizes duke in quick move",
-    "dodge"
+      "Magistrate seizes duke in quick move",
+      "ZG9kZ2U="
   ],
   [
-    "Kind of an Einstein? Not I",
-    "genus"
+      "Kind of an Einstein? Not I",
+      "Z2VudXM="
   ],
   [
-    "Cut part of bulb",
-    "clove"
+      "Cut part of bulb",
+      "Y2xvdmU="
   ],
   [
-    "Film sequence has one negative effect",
-    "ident"
+      "Film sequence has one negative effect",
+      "aWRlbnQ="
   ],
   [
-    "Rocky beds bad aboard ship",
-    "sills"
+      "Rocky beds bad aboard ship",
+      "c2lsbHM="
   ],
   [
-    "Ensnare a smoker",
-    "hooka"
+      "Ensnare a smoker",
+      "aG9va2E="
   ],
   [
-    "Very mature red ultimately missing in cellar",
-    "vault"
+      "Very mature red ultimately missing in cellar",
+      "dmF1bHQ="
   ],
   [
-    "Family group’s beginning a racket",
-    "clang"
+      "Family group’s beginning a racket",
+      "Y2xhbmc="
   ],
   [
-    "A scam to snaffle farmer’s last fruit from tree",
-    "acorn"
+      "A scam to snaffle farmer’s last fruit from tree",
+      "YWNvcm4="
   ],
   [
-    "Deduce no escaping from fire",
-    "infer"
+      "Deduce no escaping from fire",
+      "aW5mZXI="
   ],
   [
-    "Country engaged in machinations?",
-    "china"
+      "Country engaged in machinations?",
+      "Y2hpbmE="
   ],
   [
-    "A type of grain I ditched in shock",
-    "amaze"
+      "A type of grain I ditched in shock",
+      "YW1hemU="
   ],
   [
-    "Search thoroughly for weapon",
-    "rifle"
+      "Search thoroughly for weapon",
+      "cmlmbGU="
   ],
   [
-    "Holy object oddly laid in playing field",
-    "relic"
+      "Holy object oddly laid in playing field",
+      "cmVsaWM="
   ],
   [
-    "Gutted officials cover up US university fails",
-    "omits"
+      "Gutted officials cover up US university fails",
+      "b21pdHM="
   ],
   [
-    "Custom somewhat hard at first",
-    "habit"
+      "Custom somewhat hard at first",
+      "aGFiaXQ="
   ],
   [
-    "Extremist cult rarely demonstrates",
-    "ultra"
+      "Extremist cult rarely demonstrates",
+      "dWx0cmE="
   ],
   [
-    "Foolish using unknown quantities in do-it-yourself",
-    "dizzy"
+      "Foolish using unknown quantities in do-it-yourself",
+      "ZGl6enk="
   ],
   [
-    "Frank the musician using sound from remote control",
-    "zappa"
+      "Frank the musician using sound from remote control",
+      "emFwcGE="
   ],
   [
-    "Last character following Disney to dance",
-    "waltz"
+      "Last character following Disney to dance",
+      "d2FsdHo="
   ],
   [
-    "Cautious line taken by US general",
-    "leery"
+      "Cautious line taken by US general",
+      "bGVlcnk="
   ],
   [
-    "Small drink's drunk with unobtrusive sound",
-    "schwa"
+      "Small drink's drunk with unobtrusive sound",
+      "c2Nod2E="
   ],
   [
-    "Letter and article presented with show of gratitude",
-    "theta"
+      "Letter and article presented with show of gratitude",
+      "dGhldGE="
   ],
   [
-    "Work out alone — very into that",
-    "solve"
+      "Work out alone — very into that",
+      "c29sdmU="
   ],
   [
-    "Loss at sea with not taking care? Not half",
-    "wreck"
+      "Loss at sea with not taking care? Not half",
+      "d3JlY2s="
   ],
   [
-    "To fall asleep during sex is ....",
-    "inapt"
+      "To fall asleep during sex is ....",
+      "aW5hcHQ="
   ],
   [
-    "All right to scarper",
-    "legit"
+      "All right to scarper",
+      "bGVnaXQ="
   ],
   [
-    "A small amount of extremely smooth wine",
-    "shred"
+      "A small amount of extremely smooth wine",
+      "c2hyZWQ="
   ],
   [
-    "Watering hole regularly serving locals first",
-    "oasis"
+      "Watering hole regularly serving locals first",
+      "b2FzaXM="
   ],
   [
-    "Spaniard possibly to pass on turn",
-    "diego"
+      "Spaniard possibly to pass on turn",
+      "ZGllZ28="
   ],
   [
-    "Record book",
-    "album"
+      "Record book",
+      "YWxidW0="
   ],
   [
-    "Weight of ice beginning to accumulate in farm vehicle",
-    "carat"
+      "Weight of ice beginning to accumulate in farm vehicle",
+      "Y2FyYXQ="
   ],
   [
-    "Almost decapitated sooner than expected",
-    "early"
+      "Almost decapitated sooner than expected",
+      "ZWFybHk="
   ],
   [
-    "Dump outside entrances to urban lorry plant",
-    "tulip"
+      "Dump outside entrances to urban lorry plant",
+      "dHVsaXA="
   ],
   [
-    "Game sheltering in scrub in gorge",
-    "bingo"
+      "Game sheltering in scrub in gorge",
+      "YmluZ28="
   ],
   [
-    "Algerian port accommodating golf magazine",
-    "organ"
+      "Algerian port accommodating golf magazine",
+      "b3JnYW4="
   ],
   [
-    "Archer’s first and last quarrel?",
-    "arrow"
+      "Archer’s first and last quarrel?",
+      "YXJyb3c="
   ],
   [
-    "My notes from Cambodia might be somehow miserly",
-    "riels"
+      "My notes from Cambodia might be somehow miserly",
+      "cmllbHM="
   ],
   [
-    "Store’s now stopped plugging place",
-    "hoard"
+      "Store’s now stopped plugging place",
+      "aG9hcmQ="
   ],
   [
-    "Grasses on Detective Sergeant following end of case",
-    "reeds"
+      "Grasses on Detective Sergeant following end of case",
+      "cmVlZHM="
   ],
   [
-    "We cannot stay fully associated when axe gets lifted",
-    "tarts"
+      "We cannot stay fully associated when axe gets lifted",
+      "dGFydHM="
   ],
   [
-    "Thousand valuable timber trees concealing wild ass",
-    "kyang"
+      "Thousand valuable timber trees concealing wild ass",
+      "a3lhbmc="
   ],
   [
-    "Fellows from Hungary in what NATO exemplifies?",
-    "chaps"
+      "Fellows from Hungary in what NATO exemplifies?",
+      "Y2hhcHM="
   ],
   [
-    "Sneak into Rechabite’s restaurant",
-    "tratt"
+      "Sneak into Rechabite’s restaurant",
+      "dHJhdHQ="
   ],
   [
-    "Old people’s home hooked on methamphetamine",
-    "iceni"
+      "Old people’s home hooked on methamphetamine",
+      "aWNlbmk="
   ],
   [
-    "Squad crossing lake as fire not yet started?",
-    "unlit"
+      "Squad crossing lake as fire not yet started?",
+      "dW5saXQ="
   ],
   [
-    "Old boy and earl eating last bits of mince pies might become thus",
-    "obese"
+      "Old boy and earl eating last bits of mince pies might become thus",
+      "b2Jlc2U="
   ],
   [
-    "Treatment upset English unionist with trapped wind",
-    "usage"
+      "Treatment upset English unionist with trapped wind",
+      "dXNhZ2U="
   ],
   [
-    "Fool around with looker briefly outside bash?",
-    "essay"
+      "Fool around with looker briefly outside bash?",
+      "ZXNzYXk="
   ],
   [
-    "Those topping early May chart employed expert rapper",
-    "emcee"
+      "Those topping early May chart employed expert rapper",
+      "ZW1jZWU="
   ],
   [
-    "Seasonal workers personalities initially ignored",
-    "elves"
+      "Seasonal workers personalities initially ignored",
+      "ZWx2ZXM="
   ],
   [
-    "Complete upper-class eccentric catching cold",
-    "uncut"
+      "Complete upper-class eccentric catching cold",
+      "dW5jdXQ="
   ],
   [
-    "Muscular worker perhaps content to abandon family",
-    "beefy"
+      "Muscular worker perhaps content to abandon family",
+      "YmVlZnk="
   ],
   [
-    "Class of individuals banned from CIA site",
-    "caste"
+      "Class of individuals banned from CIA site",
+      "Y2FzdGU="
   ],
   [
-    "Finally consider Samuel's teacher Charlie a bit of a saint?",
-    "relic"
+      "Finally consider Samuel's teacher Charlie a bit of a saint?",
+      "cmVsaWM="
   ],
   [
-    "Doctor and I don't know what to say after colonel turns up",
-    "locum"
+      "Doctor and I don't know what to say after colonel turns up",
+      "bG9jdW0="
   ],
   [
-    "Trips from this French city?",
-    "tours"
+      "Trips from this French city?",
+      "dG91cnM="
   ],
   [
-    "Artist paid to pen article",
-    "manet"
+      "Artist paid to pen article",
+      "bWFuZXQ="
   ],
   [
-    "Performer with animal has monkey around not keeping quiet",
-    "tamer"
+      "Performer with animal has monkey around not keeping quiet",
+      "dGFtZXI="
   ],
   [
-    "Sage in Nagpur — I shine",
-    "rishi"
+      "Sage in Nagpur — I shine",
+      "cmlzaGk="
   ],
   [
-    "Demand that performance is never to be put on again?",
-    "exact"
+      "Demand that performance is never to be put on again?",
+      "ZXhhY3Q="
   ],
   [
-    "Last Oscar given to Titanic",
-    "omega"
+      "Last Oscar given to Titanic",
+      "b21lZ2E="
   ],
   [
-    "Beer about four makes one animated?",
-    "alive"
+      "Beer about four makes one animated?",
+      "YWxpdmU="
   ],
   [
-    "Henry in bed in hut",
-    "shack"
+      "Henry in bed in hut",
+      "c2hhY2s="
   ],
   [
-    "Quiet individual was excellent",
-    "shone"
+      "Quiet individual was excellent",
+      "c2hvbmU="
   ],
   [
-    "Liberal lots will accept as courageous perhaps",
-    "manly"
+      "Liberal lots will accept as courageous perhaps",
+      "bWFubHk="
   ],
   [
-    "Ascended in Kilimanjaro seemingly",
-    "arose"
+      "Ascended in Kilimanjaro seemingly",
+      "YXJvc2U="
   ],
   [
-    "Move quickly to embrace right tease?",
-    "flirt"
+      "Move quickly to embrace right tease?",
+      "ZmxpcnQ="
   ],
   [
-    "Deliberately hands round a board game",
-    "largo"
+      "Deliberately hands round a board game",
+      "bGFyZ28="
   ],
   [
-    "Bill wearing woman's skirt",
-    "evade"
+      "Bill wearing woman's skirt",
+      "ZXZhZGU="
   ],
   [
-    "Foreign ally questioning whether he can proceed?",
-    "amigo"
+      "Foreign ally questioning whether he can proceed?",
+      "YW1pZ28="
   ],
   [
-    "Concerned with a contest",
-    "about"
+      "Concerned with a contest",
+      "YWJvdXQ="
   ],
   [
-    "Violence in an attempt to capture king",
-    "aggro"
+      "Violence in an attempt to capture king",
+      "YWdncm8="
   ],
   [
-    "A crop that is produced by a tree",
-    "acorn"
+      "A crop that is produced by a tree",
+      "YWNvcm4="
   ],
   [
-    "One learning this is part of the eye",
-    "pupil"
+      "One learning this is part of the eye",
+      "cHVwaWw="
   ],
   [
-    "Light vehicle that is full of listening devices?",
-    "buggy"
+      "Light vehicle that is full of listening devices?",
+      "YnVnZ3k="
   ],
   [
-    "Step right up to summarise",
-    "recap"
+      "Step right up to summarise",
+      "cmVjYXA="
   ],
   [
-    "Proportion found in peroration",
-    "ratio"
+      "Proportion found in peroration",
+      "cmF0aW8="
   ],
   [
-    "Rowing team’s bulk initially reduced",
-    "eight"
+      "Rowing team’s bulk initially reduced",
+      "ZWlnaHQ="
   ],
   [
-    "Street urchin playin' for money",
-    "gamin"
+      "Street urchin playin' for money",
+      "Z2FtaW4="
   ],
   [
-    "Brave chap guarding borders of Thebes",
-    "gutsy"
+      "Brave chap guarding borders of Thebes",
+      "Z3V0c3k="
   ],
   [
-    "Portion of feta's typically pleasing to the palate",
-    "tasty"
+      "Portion of feta's typically pleasing to the palate",
+      "dGFzdHk="
   ],
   [
-    "Cook first portions of beef rib with alternative to lard?",
-    "broil"
+      "Cook first portions of beef rib with alternative to lard?",
+      "YnJvaWw="
   ],
   [
-    "Italian poet’s output ultimately digested by Scandinavian",
-    "dante"
+      "Italian poet’s output ultimately digested by Scandinavian",
+      "ZGFudGU="
   ],
   [
-    "It isn’t commonly a stain or blemish",
-    "taint"
+      "It isn’t commonly a stain or blemish",
+      "dGFpbnQ="
   ],
   [
-    "Second outsize European deer",
-    "moose"
+      "Second outsize European deer",
+      "bW9vc2U="
   ],
   [
-    "Fortress you and I observed in rocky peak",
-    "tower"
+      "Fortress you and I observed in rocky peak",
+      "dG93ZXI="
   ],
   [
-    "Decoration in one room",
-    "award"
+      "Decoration in one room",
+      "YXdhcmQ="
   ],
   [
-    "A bit of smoked ham",
-    "speck"
+      "A bit of smoked ham",
+      "c3BlY2s="
   ],
   [
-    "Extremely tough bank project",
-    "throw"
+      "Extremely tough bank project",
+      "dGhyb3c="
   ],
   [
-    "Support that Russia’s secured",
-    "truss"
+      "Support that Russia’s secured",
+      "dHJ1c3M="
   ],
   [
-    "Noise from guitar fret? Start to tune up",
-    "twang"
+      "Noise from guitar fret? Start to tune up",
+      "dHdhbmc="
   ],
   [
-    "Put hands together round middle of stomach and squeeze hard",
-    "clamp"
+      "Put hands together round middle of stomach and squeeze hard",
+      "Y2xhbXA="
   ],
   [
-    "See smoke circling: reason?",
-    "logic"
+      "See smoke circling: reason?",
+      "bG9naWM="
   ],
   [
-    "Indicates approval of some clock noises",
-    "ticks"
+      "Indicates approval of some clock noises",
+      "dGlja3M="
   ],
   [
-    "Republic once sounded drier",
-    "airer"
+      "Republic once sounded drier",
+      "YWlyZXI="
   ],
   [
-    "Such an attractive point about breaking a horse",
-    "focal"
+      "Such an attractive point about breaking a horse",
+      "Zm9jYWw="
   ],
   [
-    "Unpleasant expression when born cradled by sister",
-    "sneer"
+      "Unpleasant expression when born cradled by sister",
+      "c25lZXI="
   ],
   [
-    "Sort of frost on front of department store",
-    "hoard"
+      "Sort of frost on front of department store",
+      "aG9hcmQ="
   ],
   [
-    "Lines known by the expert",
-    "ropes"
+      "Lines known by the expert",
+      "cm9wZXM="
   ],
   [
-    "Piece of music displayed in order on door",
-    "rondo"
+      "Piece of music displayed in order on door",
+      "cm9uZG8="
   ],
   [
-    "Scotsman’s to know an indication",
-    "token"
+      "Scotsman’s to know an indication",
+      "dG9rZW4="
   ],
   [
-    "Way left to produce scaled-down version",
-    "model"
+      "Way left to produce scaled-down version",
+      "bW9kZWw="
   ],
   [
-    "Easily annoyed a couple of times aboard railway",
-    "ratty"
+      "Easily annoyed a couple of times aboard railway",
+      "cmF0dHk="
   ],
   [
-    "Put a price on uranium discovered in glen",
-    "value"
+      "Put a price on uranium discovered in glen",
+      "dmFsdWU="
   ],
   [
-    "Sign made by one supporter following Liverpool's first",
-    "libra"
+      "Sign made by one supporter following Liverpool's first",
+      "bGlicmE="
   ],
   [
-    "Shock that head is leaving? I'll say!",
-    "right"
+      "Shock that head is leaving? I'll say!",
+      "cmlnaHQ="
   ],
   [
-    "Axe green areas of Paris to the north",
-    "scrap"
+      "Axe green areas of Paris to the north",
+      "c2NyYXA="
   ],
   [
-    "Volunteers to lead a soldier up lots of freezing trees",
-    "taiga"
+      "Volunteers to lead a soldier up lots of freezing trees",
+      "dGFpZ2E="
   ],
   [
-    "Miserable nurse at end of ward",
-    "drear"
+      "Miserable nurse at end of ward",
+      "ZHJlYXI="
   ],
   [
-    "It's not right to pack flip-flop",
-    "thong"
+      "It's not right to pack flip-flop",
+      "dGhvbmc="
   ],
   [
-    "One who wrote in defence of editorial sent up",
-    "defoe"
+      "One who wrote in defence of editorial sent up",
+      "ZGVmb2U="
   ],
   [
-    "Tease American over sweetheart",
-    "sugar"
+      "Tease American over sweetheart",
+      "c3VnYXI="
   ],
   [
-    "In Tacitus by the way see developing porky",
-    "obese"
+      "In Tacitus by the way see developing porky",
+      "b2Jlc2U="
   ],
   [
-    "Rab C’s abuse is unexpected and quiet without pressure",
-    "snash"
+      "Rab C’s abuse is unexpected and quiet without pressure",
+      "c25hc2g="
   ],
   [
-    "Bingo’s destiny — time together with love",
-    "lotto"
+      "Bingo’s destiny — time together with love",
+      "bG90dG8="
   ],
   [
-    "Old relation sinks back clutching what’s still to be found",
-    "sybbe"
+      "Old relation sinks back clutching what’s still to be found",
+      "c3liYmU="
   ],
   [
-    "Doyens in court watchers wanting one date",
-    "deans"
+      "Doyens in court watchers wanting one date",
+      "ZGVhbnM="
   ],
   [
-    "Hostel in present poet’s praise",
-    "herye"
+      "Hostel in present poet’s praise",
+      "aGVyeWU="
   ],
   [
-    "Joy has Knight in old card game",
-    "gleek"
+      "Joy has Knight in old card game",
+      "Z2xlZWs="
   ],
   [
-    "Months and months investing in advance",
-    "moons"
+      "Months and months investing in advance",
+      "bW9vbnM="
   ],
   [
-    "Walrus remains under stone",
-    "stash"
+      "Walrus remains under stone",
+      "c3Rhc2g="
   ],
   [
-    "Pointer once part of the One-Eleven",
-    "neele"
+      "Pointer once part of the One-Eleven",
+      "bmVlbGU="
   ],
   [
-    "Feature of mountain visible in fair weather off and on",
-    "arete"
+      "Feature of mountain visible in fair weather off and on",
+      "YXJldGU="
   ],
   [
-    "Old boy about to get Palace's recognition? That's sweet",
-    "bombe"
+      "Old boy about to get Palace's recognition? That's sweet",
+      "Ym9tYmU="
   ],
   [
-    "Right person to give support in meeting",
-    "rally"
+      "Right person to give support in meeting",
+      "cmFsbHk="
   ],
   [
-    "Persuasive chaps maybe getting maiden to enter a place of vice?",
-    "admen"
+      "Persuasive chaps maybe getting maiden to enter a place of vice?",
+      "YWRtZW4="
   ],
   [
-    "Former drug mixture",
-    "paste"
+      "Former drug mixture",
+      "cGFzdGU="
   ],
   [
-    "Hat that's not got left in country cottage",
-    "bower"
+      "Hat that's not got left in country cottage",
+      "Ym93ZXI="
   ],
   [
-    "Some learn one sunny day from Caesar",
-    "nones"
+      "Some learn one sunny day from Caesar",
+      "bm9uZXM="
   ],
   [
-    "Small vessel with temperature scarcely sufficient",
-    "scant"
+      "Small vessel with temperature scarcely sufficient",
+      "c2NhbnQ="
   ],
   [
-    "Cold comfort in end",
-    "cease"
+      "Cold comfort in end",
+      "Y2Vhc2U="
   ],
   [
-    "White House soldier going round facilities",
-    "igloo"
+      "White House soldier going round facilities",
+      "aWdsb28="
   ],
   [
-    "Quiet chap with a salty wife “saint” beds",
-    "plots"
+      "Quiet chap with a salty wife “saint” beds",
+      "cGxvdHM="
   ],
   [
-    "Author producing series of books after long time",
-    "agent"
+      "Author producing series of books after long time",
+      "YWdlbnQ="
   ],
   [
-    "Certain numbers of youngsters swallowing recreational drug",
-    "cubes"
+      "Certain numbers of youngsters swallowing recreational drug",
+      "Y3ViZXM="
   ],
   [
-    "Naughty ripping out insides in the manner of a wild animal",
-    "nyala"
+      "Naughty ripping out insides in the manner of a wild animal",
+      "bnlhbGE="
   ],
   [
-    "Country church with trendy bit of architecture at the front",
-    "china"
+      "Country church with trendy bit of architecture at the front",
+      "Y2hpbmE="
   ],
   [
-    "Words on gift tag for Edmund went well",
-    "toned"
+      "Words on gift tag for Edmund went well",
+      "dG9uZWQ="
   ],
   [
-    "Cockney embraced the woman in this shrub",
-    "elder"
+      "Cockney embraced the woman in this shrub",
+      "ZWxkZXI="
   ],
   [
-    "A meat and egg combination served up in US city",
-    "omaha"
+      "A meat and egg combination served up in US city",
+      "b21haGE="
   ],
   [
-    "Look after some revolutionary candidates running",
-    "nurse"
+      "Look after some revolutionary candidates running",
+      "bnVyc2U="
   ],
   [
-    "Turn of phrase in papers I'm carrying round",
-    "idiom"
+      "Turn of phrase in papers I'm carrying round",
+      "aWRpb20="
   ],
   [
-    "Genuinely devoid of energy in comeback",
-    "rally"
+      "Genuinely devoid of energy in comeback",
+      "cmFsbHk="
   ],
   [
-    "A European losing last match",
-    "agree"
+      "A European losing last match",
+      "YWdyZWU="
   ],
   [
-    "Strange article about piece of fiction",
-    "alien"
+      "Strange article about piece of fiction",
+      "YWxpZW4="
   ],
   [
-    "Hummer to reverse move quickly",
-    "topaz"
+      "Hummer to reverse move quickly",
+      "dG9wYXo="
   ],
   [
-    "From which one selects fellows oneself",
-    "menus"
+      "From which one selects fellows oneself",
+      "bWVudXM="
   ],
   [
-    "Fieldwork nurtured a non-specialist to some extent",
-    "redan"
+      "Fieldwork nurtured a non-specialist to some extent",
+      "cmVkYW4="
   ],
   [
-    "Asian barge business that’s steady but for husband and wife",
-    "casco"
+      "Asian barge business that’s steady but for husband and wife",
+      "Y2FzY28="
   ],
   [
-    "Query not entirely to Persian dynasty",
-    "qajar"
+      "Query not entirely to Persian dynasty",
+      "cWFqYXI="
   ],
   [
-    "One shining brightly in earlier prayer day is upset",
-    "deneb"
+      "One shining brightly in earlier prayer day is upset",
+      "ZGVuZWI="
   ],
   [
-    "Trim and uniform unisex wrap",
-    "pareu"
+      "Trim and uniform unisex wrap",
+      "cGFyZXU="
   ],
   [
-    "Outburst of delight then disgust finding meadow in Moray",
-    "haugh"
+      "Outburst of delight then disgust finding meadow in Moray",
+      "aGF1Z2g="
   ],
   [
-    "Think about love as a timid person",
-    "mouse"
+      "Think about love as a timid person",
+      "bW91c2U="
   ],
   [
-    "Dance beat given energy",
-    "tango"
+      "Dance beat given energy",
+      "dGFuZ28="
   ],
   [
-    "Out-of-date permit unacceptable ultimately",
-    "passe"
+      "Out-of-date permit unacceptable ultimately",
+      "cGFzc2U="
   ],
   [
-    "Wait for action on tennis court",
-    "serve"
+      "Wait for action on tennis court",
+      "c2VydmU="
   ],
   [
-    "Unskilled work from son of afflicted man?",
-    "mcjob"
+      "Unskilled work from son of afflicted man?",
+      "bWNqb2I="
   ],
   [
-    "Squirrel away almost months in terrible weather",
-    "storm"
+      "Squirrel away almost months in terrible weather",
+      "c3Rvcm0="
   ],
   [
-    "Doctors succeeded saving European national leader",
-    "moses"
+      "Doctors succeeded saving European national leader",
+      "bW9zZXM="
   ],
   [
-    "No new sort of calendar girl",
-    "julia"
+      "No new sort of calendar girl",
+      "anVsaWE="
   ],
   [
-    "I agree about returning thanks for poet",
-    "yeats"
+      "I agree about returning thanks for poet",
+      "eWVhdHM="
   ],
   [
-    "A college year provides friendship",
-    "amity"
+      "A college year provides friendship",
+      "YW1pdHk="
   ],
   [
-    "Chain of human descent not complete",
-    "andes"
+      "Chain of human descent not complete",
+      "YW5kZXM="
   ],
   [
-    "Part of circle about to retire in Ghanaian port",
-    "accra"
+      "Part of circle about to retire in Ghanaian port",
+      "YWNjcmE="
   ],
   [
-    "Meal served by a number (about fifty?)",
-    "flour"
+      "Meal served by a number (about fifty?)",
+      "ZmxvdXI="
   ],
   [
-    "Fiasco trying to accommodate race venue",
-    "ascot"
+      "Fiasco trying to accommodate race venue",
+      "YXNjb3Q="
   ],
   [
-    "Article about Italian wine tax no longer levied",
-    "tithe"
+      "Article about Italian wine tax no longer levied",
+      "dGl0aGU="
   ],
   [
-    "Community leader to go on endlessly",
-    "rabbi"
+      "Community leader to go on endlessly",
+      "cmFiYmk="
   ],
   [
-    "Listen to the French horn",
-    "bugle"
+      "Listen to the French horn",
+      "YnVnbGU="
   ],
   [
-    "Mind introducing new terms",
-    "nouns"
+      "Mind introducing new terms",
+      "bm91bnM="
   ],
   [
-    "Keen on catching Mahler's last prelude",
-    "intro"
+      "Keen on catching Mahler's last prelude",
+      "aW50cm8="
   ],
   [
-    "Clergyman forgetting first offence",
-    "arson"
+      "Clergyman forgetting first offence",
+      "YXJzb24="
   ],
   [
-    "I will briefly broadcast in passageway",
-    "aisle"
+      "I will briefly broadcast in passageway",
+      "YWlzbGU="
   ],
   [
-    "Own goal to include Republican article in periodical",
-    "organ"
+      "Own goal to include Republican article in periodical",
+      "b3JnYW4="
   ],
   [
-    "Unpleasant refusal to accommodate street",
-    "nasty"
+      "Unpleasant refusal to accommodate street",
+      "bmFzdHk="
   ],
   [
-    "Complete stop as outsiders leave — speech unfinished",
-    "total"
+      "Complete stop as outsiders leave — speech unfinished",
+      "dG90YWw="
   ],
   [
-    "Boxer maybe supported by mother’s belief",
-    "dogma"
+      "Boxer maybe supported by mother’s belief",
+      "ZG9nbWE="
   ],
   [
-    "Pull away from wife and sleep",
-    "wrest"
+      "Pull away from wife and sleep",
+      "d3Jlc3Q="
   ],
   [
-    "Papers etc dismissing knight from holy city",
-    "media"
+      "Papers etc dismissing knight from holy city",
+      "bWVkaWE="
   ],
   [
-    "Hand in part penning second song",
-    "psalm"
+      "Hand in part penning second song",
+      "cHNhbG0="
   ],
   [
-    "Wall painting left on a strange backing",
-    "mural"
+      "Wall painting left on a strange backing",
+      "bXVyYWw="
   ],
   [
-    "Catwalk artist is large on style",
-    "model"
+      "Catwalk artist is large on style",
+      "bW9kZWw="
   ],
   [
-    "River running across road makes one late",
-    "tardy"
+      "River running across road makes one late",
+      "dGFyZHk="
   ],
   [
-    "Beat section of totem pole",
-    "tempo"
+      "Beat section of totem pole",
+      "dGVtcG8="
   ],
   [
-    "Character of the lower Nile",
-    "delta"
+      "Character of the lower Nile",
+      "ZGVsdGE="
   ],
   [
-    "Celestial visitor has to arrive on time",
-    "comet"
+      "Celestial visitor has to arrive on time",
+      "Y29tZXQ="
   ],
   [
-    "Current score is high before end of play",
-    "tally"
+      "Current score is high before end of play",
+      "dGFsbHk="
   ],
   [
-    "One enters London school after European woman",
-    "elsie"
+      "One enters London school after European woman",
+      "ZWxzaWU="
   ],
   [
-    "Prizegiver putting book in Christmas wrapping",
-    "nobel"
+      "Prizegiver putting book in Christmas wrapping",
+      "bm9iZWw="
   ],
   [
-    "Opening bars with some quaint rooms",
-    "intro"
+      "Opening bars with some quaint rooms",
+      "aW50cm8="
   ],
   [
-    "Start to collect pieces of wood for footwear",
-    "clogs"
+      "Start to collect pieces of wood for footwear",
+      "Y2xvZ3M="
   ],
   [
-    "Short fibre spun",
-    "brief"
+      "Short fibre spun",
+      "YnJpZWY="
   ],
   [
-    "Fellow gets hot in foreign city",
-    "ghent"
+      "Fellow gets hot in foreign city",
+      "Z2hlbnQ="
   ],
   [
-    "King in spectacular drive",
-    "ardri"
+      "King in spectacular drive",
+      "YXJkcmk="
   ],
   [
-    "My very good procession",
-    "corso"
+      "My very good procession",
+      "Y29yc28="
   ],
   [
-    "Sharp sounds from small children needing double love",
-    "toots"
+      "Sharp sounds from small children needing double love",
+      "dG9vdHM="
   ],
   [
-    "Seal turning around ducking head",
-    "otary"
+      "Seal turning around ducking head",
+      "b3Rhcnk="
   ],
   [
-    "Without wife as source of strength",
-    "sinew"
+      "Without wife as source of strength",
+      "c2luZXc="
   ],
   [
-    "Tree chopped landing on area in village",
-    "aldea"
+      "Tree chopped landing on area in village",
+      "YWxkZWE="
   ],
   [
-    "Take down unstable bridge lacking breadth",
-    "derig"
+      "Take down unstable bridge lacking breadth",
+      "ZGVyaWc="
   ],
   [
-    "Symbolic books reflecting breadth of knowledge",
-    "token"
+      "Symbolic books reflecting breadth of knowledge",
+      "dG9rZW4="
   ],
   [
-    "Jam or cake?",
-    "block"
+      "Jam or cake?",
+      "YmxvY2s="
   ],
   [
-    "Dog food without flavour ultimately",
-    "track"
+      "Dog food without flavour ultimately",
+      "dHJhY2s="
   ],
   [
-    "Old tapestry frames where padres preach",
-    "tents"
+      "Old tapestry frames where padres preach",
+      "dGVudHM="
   ],
   [
-    "That which winds Guevara up in revolutionary broadcast",
-    "aired"
+      "That which winds Guevara up in revolutionary broadcast",
+      "YWlyZWQ="
   ],
   [
-    "Scot on the fiddle uses this run out to brood",
-    "rosit"
+      "Scot on the fiddle uses this run out to brood",
+      "cm9zaXQ="
   ],
   [
-    "Resent involving old diplomat who’s second-rate",
-    "envoy"
+      "Resent involving old diplomat who’s second-rate",
+      "ZW52b3k="
   ],
   [
-    "Spenser’s vow is in trouble",
-    "heast"
+      "Spenser’s vow is in trouble",
+      "aGVhc3Q="
   ],
   [
-    "Couple from Hebron holding up stiff letter of theirs?",
-    "sadhe"
+      "Couple from Hebron holding up stiff letter of theirs?",
+      "c2FkaGU="
   ],
   [
-    "Geese spotted heading northwards around noon",
-    "nenes"
+      "Geese spotted heading northwards around noon",
+      "bmVuZXM="
   ],
   [
-    "Bawd mostly admitted to it? It gets you hot and steamy",
-    "sauna"
+      "Bawd mostly admitted to it? It gets you hot and steamy",
+      "c2F1bmE="
   ],
   [
-    "Special number to ring on a tablet",
-    "stela"
+      "Special number to ring on a tablet",
+      "c3RlbGE="
   ],
   [
-    "One year skate over twenty-nine spring days",
-    "iyyar"
+      "One year skate over twenty-nine spring days",
+      "aXl5YXI="
   ],
   [
-    "Reportedly one departing for bar",
-    "lever"
+      "Reportedly one departing for bar",
+      "bGV2ZXI="
   ],
   [
-    "Model   question",
-    "poser"
+      "Model   question",
+      "cG9zZXI="
   ],
   [
-    "Stick fork into small fruit",
-    "spear"
+      "Stick fork into small fruit",
+      "c3BlYXI="
   ],
   [
-    "Put finger on front of thigh: that hurt!",
-    "touch"
+      "Put finger on front of thigh: that hurt!",
+      "dG91Y2g="
   ],
   [
-    "Pull away with the others",
-    "wrest"
+      "Pull away with the others",
+      "d3Jlc3Q="
   ],
   [
-    "Crouch down in illegally-occupied building",
-    "squat"
+      "Crouch down in illegally-occupied building",
+      "c3F1YXQ="
   ],
   [
-    "One regretting keeping large measuring device?",
-    "ruler"
+      "One regretting keeping large measuring device?",
+      "cnVsZXI="
   ],
   [
-    "Call up the day before receiving fine",
-    "evoke"
+      "Call up the day before receiving fine",
+      "ZXZva2U="
   ],
   [
-    "Dance company never goes abroad initially",
-    "conga"
+      "Dance company never goes abroad initially",
+      "Y29uZ2E="
   ],
   [
-    "Some exert influence over explosive constituent",
-    "nitre"
+      "Some exert influence over explosive constituent",
+      "bml0cmU="
   ],
   [
-    "Refrain from eating inspiring oriental banquet",
-    "feast"
+      "Refrain from eating inspiring oriental banquet",
+      "ZmVhc3Q="
   ],
   [
-    "Oscar managed to get hold of golf magazine",
-    "organ"
+      "Oscar managed to get hold of golf magazine",
+      "b3JnYW4="
   ],
   [
-    "I was competitive with climber going up the wall?",
-    "ivied"
+      "I was competitive with climber going up the wall?",
+      "aXZpZWQ="
   ],
   [
-    "Loud noise from family beginning to grate",
-    "clang"
+      "Loud noise from family beginning to grate",
+      "Y2xhbmc="
   ],
   [
-    "Seeing bear regularly in this Alpine landmark",
-    "eiger"
+      "Seeing bear regularly in this Alpine landmark",
+      "ZWlnZXI="
   ],
   [
-    "Observe pair immersed in that European river",
-    "spree"
+      "Observe pair immersed in that European river",
+      "c3ByZWU="
   ],
   [
-    "Study this writer's material",
-    "denim"
+      "Study this writer's material",
+      "ZGVuaW0="
   ],
   [
-    "Store had several drinks put back",
-    "depot"
+      "Store had several drinks put back",
+      "ZGVwb3Q="
   ],
   [
-    "Big sound in very small space",
-    "vroom"
+      "Big sound in very small space",
+      "dnJvb20="
   ],
   [
-    "Game about to get explosive — one may be on edge",
-    "ruche"
+      "Game about to get explosive — one may be on edge",
+      "cnVjaGU="
   ],
   [
-    "Positive response when claiming record — cries of delight?",
-    "yelps"
+      "Positive response when claiming record — cries of delight?",
+      "eWVscHM="
   ],
   [
-    "Acceptable shape of neck with a top",
-    "valid"
+      "Acceptable shape of neck with a top",
+      "dmFsaWQ="
   ],
   [
-    "Crudely hang sort of gate that nobody at first goes through",
-    "lynch"
+      "Crudely hang sort of gate that nobody at first goes through",
+      "bHluY2g="
   ],
   [
-    "Person in office one playing rates",
-    "tempi"
+      "Person in office one playing rates",
+      "dGVtcGk="
   ],
   [
-    "Demanding to be beheaded: doing it?",
-    "axing"
+      "Demanding to be beheaded: doing it?",
+      "YXhpbmc="
   ],
   [
-    "Resolve to move rook to the fifth? No way",
-    "never"
+      "Resolve to move rook to the fifth? No way",
+      "bmV2ZXI="
   ],
   [
-    "Time out?",
-    "night"
+      "Time out?",
+      "bmlnaHQ="
   ],
   [
-    "Modify a dwelling on return at end of August",
-    "adapt"
+      "Modify a dwelling on return at end of August",
+      "YWRhcHQ="
   ],
   [
-    "Inform about time for swindle",
-    "sting"
+      "Inform about time for swindle",
+      "c3Rpbmc="
   ],
   [
-    "Headdress seen in trip abroad oddly",
-    "tiara"
+      "Headdress seen in trip abroad oddly",
+      "dGlhcmE="
   ],
   [
-    "Husband in holiday area — a winner",
-    "champ"
+      "Husband in holiday area — a winner",
+      "Y2hhbXA="
   ],
   [
-    "Run after husband when entering church",
-    "chase"
+      "Run after husband when entering church",
+      "Y2hhc2U="
   ],
   [
-    "Drinks served to English guy",
-    "tease"
+      "Drinks served to English guy",
+      "dGVhc2U="
   ],
   [
-    "Light Muscat or Chablis bottles",
-    "torch"
+      "Light Muscat or Chablis bottles",
+      "dG9yY2g="
   ],
   [
-    "A trotter for cooking?",
-    "afoot"
+      "A trotter for cooking?",
+      "YWZvb3Q="
   ],
   [
-    "Mog kept rhino?",
-    "kitty"
+      "Mog kept rhino?",
+      "a2l0dHk="
   ],
   [
-    "Conservative soon to become ordained minister",
-    "canon"
+      "Conservative soon to become ordained minister",
+      "Y2Fub24="
   ],
   [
-    "Fellow joining soldiers in mansion",
-    "manor"
+      "Fellow joining soldiers in mansion",
+      "bWFub3I="
   ],
   [
-    "Depart with characters from Middle Avenue",
-    "leave"
+      "Depart with characters from Middle Avenue",
+      "bGVhdmU="
   ],
   [
-    "Bushy-tailed African is bizarrely red in South Africa",
-    "zerda"
+      "Bushy-tailed African is bizarrely red in South Africa",
+      "emVyZGE="
   ],
   [
-    "Language with a couple of laughable fallacies",
-    "idola"
+      "Language with a couple of laughable fallacies",
+      "aWRvbGE="
   ],
   [
-    "Service to erase computing bug",
-    "lurgy"
+      "Service to erase computing bug",
+      "bHVyZ3k="
   ],
   [
-    "Scale from cayman’s front leg?",
-    "climb"
+      "Scale from cayman’s front leg?",
+      "Y2xpbWI="
   ],
   [
-    "People’s careers",
-    "races"
+      "People’s careers",
+      "cmFjZXM="
   ],
   [
-    "Bill attached to papers is consumptive",
-    "tabid"
+      "Bill attached to papers is consumptive",
+      "dGFiaWQ="
   ],
   [
-    "Ghost writer’s latest found in a bum novel",
-    "umbra"
+      "Ghost writer’s latest found in a bum novel",
+      "dW1icmE="
   ],
   [
-    "Special seat around back of court providing cover for a seed",
-    "testa"
+      "Special seat around back of court providing cover for a seed",
+      "dGVzdGE="
   ],
   [
-    "Once superior European province",
-    "liege"
+      "Once superior European province",
+      "bGllZ2U="
   ],
   [
-    "I may be put out by person serving at table",
-    "water"
+      "I may be put out by person serving at table",
+      "d2F0ZXI="
   ],
   [
-    "Youngster guarded by neurotic Hilda",
-    "child"
+      "Youngster guarded by neurotic Hilda",
+      "Y2hpbGQ="
   ],
   [
-    "Change commercial about workers",
-    "amend"
+      "Change commercial about workers",
+      "YW1lbmQ="
   ],
   [
-    "Banal ending for magnificent ceremony",
-    "trite"
+      "Banal ending for magnificent ceremony",
+      "dHJpdGU="
   ],
   [
-    "Carpenter's food",
-    "chips"
+      "Carpenter's food",
+      "Y2hpcHM="
   ],
   [
-    "Sweets in tin daddy emptied",
-    "candy"
+      "Sweets in tin daddy emptied",
+      "Y2FuZHk="
   ],
   [
-    "Sauce eaten by colossal savage",
-    "salsa"
+      "Sauce eaten by colossal savage",
+      "c2Fsc2E="
   ],
   [
-    "More than one fell in love with men in the script",
-    "moors"
+      "More than one fell in love with men in the script",
+      "bW9vcnM="
   ],
   [
-    "Light that warns companion leaving compartment",
-    "amber"
+      "Light that warns companion leaving compartment",
+      "YW1iZXI="
   ],
   [
-    "One Murdoch hails originally from Dublin?",
-    "irish"
+      "One Murdoch hails originally from Dublin?",
+      "aXJpc2g="
   ],
   [
-    "Occasionally behind peers: feel down about this?",
-    "eider"
+      "Occasionally behind peers: feel down about this?",
+      "ZWlkZXI="
   ],
   [
-    "Quiet fellow taking dip in river",
-    "piano"
+      "Quiet fellow taking dip in river",
+      "cGlhbm8="
   ],
   [
-    "Short advert: for a second",
-    "photo"
+      "Short advert: for a second",
+      "cGhvdG8="
   ],
   [
-    "A range of hearing",
-    "aural"
+      "A range of hearing",
+      "YXVyYWw="
   ],
   [
-    "Cheers football teams? They’re going places!",
-    "taxis"
+      "Cheers football teams? They’re going places!",
+      "dGF4aXM="
   ],
   [
-    "Yankee area accommodating key conference centre once",
-    "yalta"
+      "Yankee area accommodating key conference centre once",
+      "eWFsdGE="
   ],
   [
-    "One page coming out of directory",
-    "recto"
+      "One page coming out of directory",
+      "cmVjdG8="
   ],
   [
-    "Meaning to float along",
-    "drift"
+      "Meaning to float along",
+      "ZHJpZnQ="
   ],
   [
-    "Power line held in that?",
-    "pylon"
+      "Power line held in that?",
+      "cHlsb24="
   ],
   [
-    "Come to wreck",
-    "total"
+      "Come to wreck",
+      "dG90YWw="
   ],
   [
-    "Minions abandoning southern nation",
-    "yemen"
+      "Minions abandoning southern nation",
+      "eWVtZW4="
   ],
   [
-    "Stick supporting middle of blue flower",
-    "lupin"
+      "Stick supporting middle of blue flower",
+      "bHVwaW4="
   ],
   [
-    "Funny spin",
-    "sally"
+      "Funny spin",
+      "c2FsbHk="
   ],
   [
-    "Funds raised for boat",
-    "sloop"
+      "Funds raised for boat",
+      "c2xvb3A="
   ],
   [
-    "Introduction to record in creative work — here?",
-    "proem"
+      "Introduction to record in creative work — here?",
+      "cHJvZW0="
   ],
   [
-    "Scottish estate owner in place of seclusion with duke",
-    "laird"
+      "Scottish estate owner in place of seclusion with duke",
+      "bGFpcmQ="
   ],
   [
-    "Principle that is engaging Democrat most of all",
-    "ideal"
+      "Principle that is engaging Democrat most of all",
+      "aWRlYWw="
   ],
   [
-    "Right to run away?",
-    "legit"
+      "Right to run away?",
+      "bGVnaXQ="
   ],
   [
-    "Army doctor has done with cut",
-    "drove"
+      "Army doctor has done with cut",
+      "ZHJvdmU="
   ],
   [
-    "Savoury jelly originally served in a popular film",
-    "aspic"
+      "Savoury jelly originally served in a popular film",
+      "YXNwaWM="
   ],
   [
-    "Retired teacher greeting Hindu sage",
-    "rishi"
+      "Retired teacher greeting Hindu sage",
+      "cmlzaGk="
   ],
   [
-    "Plankton: prey rorquals principally swallowed",
-    "krill"
+      "Plankton: prey rorquals principally swallowed",
+      "a3JpbGw="
   ],
   [
-    "Astute waif initially avoided scrap",
-    "shred"
+      "Astute waif initially avoided scrap",
+      "c2hyZWQ="
   ],
   [
-    "Playing area perfect for some musicians",
-    "pitch"
+      "Playing area perfect for some musicians",
+      "cGl0Y2g="
   ],
   [
-    "Wrongdoing of troublesome brat the head expelled",
-    "error"
+      "Wrongdoing of troublesome brat the head expelled",
+      "ZXJyb3I="
   ],
   [
-    "Sensational start to lecture union leader delivered",
-    "lurid"
+      "Sensational start to lecture union leader delivered",
+      "bHVyaWQ="
   ],
   [
-    "Wrong end of apple cake",
-    "torte"
+      "Wrong end of apple cake",
+      "dG9ydGU="
   ],
   [
-    "Promise singular sport",
-    "swear"
+      "Promise singular sport",
+      "c3dlYXI="
   ],
   [
-    "Fabric in wide opening drawer",
-    "twill"
+      "Fabric in wide opening drawer",
+      "dHdpbGw="
   ],
   [
-    "Suffering girl's lost hair",
-    "tress"
+      "Suffering girl's lost hair",
+      "dHJlc3M="
   ],
   [
-    "Struggles to cover constant weaknesses",
-    "vices"
+      "Struggles to cover constant weaknesses",
+      "dmljZXM="
   ],
   [
-    "I count as mad",
-    "irate"
+      "I count as mad",
+      "aXJhdGU="
   ],
   [
-    "Strip protection from team without right back",
-    "unarm"
+      "Strip protection from team without right back",
+      "dW5hcm0="
   ],
   [
-    "Note monarch from the east is no lone wolf",
-    "mixer"
+      "Note monarch from the east is no lone wolf",
+      "bWl4ZXI="
   ],
   [
-    "Letters from Nepali centrally displaying Chinese symbol",
-    "panda"
+      "Letters from Nepali centrally displaying Chinese symbol",
+      "cGFuZGE="
   ],
   [
-    "Company hasn't time to make suppositions",
-    "guess"
+      "Company hasn't time to make suppositions",
+      "Z3Vlc3M="
   ],
   [
-    "African's vote — I'm surprised about it",
-    "xhosa"
+      "African's vote — I'm surprised about it",
+      "eGhvc2E="
   ],
   [
-    "Poison in canned beef",
-    "toxin"
+      "Poison in canned beef",
+      "dG94aW4="
   ],
   [
-    "Tent was initially of poor quality fabric",
-    "twill"
+      "Tent was initially of poor quality fabric",
+      "dHdpbGw="
   ],
   [
-    "Pot from southern US states",
-    "dixie"
+      "Pot from southern US states",
+      "ZGl4aWU="
   ],
   [
-    "A small cat and a big dog",
-    "akita"
+      "A small cat and a big dog",
+      "YWtpdGE="
   ],
   [
-    "Sebastian’s twin sister’s instrument?",
-    "viola"
+      "Sebastian’s twin sister’s instrument?",
+      "dmlvbGE="
   ],
   [
-    "Admitted / being possessed",
-    "owned"
+      "Admitted / being possessed",
+      "b3duZWQ="
   ],
   [
-    "Racehorse spy eating river fish",
-    "trout"
+      "Racehorse spy eating river fish",
+      "dHJvdXQ="
   ],
   [
-    "Steer madly for compound",
-    "ester"
+      "Steer madly for compound",
+      "ZXN0ZXI="
   ],
   [
-    "Season throwing out new shoot",
-    "sprig"
+      "Season throwing out new shoot",
+      "c3ByaWc="
   ],
   [
-    "Loner forced to join up",
-    "enrol"
+      "Loner forced to join up",
+      "ZW5yb2w="
   ],
   [
-    "Language used by rajah in Didwana",
-    "hindi"
+      "Language used by rajah in Didwana",
+      "aGluZGk="
   ],
   [
-    "Piece attached to heel is hanging",
-    "tapis"
+      "Piece attached to heel is hanging",
+      "dGFwaXM="
   ],
   [
-    "Mischief-maker’s accent not British",
-    "rogue"
+      "Mischief-maker’s accent not British",
+      "cm9ndWU="
   ],
   [
-    "Something afoot: no time for throwing a spanner in the works?",
-    "sabot"
+      "Something afoot: no time for throwing a spanner in the works?",
+      "c2Fib3Q="
   ],
   [
-    "Patriarch backing solid husband",
-    "enoch"
+      "Patriarch backing solid husband",
+      "ZW5vY2g="
   ],
   [
-    "Hard punches ruptured spine",
-    "thorn"
+      "Hard punches ruptured spine",
+      "dGhvcm4="
   ],
   [
-    "Followed three females leaving far-off area of Home Counties",
-    "arose"
+      "Followed three females leaving far-off area of Home Counties",
+      "YXJvc2U="
   ],
   [
-    "Force isn't commonly weak",
-    "faint"
+      "Force isn't commonly weak",
+      "ZmFpbnQ="
   ],
   [
-    "Elegant ships poetically capsizing",
-    "sleek"
+      "Elegant ships poetically capsizing",
+      "c2xlZWs="
   ],
   [
-    "Short of things to do",
-    "maybe"
+      "Short of things to do",
+      "bWF5YmU="
   ],
   [
-    "Praise old singer cutting disc",
-    "exalt"
+      "Praise old singer cutting disc",
+      "ZXhhbHQ="
   ],
   [
-    "Greek festival inspires king – it’s something in the atmosphere",
-    "argon"
+      "Greek festival inspires king – it’s something in the atmosphere",
+      "YXJnb24="
   ],
   [
-    "Fiddle one misplaced? There it is!",
-    "voila"
+      "Fiddle one misplaced? There it is!",
+      "dm9pbGE="
   ],
   [
-    "Passage south across the Atlantic",
-    "sinus"
+      "Passage south across the Atlantic",
+      "c2ludXM="
   ],
   [
-    "Brief verse in French mostly useless",
-    "envoi"
+      "Brief verse in French mostly useless",
+      "ZW52b2k="
   ],
   [
-    "Spray water on a book",
-    "hosea"
+      "Spray water on a book",
+      "aG9zZWE="
   ],
   [
-    "Keen on including composer's last piece of music",
-    "intro"
+      "Keen on including composer's last piece of music",
+      "aW50cm8="
   ],
   [
-    "Minister’s current vehicle parked by entrance to villa",
-    "vicar"
+      "Minister’s current vehicle parked by entrance to villa",
+      "dmljYXI="
   ],
   [
-    "Language once spoken in Bergen or Senja",
-    "norse"
+      "Language once spoken in Bergen or Senja",
+      "bm9yc2U="
   ],
   [
-    "Person in authority that must be straight!",
-    "ruler"
+      "Person in authority that must be straight!",
+      "cnVsZXI="
   ],
   [
-    "Proposal to clothe artist in interwoven fabric",
-    "braid"
+      "Proposal to clothe artist in interwoven fabric",
+      "YnJhaWQ="
   ],
   [
-    "Possibly Kingsley’s wrong!",
-    "amiss"
+      "Possibly Kingsley’s wrong!",
+      "YW1pc3M="
   ],
   [
-    "Surly Republican in bunk …",
-    "gruff"
+      "Surly Republican in bunk …",
+      "Z3J1ZmY="
   ],
   [
-    "… almost cheers an Athenian lawgiver",
-    "solon"
+      "… almost cheers an Athenian lawgiver",
+      "c29sb24="
   ],
   [
-    "Biblical character I whine about",
-    "naomi"
+      "Biblical character I whine about",
+      "bmFvbWk="
   ],
   [
-    "Speeding boats",
-    "fleet"
+      "Speeding boats",
+      "ZmxlZXQ="
   ],
   [
-    "It’s awkward to sleep in it",
-    "inapt"
+      "It’s awkward to sleep in it",
+      "aW5hcHQ="
   ],
   [
-    "Reason fire’s not turned on",
-    "infer"
+      "Reason fire’s not turned on",
+      "aW5mZXI="
   ],
   [
-    "The spirit of Jungian imagery",
-    "anima"
+      "The spirit of Jungian imagery",
+      "YW5pbWE="
   ],
   [
-    "Solvent or sedative everyone’s taken in party",
-    "aldol"
+      "Solvent or sedative everyone’s taken in party",
+      "YWxkb2w="
   ],
   [
-    "Hint of air and sky all see tho’ never outside",
-    "inkle"
+      "Hint of air and sky all see tho’ never outside",
+      "aW5rbGU="
   ],
   [
-    "Credit outspoken school making a stand",
-    "bipod"
+      "Credit outspoken school making a stand",
+      "Ymlwb2Q="
   ],
   [
-    "Painter’s materials interspersed with hint of light medium",
-    "klimt"
+      "Painter’s materials interspersed with hint of light medium",
+      "a2xpbXQ="
   ],
   [
-    "Surrounded by part of team on green",
-    "among"
+      "Surrounded by part of team on green",
+      "YW1vbmc="
   ],
   [
-    "Compere picked up award for gallantry?",
-    "emcee"
+      "Compere picked up award for gallantry?",
+      "ZW1jZWU="
   ],
   [
-    "Render “disjointed” maybe with it? Hardly",
-    "unhip"
+      "Render “disjointed” maybe with it? Hardly",
+      "dW5oaXA="
   ],
   [
-    "Come by home with vicious dog",
-    "incur"
+      "Come by home with vicious dog",
+      "aW5jdXI="
   ],
   [
-    "Screen series for audience in hotel",
-    "hydro"
+      "Screen series for audience in hotel",
+      "aHlkcm8="
   ],
   [
-    "Heard Scottish island shows something very remarkable",
-    "beaut"
+      "Heard Scottish island shows something very remarkable",
+      "YmVhdXQ="
   ],
   [
-    "Spike publicity about golf",
-    "prong"
+      "Spike publicity about golf",
+      "cHJvbmc="
   ],
   [
-    "They may be exposed in vulgar session!",
-    "arses"
+      "They may be exposed in vulgar session!",
+      "YXJzZXM="
   ],
   [
-    "Church abandons whim to create popular resort",
-    "capri"
+      "Church abandons whim to create popular resort",
+      "Y2Fwcmk="
   ],
   [
-    "Material for gloves taken to court by English",
-    "suede"
+      "Material for gloves taken to court by English",
+      "c3VlZGU="
   ],
   [
-    "Rope-maker’s sibling briefly linked with notorious gangster",
-    "sisal"
+      "Rope-maker’s sibling briefly linked with notorious gangster",
+      "c2lzYWw="
   ],
   [
-    "Dainty swimming aid used by the Spanish",
-    "elfin"
+      "Dainty swimming aid used by the Spanish",
+      "ZWxmaW4="
   ],
   [
-    "Break assistant initially employed touring the States",
-    "pause"
+      "Break assistant initially employed touring the States",
+      "cGF1c2U="
   ],
   [
-    "Rugby club used to be pretty successful at first",
-    "wasps"
+      "Rugby club used to be pretty successful at first",
+      "d2FzcHM="
   ],
   [
-    "Liberal introducing novel proposition",
-    "lemma"
+      "Liberal introducing novel proposition",
+      "bGVtbWE="
   ],
   [
-    "Hearty boatman’s beginning to steer towards the wind",
-    "bluff"
+      "Hearty boatman’s beginning to steer towards the wind",
+      "Ymx1ZmY="
   ],
   [
-    "Spot near the centre of Jupiter’s red spot?",
-    "bindi"
+      "Spot near the centre of Jupiter’s red spot?",
+      "YmluZGk="
   ],
   [
-    "I won’t mix a drink in large shaker ultimately",
-    "loner"
+      "I won’t mix a drink in large shaker ultimately",
+      "bG9uZXI="
   ],
   [
-    "Description of call from dove loft heard in poem",
-    "haiku"
+      "Description of call from dove loft heard in poem",
+      "aGFpa3U="
   ],
   [
-    "Swell certainly to consume gallons",
-    "surge"
+      "Swell certainly to consume gallons",
+      "c3VyZ2U="
   ],
   [
-    "A grain seed",
-    "acorn"
+      "A grain seed",
+      "YWNvcm4="
   ],
   [
-    "Small company with work that’s exclusive",
-    "scoop"
+      "Small company with work that’s exclusive",
+      "c2Nvb3A="
   ],
   [
-    "New European friend’s country",
-    "nepal"
+      "New European friend’s country",
+      "bmVwYWw="
   ],
   [
-    "Duke drops pipe",
-    "drain"
+      "Duke drops pipe",
+      "ZHJhaW4="
   ],
   [
-    "One scattering seeds ultimately manages to follow the supervisor",
-    "sower"
+      "One scattering seeds ultimately manages to follow the supervisor",
+      "c293ZXI="
   ],
   [
-    "Vision of latter half of hadj?",
-    "image"
+      "Vision of latter half of hadj?",
+      "aW1hZ2U="
   ],
   [
-    "What’s taking place in First Empire times",
-    "tempi"
+      "What’s taking place in First Empire times",
+      "dGVtcGk="
   ],
   [
-    "Trade union gets backchat in plant",
-    "tulip"
+      "Trade union gets backchat in plant",
+      "dHVsaXA="
   ],
   [
-    "At home wearing shoddy stuff - a flaw",
-    "taint"
+      "At home wearing shoddy stuff - a flaw",
+      "dGFpbnQ="
   ],
   [
-    "Appropriately position almost all signs centrally",
-    "align"
+      "Appropriately position almost all signs centrally",
+      "YWxpZ24="
   ],
   [
-    "Report of examination relating to the ears",
-    "aural"
+      "Report of examination relating to the ears",
+      "YXVyYWw="
   ],
   [
-    "Chap showing interest at first in bird of prey",
-    "ernie"
+      "Chap showing interest at first in bird of prey",
+      "ZXJuaWU="
   ],
   [
-    "Immature form of life right in centre of volcanic discharge",
-    "larva"
+      "Immature form of life right in centre of volcanic discharge",
+      "bGFydmE="
   ],
   [
-    "Is Capone able to identify a watercourse?",
-    "canal"
+      "Is Capone able to identify a watercourse?",
+      "Y2FuYWw="
   ],
   [
-    "Star cast will include European stunner",
-    "taser"
+      "Star cast will include European stunner",
+      "dGFzZXI="
   ],
   [
-    "It's clear police left uniform on top",
-    "lucid"
+      "It's clear police left uniform on top",
+      "bHVjaWQ="
   ],
   [
-    "True masculine field of study",
-    "realm"
+      "True masculine field of study",
+      "cmVhbG0="
   ],
   [
-    "Unpleasant task in branch or elsewhere",
-    "chore"
+      "Unpleasant task in branch or elsewhere",
+      "Y2hvcmU="
   ],
   [
-    "New house after revolution in French city",
-    "nimes"
+      "New house after revolution in French city",
+      "bmltZXM="
   ],
   [
-    "Part of fiscal policy that's often hairy",
-    "scalp"
+      "Part of fiscal policy that's often hairy",
+      "c2NhbHA="
   ],
   [
-    "Be quiet in public? Hardly!",
-    "shout"
+      "Be quiet in public? Hardly!",
+      "c2hvdXQ="
   ],
   [
-    "Society to do away with expertise",
-    "skill"
+      "Society to do away with expertise",
+      "c2tpbGw="
   ],
   [
-    "Battle about old raid",
-    "foray"
+      "Battle about old raid",
+      "Zm9yYXk="
   ],
   [
-    "Unabridged opening in speech",
-    "whole"
+      "Unabridged opening in speech",
+      "d2hvbGU="
   ],
   [
-    "Article on fort robbery",
-    "theft"
+      "Article on fort robbery",
+      "dGhlZnQ="
   ],
   [
-    "Fellow journalists from left and right penning leader for Independent",
-    "eddie"
+      "Fellow journalists from left and right penning leader for Independent",
+      "ZWRkaWU="
   ],
   [
-    "Incompletely translating ancient language",
-    "latin"
+      "Incompletely translating ancient language",
+      "bGF0aW4="
   ],
   [
-    "A largely penniless place of learning in the Midlands",
-    "aston"
+      "A largely penniless place of learning in the Midlands",
+      "YXN0b24="
   ],
   [
-    "A bit like a Quaker?",
-    "penny"
+      "A bit like a Quaker?",
+      "cGVubnk="
   ],
   [
-    "Extracted material to be brought up",
-    "mined"
+      "Extracted material to be brought up",
+      "bWluZWQ="
   ],
   [
-    "Loose dog maybe nipping the Parisian",
-    "relax"
+      "Loose dog maybe nipping the Parisian",
+      "cmVsYXg="
   ],
   [
-    "Smart part of America accommodating a Rechabite?",
-    "natty"
+      "Smart part of America accommodating a Rechabite?",
+      "bmF0dHk="
   ],
   [
-    "Bear — one sits regularly for surrealist",
-    "ernst"
+      "Bear — one sits regularly for surrealist",
+      "ZXJuc3Q="
   ],
   [
-    "Trace local banished from China for example",
-    "relic"
+      "Trace local banished from China for example",
+      "cmVsaWM="
   ],
   [
-    "Lot's regret voiced by Terah initially",
-    "sight"
+      "Lot's regret voiced by Terah initially",
+      "c2lnaHQ="
   ],
   [
-    "Flower to put back in boozer that's refused husband",
-    "lotus"
+      "Flower to put back in boozer that's refused husband",
+      "bG90dXM="
   ],
   [
-    "Tips to help all dodging fifty per cent in tax",
-    "tithe"
+      "Tips to help all dodging fifty per cent in tax",
+      "dGl0aGU="
   ],
   [
-    "Wit from the south captivates one Nobel laureate",
-    "dirac"
+      "Wit from the south captivates one Nobel laureate",
+      "ZGlyYWM="
   ],
   [
-    "Mark sending Mike into unconscious state",
-    "comma"
+      "Mark sending Mike into unconscious state",
+      "Y29tbWE="
   ],
   [
-    "Somewhat wet politicians at centre in majority",
-    "moist"
+      "Somewhat wet politicians at centre in majority",
+      "bW9pc3Q="
   ],
   [
-    "Trap quickly springs up — end of mouse!",
-    "noose"
+      "Trap quickly springs up — end of mouse!",
+      "bm9vc2U="
   ],
   [
-    "Flock seen aloft with grouse finally breaking cover",
-    "skein"
+      "Flock seen aloft with grouse finally breaking cover",
+      "c2tlaW4="
   ],
   [
-    "Badminton competition's opening by end of June",
-    "event"
+      "Badminton competition's opening by end of June",
+      "ZXZlbnQ="
   ],
   [
-    "Chief put away person who has had one",
-    "cheat"
+      "Chief put away person who has had one",
+      "Y2hlYXQ="
   ],
   [
-    "Nice night following one husky driver?",
-    "inuit"
+      "Nice night following one husky driver?",
+      "aW51aXQ="
   ],
   [
-    "People accepting bible’s authority",
-    "maven"
+      "People accepting bible’s authority",
+      "bWF2ZW4="
   ],
   [
-    "Six minus nine’s still a positive integer",
-    "seven"
+      "Six minus nine’s still a positive integer",
+      "c2V2ZW4="
   ],
   [
-    "Rick and Oliver",
-    "twist"
+      "Rick and Oliver",
+      "dHdpc3Q="
   ],
   [
-    "Show off verse written by relative",
-    "vaunt"
+      "Show off verse written by relative",
+      "dmF1bnQ="
   ],
   [
-    "Daggers bishop plunged into old priest",
-    "obeli"
+      "Daggers bishop plunged into old priest",
+      "b2JlbGk="
   ],
   [
-    "Press employee takes hour in identifying woody plant",
-    "shrub"
+      "Press employee takes hour in identifying woody plant",
+      "c2hydWI="
   ],
   [
-    "Fertile spot originally on a small island",
-    "oasis"
+      "Fertile spot originally on a small island",
+      "b2FzaXM="
   ],
   [
-    "Elderly person regularly appearing in soiled linen?",
-    "oldie"
+      "Elderly person regularly appearing in soiled linen?",
+      "b2xkaWU="
   ],
   [
-    "Composer's husband entertained by tragic king",
-    "lehar"
+      "Composer's husband entertained by tragic king",
+      "bGVoYXI="
   ],
   [
-    "Woman one's embraced by otherwise",
-    "elsie"
+      "Woman one's embraced by otherwise",
+      "ZWxzaWU="
   ],
   [
-    "Plant Rumpole talked of in East London?",
-    "orris"
+      "Plant Rumpole talked of in East London?",
+      "b3JyaXM="
   ],
   [
-    "Drink is taken in part of church",
-    "aisle"
+      "Drink is taken in part of church",
+      "YWlzbGU="
   ],
   [
-    "Strong worker’s extremely friendly",
-    "beefy"
+      "Strong worker’s extremely friendly",
+      "YmVlZnk="
   ],
   [
-    "Those at the front of May’s injured government havefinally bought power",
-    "might"
+      "Those at the front of May’s injured government havefinally bought power",
+      "bWlnaHQ="
   ],
   [
-    "Fresh chlorine put round something used at the pool",
-    "crawl"
+      "Fresh chlorine put round something used at the pool",
+      "Y3Jhd2w="
   ],
   [
-    "Clever to cover head when this?",
-    "rainy"
+      "Clever to cover head when this?",
+      "cmFpbnk="
   ],
   [
-    "One heading for snow protected by mountain is a famousNorwegian",
-    "ibsen"
+      "One heading for snow protected by mountain is a famousNorwegian",
+      "aWJzZW4="
   ],
   [
-    "Note copied about a city",
-    "miami"
+      "Note copied about a city",
+      "bWlhbWk="
   ],
   [
-    "Some feel embarrassed about fracas",
-    "melee"
+      "Some feel embarrassed about fracas",
+      "bWVsZWU="
   ],
   [
-    "Irish county taking odd returnees from Sligo jail",
-    "laois"
+      "Irish county taking odd returnees from Sligo jail",
+      "bGFvaXM="
   ],
   [
-    "Copy of Times — I hesitate to say old Times",
-    "xerox"
+      "Copy of Times — I hesitate to say old Times",
+      "eGVyb3g="
   ],
   [
-    "Seriously wound up one in US resort",
-    "miami"
+      "Seriously wound up one in US resort",
+      "bWlhbWk="
   ],
   [
-    "Message to divulge verbally sometime",
-    "telex"
+      "Message to divulge verbally sometime",
+      "dGVsZXg="
   ],
   [
-    "Pitcher: you must stop second home run",
-    "shyer"
+      "Pitcher: you must stop second home run",
+      "c2h5ZXI="
   ],
   [
-    "Like an egg base for taco not binding",
-    "ovoid"
+      "Like an egg base for taco not binding",
+      "b3ZvaWQ="
   ],
   [
-    "Tax returns holding up a grant",
-    "allot"
+      "Tax returns holding up a grant",
+      "YWxsb3Q="
   ],
   [
-    "It's almost time when I should retire",
-    "night"
+      "It's almost time when I should retire",
+      "bmlnaHQ="
   ],
   [
-    "Eg Ezra’s enclosure for stray dogs",
-    "pound"
+      "Eg Ezra’s enclosure for stray dogs",
+      "cG91bmQ="
   ],
   [
-    "He leaves the grain for a moment",
-    "trice"
+      "He leaves the grain for a moment",
+      "dHJpY2U="
   ],
   [
-    "Greatly want firm to take on old soldier",
-    "covet"
+      "Greatly want firm to take on old soldier",
+      "Y292ZXQ="
   ],
   [
-    "Front removed from ceiling timber subsequently",
-    "after"
+      "Front removed from ceiling timber subsequently",
+      "YWZ0ZXI="
   ],
   [
-    "Mark of excellence in trial phase",
-    "alpha"
+      "Mark of excellence in trial phase",
+      "YWxwaGE="
   ],
   [
-    "Article about professional gear for the cook?",
-    "apron"
+      "Article about professional gear for the cook?",
+      "YXByb24="
   ],
   [
-    "Automatic runs on winter sports event",
-    "luger"
+      "Automatic runs on winter sports event",
+      "bHVnZXI="
   ],
   [
-    "Old commander elected for the second time?",
-    "again"
+      "Old commander elected for the second time?",
+      "YWdhaW4="
   ],
   [
-    "Fibrous plant is invading South American lake",
-    "sisal"
+      "Fibrous plant is invading South American lake",
+      "c2lzYWw="
   ],
   [
-    "Godfearing type losing time in hold-up",
-    "heist"
+      "Godfearing type losing time in hold-up",
+      "aGVpc3Q="
   ],
   [
-    "Canine tooth one has right in middle",
-    "corgi"
+      "Canine tooth one has right in middle",
+      "Y29yZ2k="
   ],
   [
-    "Be likely to consume ultimate in hipster fashion",
-    "trend"
+      "Be likely to consume ultimate in hipster fashion",
+      "dHJlbmQ="
   ],
   [
-    "A series of confusing paths perplex",
-    "amaze"
+      "A series of confusing paths perplex",
+      "YW1hemU="
   ],
   [
-    "Magic / giant",
-    "great"
+      "Magic / giant",
+      "Z3JlYXQ="
   ],
   [
-    "Extremist involved in awful tragedy",
-    "ultra"
+      "Extremist involved in awful tragedy",
+      "dWx0cmE="
   ],
   [
-    "Reported attempt by commercial gang of criminals",
-    "triad"
+      "Reported attempt by commercial gang of criminals",
+      "dHJpYWQ="
   ],
   [
-    "Succeeded with month — after missing the first three — avoiding drink",
-    "sober"
+      "Succeeded with month — after missing the first three — avoiding drink",
+      "c29iZXI="
   ],
   [
-    "New Year in parrot country",
-    "kenya"
+      "New Year in parrot country",
+      "a2VueWE="
   ],
   [
-    "Dull brownish-yellow persimmon’s hard inside",
-    "khaki"
+      "Dull brownish-yellow persimmon’s hard inside",
+      "a2hha2k="
   ],
   [
-    "Pure gold at heart of EM Forster novel?",
-    "auric"
+      "Pure gold at heart of EM Forster novel?",
+      "YXVyaWM="
   ],
   [
-    "Morning service has Roman Catholic in support",
-    "terce"
+      "Morning service has Roman Catholic in support",
+      "dGVyY2U="
   ],
   [
-    "Antelope displaying vigour over days",
-    "eland"
+      "Antelope displaying vigour over days",
+      "ZWxhbmQ="
   ],
   [
-    "Anger about loud weapon",
-    "rifle"
+      "Anger about loud weapon",
+      "cmlmbGU="
   ],
   [
-    "Not standing for mendacity",
-    "lying"
+      "Not standing for mendacity",
+      "bHlpbmc="
   ],
   [
-    "You may hear a tidier girl",
-    "anita"
+      "You may hear a tidier girl",
+      "YW5pdGE="
   ],
   [
-    "Some wrap articles separately",
-    "apart"
+      "Some wrap articles separately",
+      "YXBhcnQ="
   ],
   [
-    "Crowd in store by the sound of it",
-    "horde"
+      "Crowd in store by the sound of it",
+      "aG9yZGU="
   ],
   [
-    "BBC missing a release?",
-    "untie"
+      "BBC missing a release?",
+      "dW50aWU="
   ],
   [
-    "Ruling dripping with mendacity at heart",
-    "fatwa"
+      "Ruling dripping with mendacity at heart",
+      "ZmF0d2E="
   ],
   [
-    "Final stage of publication covered by satellite",
-    "imago"
+      "Final stage of publication covered by satellite",
+      "aW1hZ28="
   ],
   [
-    "Give and receive stick",
-    "bandy"
+      "Give and receive stick",
+      "YmFuZHk="
   ],
   [
-    "Base for car makers — but not for mathematician",
-    "turin"
+      "Base for car makers — but not for mathematician",
+      "dHVyaW4="
   ],
   [
-    "Stag party",
-    "maybe"
+      "Stag party",
+      "bWF5YmU="
   ],
   [
-    "Exercise when wearing casual shirt in tent",
-    "tepee"
+      "Exercise when wearing casual shirt in tent",
+      "dGVwZWU="
   ],
   [
-    "Plant without specification found in river",
-    "tansy"
+      "Plant without specification found in river",
+      "dGFuc3k="
   ],
   [
-    "Depressed about river in flood",
-    "drown"
+      "Depressed about river in flood",
+      "ZHJvd24="
   ],
   [
-    "Drug user finally caught in Tube",
-    "horse"
+      "Drug user finally caught in Tube",
+      "aG9yc2U="
   ],
   [
-    "An ecologist denied new grant",
-    "agree"
+      "An ecologist denied new grant",
+      "YWdyZWU="
   ],
   [
-    "Boy in charge of sound",
-    "sonic"
+      "Boy in charge of sound",
+      "c29uaWM="
   ],
   [
-    "In pursuit of more at the back?",
-    "after"
+      "In pursuit of more at the back?",
+      "YWZ0ZXI="
   ],
   [
-    "Good rule for processing poor food",
-    "gruel"
+      "Good rule for processing poor food",
+      "Z3J1ZWw="
   ],
   [
-    "Firm exporting small item of furniture",
-    "table"
+      "Firm exporting small item of furniture",
+      "dGFibGU="
   ],
   [
-    "Send up some weak lopsided dance",
-    "polka"
+      "Send up some weak lopsided dance",
+      "cG9sa2E="
   ],
   [
-    "Beer left to mature - right",
-    "lager"
+      "Beer left to mature - right",
+      "bGFnZXI="
   ],
   [
-    "Law scholar losing time in talk",
-    "rabbi"
+      "Law scholar losing time in talk",
+      "cmFiYmk="
   ],
   [
-    "Vegetable we had planted in southeast",
-    "swede"
+      "Vegetable we had planted in southeast",
+      "c3dlZGU="
   ],
   [
-    "Work stoppage fails to start — transport for child produced",
-    "trike"
+      "Work stoppage fails to start — transport for child produced",
+      "dHJpa2U="
   ],
   [
-    "Contribution from trendy place?",
-    "input"
+      "Contribution from trendy place?",
+      "aW5wdXQ="
   ],
   [
-    "Round container mate finally dropped in sea",
-    "ocean"
+      "Round container mate finally dropped in sea",
+      "b2NlYW4="
   ],
   [
-    "Arranger of festival in Cheshire town on the radio",
-    "krewe"
+      "Arranger of festival in Cheshire town on the radio",
+      "a3Jld2U="
   ],
   [
-    "A British accountant’s providing graphical representations",
-    "abacs"
+      "A British accountant’s providing graphical representations",
+      "YWJhY3M="
   ],
   [
-    "Cappuccino not half disgusting — so get this?",
-    "cuppa"
+      "Cappuccino not half disgusting — so get this?",
+      "Y3VwcGE="
   ],
   [
-    "Old women no longer advocates of revolution",
-    "trots"
+      "Old women no longer advocates of revolution",
+      "dHJvdHM="
   ],
   [
-    "Former bailiff concerned about first female",
-    "reeve"
+      "Former bailiff concerned about first female",
+      "cmVldmU="
   ],
   [
-    "Star won regularly on Scottish golf course",
-    "troon"
+      "Star won regularly on Scottish golf course",
+      "dHJvb24="
   ],
   [
-    "Women's Institute radical connected to the internet?",
-    "wired"
+      "Women's Institute radical connected to the internet?",
+      "d2lyZWQ="
   ],
   [
-    "Stunner modelled again",
-    "maybe"
+      "Stunner modelled again",
+      "bWF5YmU="
   ],
   [
-    "Time to bring in new poet",
-    "dante"
+      "Time to bring in new poet",
+      "ZGFudGU="
   ],
   [
-    "Dentists may resort to this procedure",
-    "drill"
+      "Dentists may resort to this procedure",
+      "ZHJpbGw="
   ],
   [
-    "Arab chap coming in round island",
-    "omani"
+      "Arab chap coming in round island",
+      "b21hbmk="
   ],
   [
-    "Support band?",
-    "truss"
+      "Support band?",
+      "dHJ1c3M="
   ],
   [
-    "Insincere wife’s abandoned cry for attention",
-    "hollo"
+      "Insincere wife’s abandoned cry for attention",
+      "aG9sbG8="
   ],
   [
-    "A lack of memory set back relative of 12",
-    "maron"
+      "A lack of memory set back relative of 12",
+      "bWFyb24="
   ],
   [
-    "Measure",
-    "maybe"
+      "Measure",
+      "bWF5YmU="
   ],
   [
-    "Bread filled with small fried potatoes",
-    "rosti"
+      "Bread filled with small fried potatoes",
+      "cm9zdGk="
   ],
   [
-    "Stores right to break embargoes",
-    "barns"
+      "Stores right to break embargoes",
+      "YmFybnM="
   ],
   [
-    "CH2O2 processed into alcohol",
-    "hooch"
+      "CH2O2 processed into alcohol",
+      "aG9vY2g="
   ],
   [
-    "Rent holiday place on the Adriatic",
-    "split"
+      "Rent holiday place on the Adriatic",
+      "c3BsaXQ="
   ],
   [
-    "See director general close to some gatekeeper’s house",
-    "lodge"
+      "See director general close to some gatekeeper’s house",
+      "bG9kZ2U="
   ],
   [
-    "Like pitch Jack’s seen near railway",
-    "tarry"
+      "Like pitch Jack’s seen near railway",
+      "dGFycnk="
   ],
   [
-    "Hear about tragic king meeting knight",
-    "learn"
+      "Hear about tragic king meeting knight",
+      "bGVhcm4="
   ],
   [
-    "Comedian’s “yes” to German upset salesperson",
-    "japer"
+      "Comedian’s “yes” to German upset salesperson",
+      "amFwZXI="
   ],
   [
-    "Timid chap getting married by river",
-    "mouse"
+      "Timid chap getting married by river",
+      "bW91c2U="
   ],
   [
-    "Emergency committee needs firm support",
-    "cobra"
+      "Emergency committee needs firm support",
+      "Y29icmE="
   ],
   [
-    "Keen to be a long time in Her Majesty's embrace?",
-    "eager"
+      "Keen to be a long time in Her Majesty's embrace?",
+      "ZWFnZXI="
   ],
   [
-    "Fatuous characters in Twain anecdote",
-    "inane"
+      "Fatuous characters in Twain anecdote",
+      "aW5hbmU="
   ],
   [
-    "Bill turned up with ambassador to have a swim",
-    "bathe"
+      "Bill turned up with ambassador to have a swim",
+      "YmF0aGU="
   ],
   [
-    "Book journey for one getting hitched",
-    "bride"
+      "Book journey for one getting hitched",
+      "YnJpZGU="
   ],
   [
-    "Large specimen unopened",
-    "ample"
+      "Large specimen unopened",
+      "YW1wbGU="
   ],
   [
-    "Cancel validity of a new name initially used lawfully",
-    "annul"
+      "Cancel validity of a new name initially used lawfully",
+      "YW5udWw="
   ],
   [
-    "Move slowly shifting blame",
-    "amble"
+      "Move slowly shifting blame",
+      "YW1ibGU="
   ],
   [
-    "Mushroom fine in the midst of evening",
-    "enoki"
+      "Mushroom fine in the midst of evening",
+      "ZW5va2k="
   ],
   [
-    "Female is not in swoon",
-    "faint"
+      "Female is not in swoon",
+      "ZmFpbnQ="
   ],
   [
-    "Course available in religious studies",
-    "route"
+      "Course available in religious studies",
+      "cm91dGU="
   ],
   [
-    "Ate in study I’d set up",
-    "dined"
+      "Ate in study I’d set up",
+      "ZGluZWQ="
   ],
   [
-    "Amusing conclusion to repeated spin",
-    "droll"
+      "Amusing conclusion to repeated spin",
+      "ZHJvbGw="
   ],
   [
-    "Books are turning up inspirational source",
-    "erato"
+      "Books are turning up inspirational source",
+      "ZXJhdG8="
   ],
   [
-    "Good fellow on the beer becoming overfamiliar",
-    "stale"
+      "Good fellow on the beer becoming overfamiliar",
+      "c3RhbGU="
   ],
   [
-    "Person in surgery admitting green look",
-    "decor"
+      "Person in surgery admitting green look",
+      "ZGVjb3I="
   ],
   [
-    "Small like a youngster?",
-    "teeny"
+      "Small like a youngster?",
+      "dGVlbnk="
   ],
   [
-    "Gutless Earl's clothing as Roman peer",
-    "equal"
+      "Gutless Earl's clothing as Roman peer",
+      "ZXF1YWw="
   ],
   [
-    "I'm off to capture unknown tree creature",
-    "tayra"
+      "I'm off to capture unknown tree creature",
+      "dGF5cmE="
   ],
   [
-    "Sub's back pass with sign of uncertainty",
-    "locum"
+      "Sub's back pass with sign of uncertainty",
+      "bG9jdW0="
   ],
   [
-    "Maybe oral fluency? Ultimately likely to lose it",
-    "testy"
+      "Maybe oral fluency? Ultimately likely to lose it",
+      "dGVzdHk="
   ],
   [
-    "Point in either direction?",
-    "refer"
+      "Point in either direction?",
+      "cmVmZXI="
   ],
   [
-    "Sack magistrate in hearing",
-    "reave"
+      "Sack magistrate in hearing",
+      "cmVhdmU="
   ],
   [
-    "Door guard after polling",
-    "entry"
+      "Door guard after polling",
+      "ZW50cnk="
   ],
   [
-    "Nickel removed from salt for stock",
-    "trite"
+      "Nickel removed from salt for stock",
+      "dHJpdGU="
   ],
   [
-    "Pelvis operation reversed for large mammal",
-    "hippo"
+      "Pelvis operation reversed for large mammal",
+      "aGlwcG8="
   ],
   [
-    "Some shenanigans turned silly",
-    "inane"
+      "Some shenanigans turned silly",
+      "aW5hbmU="
   ],
   [
-    "Goodness found in an oak seed",
-    "acorn"
+      "Goodness found in an oak seed",
+      "YWNvcm4="
   ],
   [
-    "Who goes to Balmoral after summer month? That is boring",
-    "auger"
+      "Who goes to Balmoral after summer month? That is boring",
+      "YXVnZXI="
   ],
   [
-    "Male teacher has son with friend",
-    "swami"
+      "Male teacher has son with friend",
+      "c3dhbWk="
   ],
   [
-    "Meet at end of scripture exam — again",
-    "resit"
+      "Meet at end of scripture exam — again",
+      "cmVzaXQ="
   ],
   [
-    "Hunting cry from Cockney in Scottish town",
-    "alloa"
+      "Hunting cry from Cockney in Scottish town",
+      "YWxsb2E="
   ],
   [
-    "One taking off supports around skip",
-    "caper"
+      "One taking off supports around skip",
+      "Y2FwZXI="
   ],
   [
-    "Flaky stuff in older part as evenly selected",
-    "lepra"
+      "Flaky stuff in older part as evenly selected",
+      "bGVwcmE="
   ],
   [
-    "Cry about reviewer’s initial description of book",
-    "blurb"
+      "Cry about reviewer’s initial description of book",
+      "Ymx1cmI="
   ],
   [
-    "Provide for Parisian who has broken old record",
-    "equip"
+      "Provide for Parisian who has broken old record",
+      "ZXF1aXA="
   ],
   [
-    "Cloud enveloping English female in spongy ground",
-    "befog"
+      "Cloud enveloping English female in spongy ground",
+      "YmVmb2c="
   ],
   [
-    "Companion welcoming secretary of a RC leader",
-    "papal"
+      "Companion welcoming secretary of a RC leader",
+      "cGFwYWw="
   ],
   [
-    "Dog carried back by big rocket",
-    "corgi"
+      "Dog carried back by big rocket",
+      "Y29yZ2k="
   ],
   [
-    "Heard of charming apartment!",
-    "suite"
+      "Heard of charming apartment!",
+      "c3VpdGU="
   ],
   [
-    "Wonderful agent takes us up",
-    "super"
+      "Wonderful agent takes us up",
+      "c3VwZXI="
   ],
   [
-    "Politician needing info about Religious Education",
-    "green"
+      "Politician needing info about Religious Education",
+      "Z3JlZW4="
   ],
   [
-    "Endlessly carp? Coming round in the end",
-    "finis"
+      "Endlessly carp? Coming round in the end",
+      "ZmluaXM="
   ],
   [
-    "Ecosystem merits having this wheat planted in it",
-    "emmer"
+      "Ecosystem merits having this wheat planted in it",
+      "ZW1tZXI="
   ],
   [
-    "Some island seized by Henry I",
-    "haiti"
+      "Some island seized by Henry I",
+      "aGFpdGk="
   ],
   [
-    "Keen to eat old duck",
-    "avoid"
+      "Keen to eat old duck",
+      "YXZvaWQ="
   ],
   [
-    "Fungus certainly turns up after vase is removed",
-    "yeast"
+      "Fungus certainly turns up after vase is removed",
+      "eWVhc3Q="
   ],
   [
-    "Protective garment being worn after thirty days",
-    "apron"
+      "Protective garment being worn after thirty days",
+      "YXByb24="
   ],
   [
-    "British-Italian music man recruits others to back shows",
-    "tosti"
+      "British-Italian music man recruits others to back shows",
+      "dG9zdGk="
   ],
   [
-    "Scottish town to make suffer prosecutor?",
-    "banff"
+      "Scottish town to make suffer prosecutor?",
+      "YmFuZmY="
   ],
   [
-    "Row involving furious Pole?",
-    "range"
+      "Row involving furious Pole?",
+      "cmFuZ2U="
   ],
   [
-    "I dislike that arch heretic’s introduction",
-    "humph"
+      "I dislike that arch heretic’s introduction",
+      "aHVtcGg="
   ],
   [
-    "Was Observer’s fashion to retreat before its boss?",
-    "noted"
+      "Was Observer’s fashion to retreat before its boss?",
+      "bm90ZWQ="
   ],
   [
-    "Set aside article out of book",
-    "annul"
+      "Set aside article out of book",
+      "YW5udWw="
   ],
   [
-    "A togetherness comes with the departure of one relation",
-    "aunty"
+      "A togetherness comes with the departure of one relation",
+      "YXVudHk="
   ],
   [
-    "Old magistrate about to meet woman in garden",
-    "reeve"
+      "Old magistrate about to meet woman in garden",
+      "cmVldmU="
   ],
   [
-    "Some problems — we argue and use bad language",
-    "swear"
+      "Some problems — we argue and use bad language",
+      "c3dlYXI="
   ],
   [
-    "Tea in tsarina’s samovar",
-    "assam"
+      "Tea in tsarina’s samovar",
+      "YXNzYW0="
   ],
   [
-    "Rubbish doctor initially seems so retrogressive",
-    "dross"
+      "Rubbish doctor initially seems so retrogressive",
+      "ZHJvc3M="
   ],
   [
-    "Pleasant hosting European relative",
-    "niece"
+      "Pleasant hosting European relative",
+      "bmllY2U="
   ],
   [
-    "Fashionable pet hopelessly clumsy",
-    "inept"
+      "Fashionable pet hopelessly clumsy",
+      "aW5lcHQ="
   ],
   [
-    "A party gives cause to feel embarrassed",
-    "abash"
+      "A party gives cause to feel embarrassed",
+      "YWJhc2g="
   ],
   [
-    "Went out with old hat",
-    "dated"
+      "Went out with old hat",
+      "ZGF0ZWQ="
   ],
   [
-    "Out of shape squad drinking in France",
-    "unfit"
+      "Out of shape squad drinking in France",
+      "dW5maXQ="
   ],
   [
-    "A peacemaker cut up about vitamin shot?",
-    "vodka"
+      "A peacemaker cut up about vitamin shot?",
+      "dm9ka2E="
   ],
   [
-    "Got the odour of fish",
-    "smelt"
+      "Got the odour of fish",
+      "c21lbHQ="
   ],
   [
-    "Excellent protest at noon",
-    "demon"
+      "Excellent protest at noon",
+      "ZGVtb24="
   ],
   [
-    "Criminal organisation’s aim to take in footballers all round?",
-    "mafia"
+      "Criminal organisation’s aim to take in footballers all round?",
+      "bWFmaWE="
   ],
   [
-    "Old head covering needed by daughter? Fiona’s not warm",
-    "cauld"
+      "Old head covering needed by daughter? Fiona’s not warm",
+      "Y2F1bGQ="
   ],
   [
-    "Theatre getting reproach in the auditorium",
-    "odeum"
+      "Theatre getting reproach in the auditorium",
+      "b2RldW0="
   ],
   [
-    "Originally on African soil it supplies refuge",
-    "oasis"
+      "Originally on African soil it supplies refuge",
+      "b2FzaXM="
   ],
   [
-    "Danger of salesman returning: I left",
-    "peril"
+      "Danger of salesman returning: I left",
+      "cGVyaWw="
   ],
   [
-    "Wrong American gets a hole in the head",
-    "sinus"
+      "Wrong American gets a hole in the head",
+      "c2ludXM="
   ],
   [
-    "Go wandering and find accommodation across river",
-    "stray"
+      "Go wandering and find accommodation across river",
+      "c3RyYXk="
   ],
   [
-    "Keep shaking cart",
-    "wagon"
+      "Keep shaking cart",
+      "d2Fnb24="
   ],
   [
-    "Where you might see film star making first appearance?",
-    "onset"
+      "Where you might see film star making first appearance?",
+      "b25zZXQ="
   ],
   [
-    "Better sort of dash back — joiner’s outside",
-    "amend"
+      "Better sort of dash back — joiner’s outside",
+      "YW1lbmQ="
   ],
   [
-    "Jewellery I found in Scarlett’s place",
-    "tiara"
+      "Jewellery I found in Scarlett’s place",
+      "dGlhcmE="
   ],
   [
-    "Flop as lover after heart transplant",
-    "loser"
+      "Flop as lover after heart transplant",
+      "bG9zZXI="
   ],
   [
-    "Raise embezzler’s case before European court",
-    "erect"
+      "Raise embezzler’s case before European court",
+      "ZXJlY3Q="
   ],
   [
-    "Backing rapid alternative to buses?",
-    "trams"
+      "Backing rapid alternative to buses?",
+      "dHJhbXM="
   ],
   [
-    "Oval game unfortunately is last of the series",
-    "omega"
+      "Oval game unfortunately is last of the series",
+      "b21lZ2E="
   ],
   [
-    "Support rent getting left at the lowest level",
-    "easel"
+      "Support rent getting left at the lowest level",
+      "ZWFzZWw="
   ],
   [
-    "Carnivore long among the last ones in South Africa",
-    "hyena"
+      "Carnivore long among the last ones in South Africa",
+      "aHllbmE="
   ],
   [
-    "Better class of religion found in Tyrrhenian location",
-    "capri"
+      "Better class of religion found in Tyrrhenian location",
+      "Y2Fwcmk="
   ],
   [
-    "Single mothers becoming learned theologians",
-    "imams"
+      "Single mothers becoming learned theologians",
+      "aW1hbXM="
   ],
   [
-    "Greek island in which Corinthians curtailed amusement",
-    "corfu"
+      "Greek island in which Corinthians curtailed amusement",
+      "Y29yZnU="
   ],
   [
-    "Investor for show one might be recording",
-    "angel"
+      "Investor for show one might be recording",
+      "YW5nZWw="
   ],
   [
-    "Hostilities interrupting commercial settlement",
-    "award"
+      "Hostilities interrupting commercial settlement",
+      "YXdhcmQ="
   ],
   [
-    "Ensure provision is made to do the dishes?",
-    "cater"
+      "Ensure provision is made to do the dishes?",
+      "Y2F0ZXI="
   ],
   [
-    "Strangely amusing nobleman lifted line",
-    "droll"
+      "Strangely amusing nobleman lifted line",
+      "ZHJvbGw="
   ],
   [
-    "Revolutionary wisdom gathered about new recruit",
-    "enrol"
+      "Revolutionary wisdom gathered about new recruit",
+      "ZW5yb2w="
   ],
   [
-    "Old PM displaying intense feeling with husband",
-    "heath"
+      "Old PM displaying intense feeling with husband",
+      "aGVhdGg="
   ],
   [
-    "Second volunteer army is raised for secret police",
-    "stasi"
+      "Second volunteer army is raised for secret police",
+      "c3Rhc2k="
   ],
   [
-    "Thick section in garden seat",
-    "dense"
+      "Thick section in garden seat",
+      "ZGVuc2U="
   ],
   [
-    "Moves at speed in waterworks",
-    "tears"
+      "Moves at speed in waterworks",
+      "dGVhcnM="
   ],
   [
-    "Only about five crack the clues",
-    "solve"
+      "Only about five crack the clues",
+      "c29sdmU="
   ],
   [
-    "Port one gets in casks",
-    "tunis"
+      "Port one gets in casks",
+      "dHVuaXM="
   ],
   [
-    "Chapter in story sent up brilliant success",
-    "eclat"
+      "Chapter in story sent up brilliant success",
+      "ZWNsYXQ="
   ],
   [
-    "Old man confining most of rest in open space",
-    "plaza"
+      "Old man confining most of rest in open space",
+      "cGxhemE="
   ],
   [
-    "Seasonal visitors beginning to congregate? Very good",
-    "magic"
+      "Seasonal visitors beginning to congregate? Very good",
+      "bWFnaWM="
   ],
   [
-    "Fifth journey is a load of rubbish",
-    "tripe"
+      "Fifth journey is a load of rubbish",
+      "dHJpcGU="
   ],
   [
-    "Edges of Selsey beach may be described thus",
-    "sandy"
+      "Edges of Selsey beach may be described thus",
+      "c2FuZHk="
   ],
   [
-    "Gas power almost failed — almost",
-    "argon"
+      "Gas power almost failed — almost",
+      "YXJnb24="
   ],
   [
-    "Senior academic ignoring last page in book",
-    "recto"
+      "Senior academic ignoring last page in book",
+      "cmVjdG8="
   ],
   [
-    "A plan to get rid of electric current in upper floor",
-    "attic"
+      "A plan to get rid of electric current in upper floor",
+      "YXR0aWM="
   ],
   [
-    "Introduction of hike in rent is an irritation",
-    "thorn"
+      "Introduction of hike in rent is an irritation",
+      "dGhvcm4="
   ],
   [
-    "Brilliant getting rid of British Conservatives?",
-    "right"
+      "Brilliant getting rid of British Conservatives?",
+      "cmlnaHQ="
   ],
   [
-    "Former partner not entirely mentioned for praise",
-    "extol"
+      "Former partner not entirely mentioned for praise",
+      "ZXh0b2w="
   ],
   [
-    "Gold bar obtained after mint is stripped of million tons",
-    "ingot"
+      "Gold bar obtained after mint is stripped of million tons",
+      "aW5nb3Q="
   ],
   [
-    "Boy wizard would have power over this aquatic creature",
-    "otter"
+      "Boy wizard would have power over this aquatic creature",
+      "b3R0ZXI="
   ],
   [
-    "Daring Bishop facing rant",
-    "brave"
+      "Daring Bishop facing rant",
+      "YnJhdmU="
   ],
   [
-    "Month ending with out-of-this world group performing",
-    "octet"
+      "Month ending with out-of-this world group performing",
+      "b2N0ZXQ="
   ],
   [
-    "Walk around bottom of village for serenity",
-    "peace"
+      "Walk around bottom of village for serenity",
+      "cGVhY2U="
   ],
   [
-    "A bishop not entirely sharp? These assist with calculations",
-    "abaci"
+      "A bishop not entirely sharp? These assist with calculations",
+      "YWJhY2k="
   ],
   [
-    "Damp fog — nothing visible in that",
-    "moist"
+      "Damp fog — nothing visible in that",
+      "bW9pc3Q="
   ],
   [
-    "Digest litre — gross!",
-    "learn"
+      "Digest litre — gross!",
+      "bGVhcm4="
   ],
   [
-    "Musical composer left note inside organ",
-    "elgar"
+      "Musical composer left note inside organ",
+      "ZWxnYXI="
   ],
   [
-    "Half suck garish sweet substance",
-    "sugar"
+      "Half suck garish sweet substance",
+      "c3VnYXI="
   ],
   [
-    "Reportedly track and creep up on wading bird",
-    "stork"
+      "Reportedly track and creep up on wading bird",
+      "c3Rvcms="
   ],
   [
-    "Dog beginning to bark at high fence",
-    "boxer"
+      "Dog beginning to bark at high fence",
+      "Ym94ZXI="
   ],
   [
-    "Plant soundly identified by groups of sheep or birds",
-    "phlox"
+      "Plant soundly identified by groups of sheep or birds",
+      "cGhsb3g="
   ],
   [
-    "Discharge right hand man originally supporting group of nations",
-    "rheum"
+      "Discharge right hand man originally supporting group of nations",
+      "cmhldW0="
   ],
   [
-    "Hunter of stars to take part in oratorio nonsense",
-    "orion"
+      "Hunter of stars to take part in oratorio nonsense",
+      "b3Jpb24="
   ],
   [
-    "Queen featured in silly sketch",
-    "draft"
+      "Queen featured in silly sketch",
+      "ZHJhZnQ="
   ],
   [
-    "A professional needs new protective garment",
-    "apron"
+      "A professional needs new protective garment",
+      "YXByb24="
   ],
   [
-    "Proposal made for unusually wrapping iron",
-    "offer"
+      "Proposal made for unusually wrapping iron",
+      "b2ZmZXI="
   ],
   [
-    "Took action against English leather company’s product",
-    "suede"
+      "Took action against English leather company’s product",
+      "c3VlZGU="
   ],
   [
-    "Instrument in small room close to piano",
-    "cello"
+      "Instrument in small room close to piano",
+      "Y2VsbG8="
   ],
   [
-    "Embargo absorbing English leader of overseas party",
-    "beano"
+      "Embargo absorbing English leader of overseas party",
+      "YmVhbm8="
   ],
   [
-    "Dud shade",
-    "lemon"
+      "Dud shade",
+      "bGVtb24="
   ],
   [
-    "Carnivore heading for lair put on speed",
-    "ratel"
+      "Carnivore heading for lair put on speed",
+      "cmF0ZWw="
   ],
   [
-    "Oddly for each thousand you get a mutant",
-    "freak"
+      "Oddly for each thousand you get a mutant",
+      "ZnJlYWs="
   ],
   [
-    "Small portion of broccoli causing complaint",
-    "colic"
+      "Small portion of broccoli causing complaint",
+      "Y29saWM="
   ],
   [
-    "Joint from an ungulate served up",
-    "ankle"
+      "Joint from an ungulate served up",
+      "YW5rbGU="
   ],
   [
-    "Brownish-yellow section of brooch revealed",
-    "ochre"
+      "Brownish-yellow section of brooch revealed",
+      "b2NocmU="
   ],
   [
-    "A golfer may register this bird of prey",
-    "eagle"
+      "A golfer may register this bird of prey",
+      "ZWFnbGU="
   ],
   [
-    "Greek character old and huge",
-    "omega"
+      "Greek character old and huge",
+      "b21lZ2E="
   ],
   [
-    "Head of regiment drills joint force",
-    "drive"
+      "Head of regiment drills joint force",
+      "ZHJpdmU="
   ],
   [
-    "Root around this counter",
-    "rebut"
+      "Root around this counter",
+      "cmVidXQ="
   ],
   [
-    "Bill that is originally unpaid for so long",
-    "adieu"
+      "Bill that is originally unpaid for so long",
+      "YWRpZXU="
   ],
   [
-    "R&A plot to overturn ban",
-    "debar"
+      "R&A plot to overturn ban",
+      "ZGViYXI="
   ],
   [
-    "Back in Normandy: a Hungarian composer",
-    "haydn"
+      "Back in Normandy: a Hungarian composer",
+      "aGF5ZG4="
   ],
   [
-    "Logo for channel that is reversing its polarity?",
-    "ident"
+      "Logo for channel that is reversing its polarity?",
+      "aWRlbnQ="
   ],
   [
-    "Dropped off note and final letter",
-    "dozed"
+      "Dropped off note and final letter",
+      "ZG96ZWQ="
   ],
   [
-    "Government department do: couple in the end have left",
-    "defra"
+      "Government department do: couple in the end have left",
+      "ZGVmcmE="
   ],
   [
-    "Slip catching four in turn after wicket’s fallen",
-    "slive"
+      "Slip catching four in turn after wicket’s fallen",
+      "c2xpdmU="
   ],
   [
-    "Month’s work for small amount of money",
-    "mopus"
+      "Month’s work for small amount of money",
+      "bW9wdXM="
   ],
   [
-    "Shift about on barbs circulating",
-    "cimar"
+      "Shift about on barbs circulating",
+      "Y2ltYXI="
   ],
   [
-    "Secure employment tails off — a hard pill to swallow",
-    "bolus"
+      "Secure employment tails off — a hard pill to swallow",
+      "Ym9sdXM="
   ],
   [
-    "Gossip helping to include a change of direction",
-    "prate"
+      "Gossip helping to include a change of direction",
+      "cHJhdGU="
   ],
   [
-    "Former Chairman taking cases in gambling Mecca",
-    "macao"
+      "Former Chairman taking cases in gambling Mecca",
+      "bWFjYW8="
   ],
   [
-    "A suggestion can get detailed",
-    "tinge"
+      "A suggestion can get detailed",
+      "dGluZ2U="
   ],
   [
-    "We must cross a street for litter",
-    "waste"
+      "We must cross a street for litter",
+      "d2FzdGU="
   ],
   [
-    "Vegan eats this up to make vegetarian angry",
-    "irate"
+      "Vegan eats this up to make vegetarian angry",
+      "aXJhdGU="
   ],
   [
-    "Collect is a church form of worship",
-    "amass"
+      "Collect is a church form of worship",
+      "YW1hc3M="
   ],
   [
-    "Stop running market booth",
-    "stall"
+      "Stop running market booth",
+      "c3RhbGw="
   ],
   [
-    "Hotel in Med resort designed for specific market",
-    "niche"
+      "Hotel in Med resort designed for specific market",
+      "bmljaGU="
   ],
   [
-    "Irish oddly acquit Arab",
-    "iraqi"
+      "Irish oddly acquit Arab",
+      "aXJhcWk="
   ],
   [
-    "Jack doesn't start to shake milk container",
-    "udder"
+      "Jack doesn't start to shake milk container",
+      "dWRkZXI="
   ],
   [
-    "Old coin originally accepted in tube",
-    "ducat"
+      "Old coin originally accepted in tube",
+      "ZHVjYXQ="
   ],
   [
-    "Section of program is simply wrong",
-    "amiss"
+      "Section of program is simply wrong",
+      "YW1pc3M="
   ],
   [
-    "Labour leader takes direction — the bare minimum!",
-    "least"
+      "Labour leader takes direction — the bare minimum!",
+      "bGVhc3Q="
   ],
   [
-    "Fish one consumed as main ingredient",
-    "basis"
+      "Fish one consumed as main ingredient",
+      "YmFzaXM="
   ],
   [
-    "Surgical procedure overcoming twitching of the eye",
-    "optic"
+      "Surgical procedure overcoming twitching of the eye",
+      "b3B0aWM="
   ],
   [
-    "Instinctive feelings exist between woman and son",
-    "vibes"
+      "Instinctive feelings exist between woman and son",
+      "dmliZXM="
   ],
   [
-    "Subject that’s closed",
-    "still"
+      "Subject that’s closed",
+      "c3RpbGw="
   ],
   [
-    "Fought to be heard with a gong",
-    "award"
+      "Fought to be heard with a gong",
+      "YXdhcmQ="
   ],
   [
-    "Veil’s collar containing a measure of brightness",
-    "niqab"
+      "Veil’s collar containing a measure of brightness",
+      "bmlxYWI="
   ],
   [
-    "Boy dispatching daughter in place of Clare",
-    "ennis"
+      "Boy dispatching daughter in place of Clare",
+      "ZW5uaXM="
   ],
   [
-    "Inclined to be having relations round last of all",
-    "atilt"
+      "Inclined to be having relations round last of all",
+      "YXRpbHQ="
   ],
   [
-    "Dead weight",
-    "plumb"
+      "Dead weight",
+      "cGx1bWI="
   ],
   [
-    "Cattle displaying little imagination?",
-    "stock"
+      "Cattle displaying little imagination?",
+      "c3RvY2s="
   ],
   [
-    "Influence seeing dismissal of foremost performer",
-    "actor"
+      "Influence seeing dismissal of foremost performer",
+      "YWN0b3I="
   ],
   [
-    "Forced peace-lover to accept war ultimately",
-    "drove"
+      "Forced peace-lover to accept war ultimately",
+      "ZHJvdmU="
   ],
   [
-    "Religious minister not coming in earlier",
-    "pious"
+      "Religious minister not coming in earlier",
+      "cGlvdXM="
   ],
   [
-    "See dog without lead jump",
-    "ollie"
+      "See dog without lead jump",
+      "b2xsaWU="
   ],
   [
-    "Beat poet?",
-    "pound"
+      "Beat poet?",
+      "cG91bmQ="
   ],
   [
-    "N Dakota city: a long way to travel",
-    "fargo"
+      "N Dakota city: a long way to travel",
+      "ZmFyZ28="
   ],
   [
-    "Imposing spell of tyranny after cutbacks",
-    "lofty"
+      "Imposing spell of tyranny after cutbacks",
+      "bG9mdHk="
   ],
   [
-    "Auntie half-heartedly backed naval officer making music",
-    "bebop"
+      "Auntie half-heartedly backed naval officer making music",
+      "YmVib3A="
   ],
   [
-    "Step from carriage on way through town",
-    "stair"
+      "Step from carriage on way through town",
+      "c3RhaXI="
   ],
   [
-    "Purchaser’s place to keep stock of audition",
-    "buyer"
+      "Purchaser’s place to keep stock of audition",
+      "YnV5ZXI="
   ],
   [
-    "Almost the perfect place for a fling",
-    "heave"
+      "Almost the perfect place for a fling",
+      "aGVhdmU="
   ],
   [
-    "Potentially miss appeal appearing in paper",
-    "susan"
+      "Potentially miss appeal appearing in paper",
+      "c3VzYW4="
   ],
   [
-    "Group getting cold in tub",
-    "batch"
+      "Group getting cold in tub",
+      "YmF0Y2g="
   ],
   [
-    "Awkward getting some sleep in it",
-    "inapt"
+      "Awkward getting some sleep in it",
+      "aW5hcHQ="
   ],
   [
-    "Fold petal another way",
-    "pleat"
+      "Fold petal another way",
+      "cGxlYXQ="
   ],
   [
-    "One article about another clan chief",
-    "thane"
+      "One article about another clan chief",
+      "dGhhbmU="
   ],
   [
-    "Talk about king's plan",
-    "chart"
+      "Talk about king's plan",
+      "Y2hhcnQ="
   ],
   [
-    "One struck perhaps in game",
-    "match"
+      "One struck perhaps in game",
+      "bWF0Y2g="
   ],
   [
-    "A coastal feature sited inappropriately",
-    "tides"
+      "A coastal feature sited inappropriately",
+      "dGlkZXM="
   ],
   [
-    "Hour of prayer in winter ceremony",
-    "terce"
+      "Hour of prayer in winter ceremony",
+      "dGVyY2U="
   ],
   [
-    "Bits of foreign money are collected by little members",
-    "toeas"
+      "Bits of foreign money are collected by little members",
+      "dG9lYXM="
   ],
   [
-    "Pear mum cut the wrong way",
-    "nelis"
+      "Pear mum cut the wrong way",
+      "bmVsaXM="
   ],
   [
-    "A Conservative nut seen in retrospect as a mug",
-    "bocca"
+      "A Conservative nut seen in retrospect as a mug",
+      "Ym9jY2E="
   ],
   [
-    "Tree people chucked with Noel finally gone",
-    "opepe"
+      "Tree people chucked with Noel finally gone",
+      "b3BlcGU="
   ],
   [
-    "Bit of old armour fashioned to protect artist",
-    "curat"
+      "Bit of old armour fashioned to protect artist",
+      "Y3VyYXQ="
   ],
   [
-    "Finished on time and open to view",
-    "overt"
+      "Finished on time and open to view",
+      "b3ZlcnQ="
   ],
   [
-    "First Oscar is too much for opera singer",
-    "tosca"
+      "First Oscar is too much for opera singer",
+      "dG9zY2E="
   ],
   [
-    "Shy artisan spending every second in the country",
-    "syria"
+      "Shy artisan spending every second in the country",
+      "c3lyaWE="
   ],
   [
-    "Traveller books place somewhere new to put down roots",
-    "repot"
+      "Traveller books place somewhere new to put down roots",
+      "cmVwb3Q="
   ],
   [
-    "Low section of arena — dirt-cheap",
-    "nadir"
+      "Low section of arena — dirt-cheap",
+      "bmFkaXI="
   ],
   [
-    "Sign we’ve lost track of reference collection",
-    "libra"
+      "Sign we’ve lost track of reference collection",
+      "bGlicmE="
   ],
   [
-    "Sweet child with its foot in Rhine on vacation",
-    "torte"
+      "Sweet child with its foot in Rhine on vacation",
+      "dG9ydGU="
   ],
   [
-    "Cost of penny cereal",
-    "price"
+      "Cost of penny cereal",
+      "cHJpY2U="
   ],
   [
-    "Indian lute is brought back by sailor",
-    "sitar"
+      "Indian lute is brought back by sailor",
+      "c2l0YXI="
   ],
   [
-    "Some treasure trove appearing from the past",
-    "retro"
+      "Some treasure trove appearing from the past",
+      "cmV0cm8="
   ],
   [
-    "Scrap put right in outhouse",
-    "shred"
+      "Scrap put right in outhouse",
+      "c2hyZWQ="
   ],
   [
-    "Diving apparatus son got on Caribbean island",
-    "scuba"
+      "Diving apparatus son got on Caribbean island",
+      "c2N1YmE="
   ],
   [
-    "Expression of surprise over soldier’s dog",
-    "corgi"
+      "Expression of surprise over soldier’s dog",
+      "Y29yZ2k="
   ],
   [
-    "Difficult — as peak may be?",
-    "rocky"
+      "Difficult — as peak may be?",
+      "cm9ja3k="
   ],
   [
-    "Field throw",
-    "pitch"
+      "Field throw",
+      "cGl0Y2g="
   ],
   [
-    "Green returned clutching a message",
-    "email"
+      "Green returned clutching a message",
+      "ZW1haWw="
   ],
   [
-    "On which one might experience turbulence that's smoother",
-    "plane"
+      "On which one might experience turbulence that's smoother",
+      "cGxhbmU="
   ],
   [
-    "Asian leaders of institution really are quite indecisive",
-    "iraqi"
+      "Asian leaders of institution really are quite indecisive",
+      "aXJhcWk="
   ],
   [
-    "Mysterious force surrounding its place",
-    "runic"
+      "Mysterious force surrounding its place",
+      "cnVuaWM="
   ],
   [
-    "Practice somewhat beneath him at first",
-    "habit"
+      "Practice somewhat beneath him at first",
+      "aGFiaXQ="
   ],
   [
-    "Pancakes — bat doesn't finish one",
-    "blini"
+      "Pancakes — bat doesn't finish one",
+      "Ymxpbmk="
   ],
   [
-    "Stand up outside a cairn",
-    "raise"
+      "Stand up outside a cairn",
+      "cmFpc2U="
   ],
   [
-    "Female energy with which Indian widow ensnares king",
-    "sakti"
+      "Female energy with which Indian widow ensnares king",
+      "c2FrdGk="
   ],
   [
-    "Women seen in foreign city station once",
-    "rowme"
+      "Women seen in foreign city station once",
+      "cm93bWU="
   ],
   [
-    "Wild tree hiding a plant",
-    "reate"
+      "Wild tree hiding a plant",
+      "cmVhdGU="
   ],
   [
-    "Rascally old soldiers upset fellow",
-    "roguy"
+      "Rascally old soldiers upset fellow",
+      "cm9ndXk="
   ],
   [
-    "Little Sarah working in hairdressers",
-    "salon"
+      "Little Sarah working in hairdressers",
+      "c2Fsb24="
   ],
   [
-    "Scholar to talk endlessly",
-    "rabbi"
+      "Scholar to talk endlessly",
+      "cmFiYmk="
   ],
   [
-    "Rice recipe: unlimited Apulian cooking",
-    "pilau"
+      "Rice recipe: unlimited Apulian cooking",
+      "cGlsYXU="
   ],
   [
-    "Firm losing small data chart",
-    "table"
+      "Firm losing small data chart",
+      "dGFibGU="
   ],
   [
-    "Hate old allegations coming back to bite one",
-    "odium"
+      "Hate old allegations coming back to bite one",
+      "b2RpdW0="
   ],
   [
-    "Dictator’s vulgar tweet",
-    "cheep"
+      "Dictator’s vulgar tweet",
+      "Y2hlZXA="
   ],
   [
-    "Dramatist whiNES BIography is holding him up",
-    "ibsen"
+      "Dramatist whiNES BIography is holding him up",
+      "aWJzZW4="
   ],
   [
-    "Chinese switch positions in capital",
-    "hanoi"
+      "Chinese switch positions in capital",
+      "aGFub2k="
   ],
   [
-    "Having got bigger reaction to bad joke perhaps when broadcast",
-    "grown"
+      "Having got bigger reaction to bad joke perhaps when broadcast",
+      "Z3Jvd24="
   ],
   [
-    "Neglect to send out Times: they haven’t taken orders",
-    "laity"
+      "Neglect to send out Times: they haven’t taken orders",
+      "bGFpdHk="
   ],
   [
-    "I hear you pulled up some more gorse",
-    "roger"
+      "I hear you pulled up some more gorse",
+      "cm9nZXI="
   ],
   [
-    "Fish with large abnormal growth thrown back",
-    "trawl"
+      "Fish with large abnormal growth thrown back",
+      "dHJhd2w="
   ],
   [
-    "Bird from banks of Amazon to keep passing through",
-    "avian"
+      "Bird from banks of Amazon to keep passing through",
+      "YXZpYW4="
   ],
   [
-    "Swamp Commons with Liberal intake",
-    "flood"
+      "Swamp Commons with Liberal intake",
+      "Zmxvb2Q="
   ],
   [
-    "Clubs finished top",
-    "cover"
+      "Clubs finished top",
+      "Y292ZXI="
   ],
   [
-    "Prime letters for clueing a single Italian",
-    "luigi"
+      "Prime letters for clueing a single Italian",
+      "bHVpZ2k="
   ],
   [
-    "Important vitamin fed to young animal",
-    "focal"
+      "Important vitamin fed to young animal",
+      "Zm9jYWw="
   ],
   [
-    "John with odd bits of foam sponge",
-    "loofa"
+      "John with odd bits of foam sponge",
+      "bG9vZmE="
   ],
   [
-    "Artist's champ",
-    "munch"
+      "Artist's champ",
+      "bXVuY2g="
   ],
   [
-    "Mark's first wife overlooked by brother",
-    "breve"
+      "Mark's first wife overlooked by brother",
+      "YnJldmU="
   ],
   [
-    "Anxiety relating to certain countries that's not his",
-    "panic"
+      "Anxiety relating to certain countries that's not his",
+      "cGFuaWM="
   ],
   [
-    "State bore recalled stopping Nixon regularly",
-    "idaho"
+      "State bore recalled stopping Nixon regularly",
+      "aWRhaG8="
   ],
   [
-    "Malicious team going around noon",
-    "snide"
+      "Malicious team going around noon",
+      "c25pZGU="
   ],
   [
-    "Surprise leading group",
-    "upset"
+      "Surprise leading group",
+      "dXBzZXQ="
   ],
   [
-    "Wander north into red mist?",
-    "range"
+      "Wander north into red mist?",
+      "cmFuZ2U="
   ],
   [
-    "Specific done deed?",
-    "exact"
+      "Specific done deed?",
+      "ZXhhY3Q="
   ],
   [
-    "Bird flying",
-    "swift"
+      "Bird flying",
+      "c3dpZnQ="
   ],
   [
-    "Hindu deity sees five parting Muslims",
-    "shiva"
+      "Hindu deity sees five parting Muslims",
+      "c2hpdmE="
   ],
   [
-    "Line of text shoots up",
-    "serif"
+      "Line of text shoots up",
+      "c2VyaWY="
   ],
   [
-    "Giant scratching head — very dense?",
-    "osmic"
+      "Giant scratching head — very dense?",
+      "b3NtaWM="
   ],
   [
-    "Emperor backs a follower of another one",
-    "rasta"
+      "Emperor backs a follower of another one",
+      "cmFzdGE="
   ],
   [
-    "Reserves place for supplier of ham that's appetising",
-    "tasty"
+      "Reserves place for supplier of ham that's appetising",
+      "dGFzdHk="
   ],
   [
-    "Stockpile a lot of documents head of army sent in",
-    "amass"
+      "Stockpile a lot of documents head of army sent in",
+      "YW1hc3M="
   ],
   [
-    "One who regrets imprisoning Liberal head of state?",
-    "ruler"
+      "One who regrets imprisoning Liberal head of state?",
+      "cnVsZXI="
   ],
   [
-    "City where lives must go on as normal",
-    "paris"
+      "City where lives must go on as normal",
+      "cGFyaXM="
   ],
   [
-    "Narrow margin’s inches",
-    "noses"
+      "Narrow margin’s inches",
+      "bm9zZXM="
   ],
   [
-    "Request team playing hands to one side",
-    "askew"
+      "Request team playing hands to one side",
+      "YXNrZXc="
   ],
   [
-    "Summarise extraordinary race on page",
-    "recap"
+      "Summarise extraordinary race on page",
+      "cmVjYXA="
   ],
   [
-    "Ruthlessly overcome infatuation",
-    "crush"
+      "Ruthlessly overcome infatuation",
+      "Y3J1c2g="
   ],
   [
-    "Super increase",
-    "swell"
+      "Super increase",
+      "c3dlbGw="
   ],
   [
-    "Author starts to defend antagonist",
-    "defoe"
+      "Author starts to defend antagonist",
+      "ZGVmb2U="
   ],
   [
-    "Stocking filler — it’s all right",
-    "legit"
+      "Stocking filler — it’s all right",
+      "bGVnaXQ="
   ],
   [
-    "American waiter not old hat",
-    "busby"
+      "American waiter not old hat",
+      "YnVzYnk="
   ],
   [
-    "Long to follow hip pop group?",
-    "indie"
+      "Long to follow hip pop group?",
+      "aW5kaWU="
   ],
   [
-    "Athenian character's black mark for wasting time",
-    "sigma"
+      "Athenian character's black mark for wasting time",
+      "c2lnbWE="
   ],
   [
-    "Woman needing a good comfy home for the most part",
-    "agnes"
+      "Woman needing a good comfy home for the most part",
+      "YWduZXM="
   ],
   [
-    "A girl suffering setback needs the ultimate in moral fibre",
-    "sisal"
+      "A girl suffering setback needs the ultimate in moral fibre",
+      "c2lzYWw="
   ],
   [
-    "Charge for trip",
-    "sally"
+      "Charge for trip",
+      "c2FsbHk="
   ],
   [
-    "Kind of skirt oddly twee around posterior",
-    "tasse"
+      "Kind of skirt oddly twee around posterior",
+      "dGFzc2U="
   ]
-]
+].map((x => ([x[0], atob(x[1])])));
 
 const dictionary = [
   "aahed",
