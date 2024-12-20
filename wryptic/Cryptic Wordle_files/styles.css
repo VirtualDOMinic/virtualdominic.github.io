@@ -273,7 +273,6 @@ button {
   cursor: pointer; /* Cursor changes to pointer on hover */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
   margin: 5px; /* Add some spacing between buttons */
-  width: 20%;
 }
 
 .button:hover {

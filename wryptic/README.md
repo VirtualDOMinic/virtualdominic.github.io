@@ -16,4 +16,4 @@ Just a light-touch change for my internet friend's Cryptic Wordle project. No bi
 - All Qs & As in the source code, more spoiler potential
   - [x] Encode in BASE64? Then can automatically decode immediately, at least meaning they're not instantly readable
   - [ ] Store in another file (as well as do a proper API req) to make the main source smaller?
-- [ ] Avoid overflow of "Explained!" button
+- [x] Avoid overflow of "Explained!" button
